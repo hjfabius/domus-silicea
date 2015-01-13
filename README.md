@@ -1,34 +1,11 @@
-Heading
- =======
- 
- Sub-heading
- -----------
- 
- ### Another deeper heading
- 
- Paragraphs are separated
- by a blank line.
- 
- Let 2 spaces at the end of a line to do a  
- line break
- 
- Text attributes *italic*, **bold**, 
- `monospace`, ~~strikethrough~~ .
- 
- A [link](http://example.com).
- <<<   No space between ] and (  >>>
- 
- Shopping list:
- 
-   * apples
-   * oranges
-   * pears
- 
- Numbered list:
- 
-   1. apples
-   2. oranges
-   3. pears
- 
- The rain---not the reign---in
- Spain.
+## Introduction
+
+The Domus Silicea project aims at providing an  integration platform for all things around home automation. 
+It is designed to be as hardware/protocol-agnostic as possible. Domus Silicea brings together different bus systems, hardware devices and interface protocols by dedicated bindings. These bindings send and receive commands and status updates on the event bus. This concept allows designing user interfaces with a unique look&feel, but with the possibility to operate devices based on a big number of different technologies. 
+Besides the user interfaces, it also brings the power of automation logics across different system boundaries.
+
+
+## Trademark Disclaimer
+
+Product names, logos, brands and other trademarks referred to within the Domus Silicea website are the property of their respective trademark holders. These trademark holders are not affiliated with Domus Silicea or our website. They do not sponsor or endorse our materials.
+
