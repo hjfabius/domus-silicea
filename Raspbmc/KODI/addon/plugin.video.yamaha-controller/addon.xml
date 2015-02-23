@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="yamaha-controller" version="0.0.5" name="Yamaha - Controller" provider-name="hjfabius">
+	<requires></requires>
+	<extension point="xbmc.python.pluginsource" library="yamaha-controller.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Yamaha Controller</summary>
+		<description>Yamaha Amplifier remote controller</description>
+		<platform>all</platform>
+	</extension>
+
+</addon>
+
+ 

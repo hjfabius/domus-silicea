@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.teleboy"
+       name="Teleboy Live-TV"
+       version="0.2.6"
+       provider-name="Andreas Wetzel [xbmc@mindmade.org]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+	<import addon="script.module.beautifulsoup" version="3.0.8" />
+	<import addon="script.module.mindmadetools" version="0.2.3" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="teleboy.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Live-TV provided by teleboy.ch</summary>
+    <description>
+Steps to be done before using the teleboy addon:
+--------------------------------------------------------------------------------
+* open &quot;http://www.teleboy.ch&quot; in your browser
+* sign up (free) and login
+* create your preferred channel list
+* enter your login and password in the addon settings
+* enjoy live television!
+    </description>
+  </extension>
+</addon>

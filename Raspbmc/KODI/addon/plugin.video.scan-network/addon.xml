@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="scan-network" version="0.0.2" name="Network Scanner" provider-name="hjfabius">
+	<requires></requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Network Scanner</summary>
+		<description>Simple program to scan the network looking for known devices</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+ 

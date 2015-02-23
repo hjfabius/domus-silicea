@@ -1,0 +1,1480 @@
+2014-08-26 07:44:43: fetchHttp(GET): http://www.teleboy.ch/watchlist
+2014-08-26 07:44:44: <_LWPCookieJar.LWPCookieJar[Cookie(version=0, name='cinergy_s', value='iu99tmlbhgtsp5jcl1lj90o371', port=None, port_specified=False, domain='www.teleboy.ch', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1410284683, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), Cookie(version=0, name='hl', value='de', port=None, port_specified=False, domain='www.teleboy.ch', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1440611083, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False)]>
+2014-08-26 07:44:44: logging in...
+2014-08-26 07:44:44: fetchHttp(POST): http://www.teleboy.ch/layer/login_check
+2014-08-26 07:44:44: args: {'y': '4', 'x': '3', 'login': 'hjfabius', 'password': 'hjfabius', 'keep_login': '1'}
+2014-08-26 07:44:46: login ok
+2014-08-26 07:44:46: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-08-26 07:45:42: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-08-26 07:45:42: args: {'cid2': '164', 'cid': '27'}
+2014-08-29 07:05:52: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-08-29 07:06:27: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-08-29 07:06:27: args: {'cid2': '0', 'cid': '28'}
+2014-10-30 12:19:05: fetchHttp(GET): http://www.teleboy.ch/watchlist
+2014-10-30 12:19:06: <_LWPCookieJar.LWPCookieJar[Cookie(version=0, name='cinergy_s', value='8tpf1tt529sihn7pvljnbcc0i1', port=None, port_specified=False, domain='www.teleboy.ch', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1414696745, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), Cookie(version=0, name='hl', value='de', port=None, port_specified=False, domain='www.teleboy.ch', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1446203945, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False)]>
+2014-10-30 12:19:06: logging in...
+2014-10-30 12:19:06: fetchHttp(POST): http://www.teleboy.ch/layer/login_check
+2014-10-30 12:19:06: args: {'y': '4', 'x': '3', 'login': 'hjfabius', 'password': 'hjfabius', 'keep_login': '1'}
+2014-10-30 12:19:07: login ok
+2014-10-30 12:19:07: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-30 12:19:59: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-30 12:19:59: args: {'cid2': '164', 'cid': '27'}
+2014-10-30 12:22:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-30 12:23:41: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-30 12:23:41: args: {'cid2': '0', 'cid': '209'}
+2014-10-30 12:28:56: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-30 12:30:59: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-30 12:31:50: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-31 01:12:12: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-31 01:13:09: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-31 01:13:10: args: {'cid2': '0', 'cid': '394'}
+2014-10-31 01:13:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-31 01:13:18: args: {'cid2': '0', 'cid': '394'}
+2014-10-31 01:13:25: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-31 01:13:25: args: {'cid2': '163', 'cid': '26'}
+2014-10-31 10:48:21: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-31 11:43:09: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-31 01:09:33: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-31 09:27:14: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-31 09:27:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-31 09:27:53: args: {'cid2': '0', 'cid': '205'}
+2014-10-31 09:28:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-31 09:28:13: args: {'cid2': '0', 'cid': '205'}
+2014-10-31 09:28:45: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-31 09:29:31: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-31 09:29:31: args: {'cid2': '0', 'cid': '205'}
+2014-10-31 10:15:21: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-31 10:15:52: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-31 10:15:52: args: {'cid2': '0', 'cid': '205'}
+2014-10-31 10:16:21: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-10-31 10:17:07: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-31 10:17:07: args: {'cid2': '0', 'cid': '205'}
+2014-10-31 10:31:17: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-31 10:31:17: args: {'cid2': '0', 'cid': '205'}
+2014-10-31 10:31:39: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-10-31 10:31:39: args: {'cid2': '0', 'cid': '205'}
+2014-10-31 10:33:18: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-02 06:18:59: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-02 06:19:29: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-02 06:19:29: args: {'cid2': '0', 'cid': '207'}
+2014-11-02 06:20:07: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-02 06:20:56: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-02 06:20:56: args: {'cid2': '0', 'cid': '207'}
+2014-11-02 06:34:13: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-02 06:34:59: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-02 06:34:59: args: {'cid2': '164', 'cid': '27'}
+2014-11-02 07:21:08: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-02 07:21:08: args: {'cid2': '0', 'cid': '105'}
+2014-11-02 08:05:59: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-02 08:07:00: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-02 08:07:00: args: {'cid2': '164', 'cid': '27'}
+2014-11-03 06:59:03: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-03 06:59:51: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-03 06:59:51: args: {'cid2': '0', 'cid': '105'}
+2014-11-04 12:02:06: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-04 06:37:52: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-04 06:38:33: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-04 06:38:33: args: {'cid2': '164', 'cid': '27'}
+2014-11-04 07:02:42: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-04 07:02:42: args: {'cid2': '164', 'cid': '27'}
+2014-11-04 07:04:32: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-04 07:04:32: args: {'cid2': '0', 'cid': '105'}
+2014-11-04 08:06:54: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-04 08:07:43: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-04 08:07:43: args: {'cid2': '164', 'cid': '27'}
+2014-11-05 01:42:52: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-05 01:43:22: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-05 01:43:22: args: {'cid2': '0', 'cid': '203'}
+2014-11-05 03:46:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-05 03:46:50: args: {'cid2': '0', 'cid': '201'}
+2014-11-06 03:42:38: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-06 03:43:26: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 03:43:26: args: {'cid2': '0', 'cid': '201'}
+2014-11-06 06:02:28: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 06:02:28: args: {'cid2': '164', 'cid': '27'}
+2014-11-06 06:02:52: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 06:02:52: args: {'cid2': '0', 'cid': '201'}
+2014-11-06 06:05:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 06:05:16: args: {'cid2': '164', 'cid': '27'}
+2014-11-06 06:53:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 06:53:50: args: {'cid2': '0', 'cid': '105'}
+2014-11-06 08:44:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-06 08:45:26: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 08:45:26: args: {'cid2': '164', 'cid': '27'}
+2014-11-06 08:45:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-06 09:09:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 09:09:19: args: {'cid2': '0', 'cid': '202'}
+2014-11-06 09:32:21: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 09:32:21: args: {'cid2': '0', 'cid': '203'}
+2014-11-06 09:32:46: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 09:32:46: args: {'cid2': '0', 'cid': '201'}
+2014-11-06 09:33:26: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-06 09:34:25: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 09:34:25: args: {'cid2': '0', 'cid': '107'}
+2014-11-06 09:54:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 09:54:19: args: {'cid2': '0', 'cid': '209'}
+2014-11-06 09:54:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 09:54:53: args: {'cid2': '164', 'cid': '27'}
+2014-11-06 10:11:40: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 10:11:40: args: {'cid2': '164', 'cid': '27'}
+2014-11-06 10:41:15: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-06 10:42:14: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 10:42:14: args: {'cid2': '0', 'cid': '203'}
+2014-11-06 11:02:06: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-06 11:02:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 11:02:50: args: {'cid2': '0', 'cid': '207'}
+2014-11-06 11:03:35: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-06 11:04:32: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-06 11:04:32: args: {'cid2': '0', 'cid': '209'}
+2014-11-06 11:06:01: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-07 12:08:01: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-07 12:09:06: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-07 12:09:06: args: {'cid2': '0', 'cid': '217'}
+2014-11-07 12:26:17: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-07 12:29:51: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-07 12:29:51: args: {'cid2': '0', 'cid': '106'}
+2014-11-07 01:05:15: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-07 01:06:02: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-07 01:06:02: args: {'cid2': '0', 'cid': '203'}
+2014-11-07 05:15:09: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-07 05:16:04: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-07 05:16:04: args: {'cid2': '0', 'cid': '201'}
+2014-11-07 06:08:47: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-07 06:09:24: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-07 06:09:24: args: {'cid2': '164', 'cid': '27'}
+2014-11-07 06:57:43: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-07 06:58:21: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-07 06:58:21: args: {'cid2': '0', 'cid': '105'}
+2014-11-07 08:04:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-07 08:06:02: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-07 08:06:02: args: {'cid2': '0', 'cid': '201'}
+2014-11-07 08:57:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-07 08:57:36: args: {'cid2': '0', 'cid': '201'}
+2014-11-07 08:57:53: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-07 09:10:44: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-07 09:10:44: args: {'cid2': '0', 'cid': '205'}
+2014-11-07 10:35:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-07 10:36:29: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-07 10:36:29: args: {'cid2': '164', 'cid': '27'}
+2014-11-07 11:39:54: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-07 11:40:35: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-07 11:40:35: args: {'cid2': '0', 'cid': '201'}
+2014-11-08 11:07:29: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-08 11:08:29: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-08 11:08:29: args: {'cid2': '0', 'cid': '28'}
+2014-11-08 04:26:03: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-08 04:26:42: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-08 04:26:42: args: {'cid2': '0', 'cid': '201'}
+2014-11-08 04:27:24: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-08 04:27:24: args: {'cid2': '0', 'cid': '209'}
+2014-11-08 05:24:21: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-08 05:24:21: args: {'cid2': '0', 'cid': '209'}
+2014-11-08 05:56:25: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-08 05:58:32: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-08 05:58:32: args: {'cid2': '0', 'cid': '202'}
+2014-11-08 06:48:32: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-08 06:49:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-08 06:49:16: args: {'cid2': '0', 'cid': '209'}
+2014-11-09 04:20:17: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-09 04:21:01: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-09 04:21:01: args: {'cid2': '0', 'cid': '217'}
+2014-11-09 04:21:04: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-09 04:21:04: args: {'cid2': '0', 'cid': '207'}
+2014-11-09 04:26:57: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-09 04:26:57: args: {'cid2': '0', 'cid': '201'}
+2014-11-09 04:30:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-09 04:30:49: args: {'cid2': '0', 'cid': '205'}
+2014-11-09 04:55:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-09 04:55:49: args: {'cid2': '0', 'cid': '205'}
+2014-11-09 06:14:57: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-09 06:15:35: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-09 06:15:35: args: {'cid2': '164', 'cid': '27'}
+2014-11-09 07:12:07: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-09 07:12:07: args: {'cid2': '164', 'cid': '27'}
+2014-11-09 07:15:37: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-09 07:16:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-09 07:16:36: args: {'cid2': '0', 'cid': '105'}
+2014-11-09 07:56:00: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-09 07:56:00: args: {'cid2': '164', 'cid': '27'}
+2014-11-09 08:31:01: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 09:42:33: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 10:53:06: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 02:00:30: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 02:00:59: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 02:05:50: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 02:06:17: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-10 02:06:17: args: {'cid2': '0', 'cid': '203'}
+2014-11-10 02:09:40: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 02:10:26: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-10 02:10:26: args: {'cid2': '0', 'cid': '203'}
+2014-11-10 04:50:19: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 04:52:25: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-10 04:52:25: args: {'cid2': '0', 'cid': '106'}
+2014-11-10 05:01:11: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 05:01:51: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-10 05:01:51: args: {'cid2': '0', 'cid': '207'}
+2014-11-10 06:12:50: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 06:13:19: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 06:13:50: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 06:13:50: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 06:15:07: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-10 06:15:07: args: {'cid2': '164', 'cid': '27'}
+2014-11-10 07:55:45: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 07:55:53: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 07:56:30: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-10 07:57:00: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-10 07:57:00: args: {'cid2': '164', 'cid': '27'}
+2014-11-11 03:14:06: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-11 03:15:25: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-11 03:15:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 03:15:53: args: {'cid2': '0', 'cid': '203'}
+2014-11-11 03:29:33: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 03:29:33: args: {'cid2': '0', 'cid': '201'}
+2014-11-11 03:40:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 03:40:18: args: {'cid2': '0', 'cid': '201'}
+2014-11-11 05:28:37: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-11 05:29:21: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 05:29:21: args: {'cid2': '0', 'cid': '207'}
+2014-11-11 05:33:08: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 05:33:08: args: {'cid2': '0', 'cid': '203'}
+2014-11-11 05:33:54: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 05:33:54: args: {'cid2': '0', 'cid': '205'}
+2014-11-11 05:34:09: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 05:34:09: args: {'cid2': '0', 'cid': '36'}
+2014-11-11 05:42:44: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-11 05:43:44: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 05:43:44: args: {'cid2': '0', 'cid': '220'}
+2014-11-11 05:52:31: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 05:52:31: args: {'cid2': '163', 'cid': '26'}
+2014-11-11 05:52:38: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-11 05:54:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 05:54:16: args: {'cid2': '164', 'cid': '27'}
+2014-11-11 06:55:36: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-11 06:56:28: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 06:56:28: args: {'cid2': '0', 'cid': '105'}
+2014-11-11 07:11:55: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-11 07:11:55: args: {'cid2': '0', 'cid': '105'}
+2014-11-12 11:14:31: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-12 11:15:09: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 11:15:09: args: {'cid2': '164', 'cid': '27'}
+2014-11-12 12:10:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 12:10:05: args: {'cid2': '0', 'cid': '203'}
+2014-11-12 01:04:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-12 01:05:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 01:05:16: args: {'cid2': '0', 'cid': '203'}
+2014-11-12 01:05:44: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 01:05:44: args: {'cid2': '0', 'cid': '209'}
+2014-11-12 01:06:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 01:06:18: args: {'cid2': '164', 'cid': '27'}
+2014-11-12 01:06:26: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-12 01:10:54: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-12 01:16:58: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 01:16:58: args: {'cid2': '0', 'cid': '28'}
+2014-11-12 01:20:59: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-12 01:21:40: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 01:21:40: args: {'cid2': '0', 'cid': '209'}
+2014-11-12 01:22:31: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 01:22:31: args: {'cid2': '0', 'cid': '203'}
+2014-11-12 04:37:01: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-12 04:37:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 04:37:53: args: {'cid2': '0', 'cid': '106'}
+2014-11-12 04:38:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 04:38:18: args: {'cid2': '0', 'cid': '201'}
+2014-11-12 04:43:48: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 04:43:48: args: {'cid2': '0', 'cid': '106'}
+2014-11-12 04:58:08: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 04:58:08: args: {'cid2': '0', 'cid': '203'}
+2014-11-12 04:58:08: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-12 05:19:21: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-12 06:56:46: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 06:56:46: args: {'cid2': '0', 'cid': '105'}
+2014-11-12 08:57:00: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-12 08:57:31: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-12 08:57:31: args: {'cid2': '164', 'cid': '27'}
+2014-11-13 10:23:11: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-13 10:37:09: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-13 10:37:43: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-13 10:37:43: args: {'cid2': '164', 'cid': '27'}
+2014-11-13 01:17:41: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-13 01:18:22: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-13 01:18:22: args: {'cid2': '164', 'cid': '27'}
+2014-11-13 07:31:21: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-13 07:31:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-13 07:31:50: args: {'cid2': '0', 'cid': '105'}
+2014-11-13 07:58:48: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-13 07:58:48: args: {'cid2': '164', 'cid': '27'}
+2014-11-13 10:03:13: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-13 10:04:08: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-13 10:27:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-13 10:28:10: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-13 10:28:10: args: {'cid2': '0', 'cid': '202'}
+2014-11-14 08:53:01: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-14 08:53:33: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-14 08:53:33: args: {'cid2': '0', 'cid': '201'}
+2014-11-14 09:52:19: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-14 09:53:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-14 09:53:05: args: {'cid2': '0', 'cid': '201'}
+2014-11-14 11:26:51: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-14 12:45:31: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-14 12:46:10: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-14 12:46:10: args: {'cid2': '0', 'cid': '209'}
+2014-11-14 03:40:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-14 03:40:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-14 03:40:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-14 03:42:03: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-14 03:42:03: args: {'cid2': '0', 'cid': '201'}
+2014-11-14 04:28:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-14 04:30:21: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-14 04:30:21: args: {'cid2': '164', 'cid': '27'}
+2014-11-14 04:30:35: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-14 04:30:35: args: {'cid2': '0', 'cid': '106'}
+2014-11-14 04:31:45: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-14 04:31:45: args: {'cid2': '0', 'cid': '203'}
+2014-11-14 05:00:44: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-14 05:02:40: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-14 05:03:40: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-14 05:03:40: args: {'cid2': '0', 'cid': '207'}
+2014-11-14 06:53:07: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-14 06:53:56: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-14 06:53:56: args: {'cid2': '0', 'cid': '105'}
+2014-11-14 07:37:40: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-14 07:37:40: args: {'cid2': '0', 'cid': '105'}
+2014-11-14 07:56:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-14 07:56:36: args: {'cid2': '164', 'cid': '27'}
+2014-11-15 12:27:35: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-15 03:10:17: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-15 03:10:17: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-15 03:11:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-15 03:11:18: args: {'cid2': '0', 'cid': '201'}
+2014-11-15 03:11:39: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-15 03:11:39: args: {'cid2': '0', 'cid': '202'}
+2014-11-15 03:12:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-15 03:12:05: args: {'cid2': '0', 'cid': '201'}
+2014-11-15 03:12:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-15 03:12:13: args: {'cid2': '0', 'cid': '207'}
+2014-11-15 04:32:09: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-15 04:32:54: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-15 04:32:54: args: {'cid2': '0', 'cid': '201'}
+2014-11-15 04:49:59: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-15 04:50:35: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-15 04:50:35: args: {'cid2': '0', 'cid': '203'}
+2014-11-15 06:49:10: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-15 06:49:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-15 06:49:50: args: {'cid2': '0', 'cid': '209'}
+2014-11-15 07:22:20: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-15 07:22:54: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-15 07:22:54: args: {'cid2': '0', 'cid': '209'}
+2014-11-15 09:17:24: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-15 09:17:51: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-15 09:17:51: args: {'cid2': '164', 'cid': '27'}
+2014-11-15 09:54:04: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-15 09:54:04: args: {'cid2': '164', 'cid': '27'}
+2014-11-15 11:08:35: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-16 12:13:33: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-16 04:10:21: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-16 04:11:02: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-16 04:11:02: args: {'cid2': '0', 'cid': '207'}
+2014-11-16 04:11:25: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-16 04:12:02: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-16 04:12:02: args: {'cid2': '0', 'cid': '209'}
+2014-11-16 04:17:27: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-16 04:18:45: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-16 04:18:45: args: {'cid2': '0', 'cid': '106'}
+2014-11-16 04:19:10: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-16 04:19:10: args: {'cid2': '0', 'cid': '203'}
+2014-11-16 06:49:36: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-16 06:50:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-16 06:50:49: args: {'cid2': '0', 'cid': '207'}
+2014-11-16 07:07:43: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-16 07:08:28: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-16 07:08:28: args: {'cid2': '0', 'cid': '105'}
+2014-11-16 08:20:50: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-16 08:21:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-16 08:21:57: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-16 08:24:25: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-16 08:24:25: args: {'cid2': '0', 'cid': '209'}
+2014-11-16 08:34:45: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-16 08:36:12: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-16 08:36:12: args: {'cid2': '0', 'cid': '28'}
+2014-11-16 08:37:04: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-16 08:37:04: args: {'cid2': '164', 'cid': '27'}
+2014-11-17 08:49:36: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-17 08:50:14: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-17 08:50:14: args: {'cid2': '0', 'cid': '201'}
+2014-11-17 11:11:04: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-17 01:00:41: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-17 01:01:11: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-17 01:01:11: args: {'cid2': '0', 'cid': '203'}
+2014-11-17 02:05:53: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-17 02:06:22: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-17 02:06:22: args: {'cid2': '0', 'cid': '203'}
+2014-11-17 03:34:46: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-17 03:34:46: args: {'cid2': '0', 'cid': '201'}
+2014-11-17 05:41:08: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-17 05:42:00: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-17 05:42:00: args: {'cid2': '0', 'cid': '205'}
+2014-11-17 06:14:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-17 06:14:53: args: {'cid2': '164', 'cid': '27'}
+2014-11-17 07:18:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-17 07:19:31: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-17 07:35:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-17 07:35:49: args: {'cid2': '0', 'cid': '105'}
+2014-11-17 08:33:30: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-17 08:33:57: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-17 08:33:57: args: {'cid2': '164', 'cid': '27'}
+2014-11-18 08:15:06: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-18 08:16:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-18 08:16:13: args: {'cid2': '0', 'cid': '201'}
+2014-11-18 08:16:30: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-18 08:16:30: args: {'cid2': '0', 'cid': '209'}
+2014-11-18 08:16:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-18 08:16:36: args: {'cid2': '0', 'cid': '201'}
+2014-11-18 03:22:02: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-18 03:22:43: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-18 03:22:43: args: {'cid2': '0', 'cid': '201'}
+2014-11-18 04:59:07: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-18 04:59:48: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-18 04:59:48: args: {'cid2': '0', 'cid': '205'}
+2014-11-18 06:07:28: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-18 06:07:28: args: {'cid2': '164', 'cid': '27'}
+2014-11-18 07:36:28: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-18 07:36:52: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-18 07:37:26: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-18 08:53:38: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-18 08:55:20: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-18 08:56:26: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-18 08:56:26: args: {'cid2': '164', 'cid': '27'}
+2014-11-19 05:19:28: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-19 05:20:00: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-19 05:20:00: args: {'cid2': '0', 'cid': '205'}
+2014-11-19 06:12:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-19 06:12:05: args: {'cid2': '164', 'cid': '27'}
+2014-11-19 06:25:55: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-19 06:25:55: args: {'cid2': '164', 'cid': '27'}
+2014-11-19 06:26:06: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-19 06:53:15: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-19 06:54:01: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-19 06:54:01: args: {'cid2': '0', 'cid': '28'}
+2014-11-19 07:25:14: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-19 07:25:14: args: {'cid2': '0', 'cid': '105'}
+2014-11-19 10:48:44: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-19 10:49:11: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-19 10:49:11: args: {'cid2': '164', 'cid': '27'}
+2014-11-20 01:19:11: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-20 01:19:40: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-20 01:19:40: args: {'cid2': '164', 'cid': '27'}
+2014-11-20 01:48:32: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-20 01:49:15: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-20 01:49:15: args: {'cid2': '0', 'cid': '209'}
+2014-11-20 05:08:17: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-20 05:08:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-20 05:08:50: args: {'cid2': '0', 'cid': '205'}
+2014-11-21 01:58:46: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-21 01:59:15: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-21 01:59:15: args: {'cid2': '0', 'cid': '203'}
+2014-11-21 04:12:15: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-21 04:13:45: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-21 04:13:45: args: {'cid2': '0', 'cid': '201'}
+2014-11-21 04:28:29: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-21 04:28:29: args: {'cid2': '0', 'cid': '205'}
+2014-11-21 04:28:56: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-21 04:28:56: args: {'cid2': '0', 'cid': '201'}
+2014-11-21 04:34:47: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-21 04:34:47: args: {'cid2': '0', 'cid': '205'}
+2014-11-22 12:41:52: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-22 12:42:29: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-22 12:42:29: args: {'cid2': '0', 'cid': '202'}
+2014-11-22 01:45:25: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-22 01:46:03: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-22 01:46:03: args: {'cid2': '0', 'cid': '105'}
+2014-11-22 03:59:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-22 04:02:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-22 04:02:49: args: {'cid2': '0', 'cid': '207'}
+2014-11-22 05:38:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-22 05:39:41: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-22 05:39:41: args: {'cid2': '0', 'cid': '203'}
+2014-11-22 05:43:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-22 05:43:53: args: {'cid2': '0', 'cid': '202'}
+2014-11-22 06:28:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-22 06:29:14: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-22 06:29:14: args: {'cid2': '0', 'cid': '209'}
+2014-11-22 07:47:12: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-22 07:47:12: args: {'cid2': '0', 'cid': '105'}
+2014-11-22 08:12:26: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-22 08:24:55: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-22 08:25:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-22 08:25:49: args: {'cid2': '164', 'cid': '27'}
+2014-11-23 02:56:12: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-23 02:56:58: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-23 02:56:58: args: {'cid2': '0', 'cid': '201'}
+2014-11-23 03:19:26: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-23 03:19:58: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-23 03:19:58: args: {'cid2': '0', 'cid': '201'}
+2014-11-23 04:13:22: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-23 04:33:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-23 04:36:32: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-23 04:36:32: args: {'cid2': '0', 'cid': '203'}
+2014-11-23 04:37:56: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-23 05:09:40: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-23 05:10:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-23 05:10:19: args: {'cid2': '164', 'cid': '27'}
+2014-11-23 05:56:15: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-23 06:18:54: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-23 07:08:54: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-23 07:08:54: args: {'cid2': '0', 'cid': '105'}
+2014-11-23 09:15:18: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-23 10:28:19: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-24 02:47:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-24 02:49:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-24 02:49:19: args: {'cid2': '0', 'cid': '203'}
+2014-11-25 10:23:18: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-25 10:24:32: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-25 10:24:32: args: {'cid2': '0', 'cid': '201'}
+2014-11-25 10:26:00: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-25 02:10:25: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-25 02:10:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-25 02:10:53: args: {'cid2': '0', 'cid': '203'}
+2014-11-26 01:19:16: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-26 01:19:52: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-26 01:19:52: args: {'cid2': '0', 'cid': '203'}
+2014-11-26 04:47:49: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-26 04:48:24: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-26 04:48:24: args: {'cid2': '0', 'cid': '205'}
+2014-11-27 02:27:24: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-27 02:27:54: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-27 02:27:54: args: {'cid2': '0', 'cid': '203'}
+2014-11-27 03:28:53: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-27 03:29:24: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-27 03:29:24: args: {'cid2': '0', 'cid': '201'}
+2014-11-27 04:01:21: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-27 04:01:56: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-27 04:01:56: args: {'cid2': '0', 'cid': '201'}
+2014-11-27 04:42:04: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-27 04:42:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-27 04:42:36: args: {'cid2': '0', 'cid': '205'}
+2014-11-27 05:12:59: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-27 05:13:54: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-27 05:13:54: args: {'cid2': '0', 'cid': '205'}
+2014-11-27 10:54:36: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-28 07:15:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-28 07:16:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-28 07:16:16: args: {'cid2': '0', 'cid': '207'}
+2014-11-28 07:18:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-28 07:18:16: args: {'cid2': '0', 'cid': '105'}
+2014-11-29 10:05:12: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-29 10:05:58: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-29 10:05:58: args: {'cid2': '0', 'cid': '106'}
+2014-11-29 02:28:37: fetchHttp(GET): http://www.teleboy.ch/watchlist
+2014-11-29 02:28:37: <_LWPCookieJar.LWPCookieJar[Cookie(version=0, name='cinergy_s', value='vra9n6783508c289bv9qu4i932', port=None, port_specified=False, domain='www.teleboy.ch', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1417296517, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), Cookie(version=0, name='hl', value='de', port=None, port_specified=False, domain='www.teleboy.ch', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1448803717, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False)]>
+2014-11-29 02:28:37: logging in...
+2014-11-29 02:28:37: fetchHttp(POST): http://www.teleboy.ch/layer/login_check
+2014-11-29 02:28:37: args: {'y': '4', 'x': '3', 'login': 'hjfabius', 'password': 'hjfabius', 'keep_login': '1'}
+2014-11-29 02:28:39: login ok
+2014-11-29 02:28:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-29 02:29:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-29 02:29:19: args: {'cid2': '0', 'cid': '203'}
+2014-11-29 05:10:49: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-29 05:11:40: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-29 05:11:40: args: {'cid2': '0', 'cid': '203'}
+2014-11-29 06:49:33: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-29 06:50:45: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-29 06:50:45: args: {'cid2': '0', 'cid': '207'}
+2014-11-29 07:17:38: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-29 07:18:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-29 07:18:13: args: {'cid2': '0', 'cid': '209'}
+2014-11-29 08:05:20: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-29 08:06:14: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-29 08:06:14: args: {'cid2': '164', 'cid': '27'}
+2014-11-30 12:22:41: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-30 12:23:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-30 12:23:19: args: {'cid2': '0', 'cid': '207'}
+2014-11-30 04:03:43: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-30 04:04:46: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-30 04:04:46: args: {'cid2': '0', 'cid': '209'}
+2014-11-30 05:23:36: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-11-30 05:24:15: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-30 05:24:15: args: {'cid2': '0', 'cid': '207'}
+2014-11-30 05:26:15: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-11-30 05:26:15: args: {'cid2': '164', 'cid': '27'}
+2014-12-01 09:42:19: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-01 10:24:55: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-01 10:25:23: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-01 10:25:23: args: {'cid2': '0', 'cid': '201'}
+2014-12-01 12:36:05: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-01 12:36:39: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-01 12:36:39: args: {'cid2': '0', 'cid': '209'}
+2014-12-01 12:47:45: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-01 12:47:45: args: {'cid2': '164', 'cid': '27'}
+2014-12-01 12:50:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-01 12:50:18: args: {'cid2': '0', 'cid': '203'}
+2014-12-01 12:50:44: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-01 12:50:44: args: {'cid2': '0', 'cid': '209'}
+2014-12-01 03:20:45: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-01 03:21:17: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-01 03:21:17: args: {'cid2': '0', 'cid': '201'}
+2014-12-01 04:40:22: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-01 04:41:00: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-01 04:41:00: args: {'cid2': '0', 'cid': '205'}
+2014-12-01 06:13:10: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-01 06:14:06: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-01 06:14:06: args: {'cid2': '164', 'cid': '27'}
+2014-12-02 02:10:03: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-02 02:10:39: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-02 02:10:39: args: {'cid2': '0', 'cid': '203'}
+2014-12-02 03:30:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-02 03:30:19: args: {'cid2': '0', 'cid': '201'}
+2014-12-02 04:08:10: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-02 04:08:10: args: {'cid2': '0', 'cid': '205'}
+2014-12-02 04:08:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-02 04:08:50: args: {'cid2': '0', 'cid': '201'}
+2014-12-02 04:40:17: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-02 04:40:17: args: {'cid2': '0', 'cid': '205'}
+2014-12-02 07:04:05: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-02 07:04:33: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-02 07:04:33: args: {'cid2': '0', 'cid': '105'}
+2014-12-03 02:18:01: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-03 02:29:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-03 02:29:16: args: {'cid2': '0', 'cid': '203'}
+2014-12-03 03:31:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-03 03:32:31: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-03 03:32:31: args: {'cid2': '0', 'cid': '201'}
+2014-12-03 04:50:38: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-03 04:51:10: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-03 04:51:10: args: {'cid2': '0', 'cid': '205'}
+2014-12-04 02:51:16: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-04 02:51:48: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-04 02:51:48: args: {'cid2': '0', 'cid': '201'}
+2014-12-04 10:10:10: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-04 10:10:31: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-04 10:11:10: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-04 10:11:10: args: {'cid2': '0', 'cid': '28'}
+2014-12-05 02:07:43: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-05 02:08:15: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-05 02:08:44: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-05 02:08:44: args: {'cid2': '0', 'cid': '203'}
+2014-12-05 03:30:01: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-05 03:30:33: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-05 03:30:33: args: {'cid2': '0', 'cid': '201'}
+2014-12-05 07:05:44: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-05 07:06:14: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-05 07:06:14: args: {'cid2': '0', 'cid': '28'}
+2014-12-05 07:56:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-05 07:56:19: args: {'cid2': '0', 'cid': '28'}
+2014-12-06 08:54:31: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-06 08:55:25: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-06 08:55:25: args: {'cid2': '0', 'cid': '201'}
+2014-12-06 08:55:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-06 08:55:50: args: {'cid2': '0', 'cid': '209'}
+2014-12-06 12:45:56: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-06 12:46:07: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2014-12-06 12:47:02: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-06 12:47:02: args: {'cid2': '0', 'cid': '203'}
+2014-12-06 12:47:41: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-06 12:47:41: args: {'cid2': '0', 'cid': '202'}
+2014-12-06 12:48:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-06 12:48:18: args: {'cid2': '0', 'cid': '203'}
+2014-12-06 03:29:46: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2014-12-06 03:29:46: args: {'cid2': '0', 'cid': '201'}
+2015-01-06 02:36:39: fetchHttp(GET): http://www.teleboy.ch/watchlist
+2015-01-06 02:36:40: <_LWPCookieJar.LWPCookieJar[Cookie(version=0, name='cinergy_s', value='pf55r8a42m96ssiiuf7l6ekbc7', port=None, port_specified=False, domain='www.teleboy.ch', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1420580199, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), Cookie(version=0, name='hl', value='de', port=None, port_specified=False, domain='www.teleboy.ch', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1452087399, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False)]>
+2015-01-06 02:36:40: logging in...
+2015-01-06 02:36:40: fetchHttp(POST): http://www.teleboy.ch/layer/login_check
+2015-01-06 02:36:40: args: {'y': '4', 'x': '3', 'login': 'hjfabius', 'password': 'hjfabius', 'keep_login': '1'}
+2015-01-06 02:36:40: login ok
+2015-01-06 02:36:40: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-06 02:37:24: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-06 02:37:24: args: {'cid2': '0', 'cid': '209'}
+2015-01-06 03:13:03: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-06 03:13:51: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-06 03:13:51: args: {'cid2': '0', 'cid': '209'}
+2015-01-06 04:31:25: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-06 04:32:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-06 04:32:16: args: {'cid2': '0', 'cid': '202'}
+2015-01-06 06:43:26: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-06 06:43:26: args: {'cid2': '164', 'cid': '27'}
+2015-01-06 06:43:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-06 06:58:28: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-06 06:58:28: args: {'cid2': '0', 'cid': '105'}
+2015-01-07 12:36:59: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-07 12:37:35: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-07 12:37:35: args: {'cid2': '0', 'cid': '209'}
+2015-01-07 12:51:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-07 12:51:19: args: {'cid2': '0', 'cid': '209'}
+2015-01-07 03:16:20: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-07 03:17:23: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-07 03:17:57: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-07 03:17:57: args: {'cid2': '0', 'cid': '201'}
+2015-01-07 03:19:01: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-07 03:19:01: args: {'cid2': '0', 'cid': '209'}
+2015-01-07 03:42:35: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-07 03:43:21: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-07 03:43:21: args: {'cid2': '0', 'cid': '207'}
+2015-01-07 03:44:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-07 03:44:50: args: {'cid2': '0', 'cid': '203'}
+2015-01-07 04:32:44: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-07 04:32:44: args: {'cid2': '0', 'cid': '201'}
+2015-01-07 05:53:24: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-07 05:54:09: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-07 05:54:09: args: {'cid2': '0', 'cid': '207'}
+2015-01-08 02:51:43: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-08 02:52:25: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-08 02:52:25: args: {'cid2': '0', 'cid': '201'}
+2015-01-08 02:53:14: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-08 02:53:14: args: {'cid2': '0', 'cid': '203'}
+2015-01-08 04:05:59: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-08 04:28:28: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-08 04:29:21: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-08 04:29:21: args: {'cid2': '0', 'cid': '201'}
+2015-01-08 10:47:13: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-08 10:48:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-08 10:48:13: args: {'cid2': '0', 'cid': '209'}
+2015-01-09 12:01:44: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-09 12:02:03: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-09 12:12:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-09 12:13:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 12:13:13: args: {'cid2': '0', 'cid': '203'}
+2015-01-09 01:40:20: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-09 01:40:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 01:40:49: args: {'cid2': '0', 'cid': '203'}
+2015-01-09 02:17:44: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 02:17:44: args: {'cid2': '0', 'cid': '203'}
+2015-01-09 02:32:58: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 02:32:58: args: {'cid2': '0', 'cid': '203'}
+2015-01-09 02:35:21: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-09 02:36:02: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 02:36:02: args: {'cid2': '0', 'cid': '28'}
+2015-01-09 03:31:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 03:31:53: args: {'cid2': '0', 'cid': '28'}
+2015-01-09 03:32:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-09 03:43:02: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-09 03:43:02: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 03:43:02: args: {'cid2': '0', 'cid': '28'}
+2015-01-09 03:43:02: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-09 03:50:47: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-09 03:54:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 03:54:16: args: {'cid2': '0', 'cid': '201'}
+2015-01-09 03:57:59: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 03:57:59: args: {'cid2': '0', 'cid': '203'}
+2015-01-09 04:03:35: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 04:03:35: args: {'cid2': '164', 'cid': '27'}
+2015-01-09 04:03:59: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-09 04:05:24: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 04:05:24: args: {'cid2': '0', 'cid': '28'}
+2015-01-09 04:06:07: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 04:06:07: args: {'cid2': '0', 'cid': '201'}
+2015-01-09 04:08:08: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 04:08:08: args: {'cid2': '0', 'cid': '203'}
+2015-01-09 04:09:25: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 04:09:25: args: {'cid2': '164', 'cid': '27'}
+2015-01-09 04:39:13: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-09 04:39:43: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-09 04:39:43: args: {'cid2': '0', 'cid': '201'}
+2015-01-07 01:40:21: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-07 01:40:50: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-10 07:34:26: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-10 07:35:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-10 07:35:18: args: {'cid2': '0', 'cid': '105'}
+2015-01-10 07:55:12: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-10 07:55:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-10 07:55:50: args: {'cid2': '164', 'cid': '27'}
+2015-01-11 12:29:44: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-11 12:30:32: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 12:30:32: args: {'cid2': '0', 'cid': '207'}
+2015-01-11 12:31:42: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 12:31:42: args: {'cid2': '0', 'cid': '202'}
+2015-01-11 12:46:24: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 12:46:24: args: {'cid2': '0', 'cid': '28'}
+2015-01-11 12:52:16: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-11 12:52:55: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 12:52:55: args: {'cid2': '0', 'cid': '202'}
+2015-01-11 12:57:01: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-11 12:57:54: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 12:57:54: args: {'cid2': '0', 'cid': '203'}
+2015-01-11 12:58:25: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 12:58:25: args: {'cid2': '0', 'cid': '28'}
+2015-01-11 02:31:03: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-11 02:31:29: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-11 02:32:12: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 02:32:12: args: {'cid2': '164', 'cid': '27'}
+2015-01-11 02:32:46: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 02:32:46: args: {'cid2': '0', 'cid': '203'}
+2015-01-11 03:31:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 03:31:53: args: {'cid2': '0', 'cid': '203'}
+2015-01-11 05:33:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-11 05:34:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 05:34:16: args: {'cid2': '0', 'cid': '207'}
+2015-01-11 07:03:19: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-11 07:04:01: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 07:04:01: args: {'cid2': '0', 'cid': '207'}
+2015-01-11 07:04:47: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 07:04:47: args: {'cid2': '0', 'cid': '105'}
+2015-01-11 09:31:09: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-11 09:32:28: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 09:32:28: args: {'cid2': '0', 'cid': '207'}
+2015-01-11 11:03:46: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-11 11:04:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-11 11:04:49: args: {'cid2': '164', 'cid': '27'}
+2015-01-12 12:17:31: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 12:37:14: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 12:37:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-12 12:37:49: args: {'cid2': '0', 'cid': '203'}
+2015-01-12 03:35:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 03:36:42: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-12 03:36:42: args: {'cid2': '0', 'cid': '201'}
+2015-01-12 03:37:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-12 03:37:13: args: {'cid2': '0', 'cid': '203'}
+2015-01-12 04:27:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-12 04:27:53: args: {'cid2': '0', 'cid': '201'}
+2015-01-12 06:28:31: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 06:30:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 06:31:20: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-12 06:31:20: args: {'cid2': '0', 'cid': '207'}
+2015-01-12 07:45:13: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 07:45:48: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-12 07:45:48: args: {'cid2': '0', 'cid': '105'}
+2015-01-12 10:46:26: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 10:46:56: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 10:47:58: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-12 10:47:58: args: {'cid2': '164', 'cid': '27'}
+2015-01-13 12:13:43: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-13 12:14:17: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-13 12:14:52: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-13 12:14:52: args: {'cid2': '0', 'cid': '203'}
+2015-01-13 03:09:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-13 03:10:35: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-13 03:10:35: args: {'cid2': '0', 'cid': '203'}
+2015-01-13 04:15:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-13 04:15:05: args: {'cid2': '0', 'cid': '209'}
+2015-01-13 04:18:54: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-13 04:18:54: args: {'cid2': '0', 'cid': '203'}
+2015-01-13 04:30:00: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-13 04:30:00: args: {'cid2': '0', 'cid': '201'}
+2015-01-13 04:30:31: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-13 06:26:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-13 06:26:53: args: {'cid2': '164', 'cid': '27'}
+2015-01-13 07:42:25: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-13 07:43:00: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-13 07:43:00: args: {'cid2': '0', 'cid': '105'}
+2015-01-13 10:34:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-13 10:35:23: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-13 10:35:23: args: {'cid2': '0', 'cid': '203'}
+2015-01-13 10:37:57: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-13 10:37:57: args: {'cid2': '0', 'cid': '209'}
+2015-01-13 11:06:50: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-14 03:36:25: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-14 03:37:06: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-14 03:37:06: args: {'cid2': '0', 'cid': '203'}
+2015-01-14 04:32:40: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-14 04:33:35: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-14 04:33:35: args: {'cid2': '0', 'cid': '209'}
+2015-01-14 04:53:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-14 04:53:05: args: {'cid2': '0', 'cid': '201'}
+2015-01-14 06:57:53: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-14 06:58:28: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-14 06:58:28: args: {'cid2': '0', 'cid': '105'}
+2015-01-14 07:08:21: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-14 07:08:21: args: {'cid2': '0', 'cid': '209'}
+2015-01-14 07:42:30: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-14 07:43:06: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-14 07:43:06: args: {'cid2': '0', 'cid': '105'}
+2015-01-14 10:51:41: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-14 10:52:51: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-14 10:52:51: args: {'cid2': '0', 'cid': '205'}
+2015-01-14 10:53:24: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-14 10:53:24: args: {'cid2': '0', 'cid': '209'}
+2015-01-15 12:18:37: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-15 12:19:04: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-15 12:19:05: args: {'cid2': '0', 'cid': '203'}
+2015-01-12 01:06:22: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 01:06:51: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 02:25:51: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 02:27:12: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 02:30:40: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 02:35:31: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 02:51:20: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-15 04:08:22: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-15 04:09:06: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-15 04:09:06: args: {'cid2': '0', 'cid': '201'}
+2015-01-15 04:09:14: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-15 04:09:14: args: {'cid2': '0', 'cid': '203'}
+2015-01-15 04:42:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-15 04:42:16: args: {'cid2': '0', 'cid': '201'}
+2015-01-15 05:47:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-15 05:47:16: args: {'cid2': '0', 'cid': '201'}
+2015-01-15 06:07:59: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-15 06:07:59: args: {'cid2': '0', 'cid': '201'}
+2015-01-15 11:00:07: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-15 11:01:00: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-15 11:01:00: args: {'cid2': '0', 'cid': '209'}
+2015-01-15 11:20:48: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-15 11:21:15: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-15 11:21:15: args: {'cid2': '0', 'cid': '209'}
+2015-01-15 11:41:36: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-15 11:42:22: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-15 11:42:22: args: {'cid2': '0', 'cid': '209'}
+2015-01-15 11:55:16: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 07:54:02: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-20 02:18:00: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-20 02:18:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-20 02:18:53: args: {'cid2': '0', 'cid': '203'}
+2015-01-20 05:12:30: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-20 05:13:02: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-20 05:13:02: args: {'cid2': '0', 'cid': '201'}
+2015-01-20 06:43:02: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-20 06:43:46: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-20 06:43:46: args: {'cid2': '164', 'cid': '27'}
+2015-01-20 06:59:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-20 06:59:16: args: {'cid2': '0', 'cid': '105'}
+2015-01-20 09:05:30: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-20 09:12:16: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-21 02:59:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-21 03:00:08: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-21 03:00:08: args: {'cid2': '0', 'cid': '203'}
+2015-01-21 05:51:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-21 05:52:02: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-21 05:52:02: args: {'cid2': '0', 'cid': '203'}
+2015-01-21 06:56:30: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-21 06:56:30: args: {'cid2': '0', 'cid': '105'}
+2015-01-22 12:09:41: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-22 12:16:45: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-22 12:16:45: args: {'cid2': '0', 'cid': '202'}
+2015-01-22 03:53:19: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-22 04:12:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-22 04:13:34: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-22 04:13:34: args: {'cid2': '0', 'cid': '203'}
+2015-01-22 04:31:04: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-22 04:31:04: args: {'cid2': '0', 'cid': '201'}
+2015-01-12 02:14:26: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-12 02:15:40: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-22 09:21:38: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-22 09:22:32: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-22 09:22:32: args: {'cid2': '0', 'cid': '203'}
+2015-01-23 11:34:48: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-23 11:35:23: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-23 11:35:23: args: {'cid2': '0', 'cid': '202'}
+2015-01-23 06:57:29: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-23 06:58:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-23 06:58:13: args: {'cid2': '0', 'cid': '209'}
+2015-01-23 10:43:51: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-23 10:44:35: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-23 10:44:35: args: {'cid2': '0', 'cid': '201'}
+2015-01-23 11:49:11: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-23 11:49:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-23 11:49:49: args: {'cid2': '0', 'cid': '209'}
+2015-01-24 03:06:55: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-24 03:07:44: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-24 03:07:44: args: {'cid2': '0', 'cid': '203'}
+2015-01-24 03:31:30: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-24 03:32:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-24 03:32:36: args: {'cid2': '0', 'cid': '203'}
+2015-01-24 03:32:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-24 03:32:36: args: {'cid2': '0', 'cid': '201'}
+2015-01-24 03:32:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-24 03:32:36: args: {'cid2': '0', 'cid': '201'}
+2015-01-24 03:33:39: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-24 03:33:39: args: {'cid2': '0', 'cid': '209'}
+2015-01-24 06:35:52: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-24 06:36:29: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-24 06:36:29: args: {'cid2': '0', 'cid': '207'}
+2015-01-24 06:38:12: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-24 06:38:12: args: {'cid2': '0', 'cid': '209'}
+2015-01-24 06:59:40: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-24 06:59:40: args: {'cid2': '164', 'cid': '27'}
+2015-01-24 06:59:43: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-24 06:59:43: args: {'cid2': '0', 'cid': '105'}
+2015-01-24 07:33:41: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-24 07:34:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-24 07:34:36: args: {'cid2': '0', 'cid': '105'}
+2015-01-25 01:12:05: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-25 01:12:56: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-25 01:12:56: args: {'cid2': '0', 'cid': '28'}
+2015-01-25 04:04:25: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-25 04:05:21: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-25 04:05:21: args: {'cid2': '0', 'cid': '209'}
+2015-01-25 05:44:11: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-25 05:45:38: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-25 05:45:38: args: {'cid2': '164', 'cid': '27'}
+2015-01-25 06:00:43: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-25 06:01:26: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-25 06:01:26: args: {'cid2': '0', 'cid': '207'}
+2015-01-25 07:34:00: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-25 07:34:29: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-25 07:34:29: args: {'cid2': '0', 'cid': '105'}
+2015-01-26 02:31:02: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-26 02:31:34: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-26 02:31:34: args: {'cid2': '0', 'cid': '203'}
+2015-01-26 04:33:08: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-26 04:33:55: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-26 04:33:55: args: {'cid2': '0', 'cid': '201'}
+2015-01-26 07:00:43: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-26 07:01:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-26 07:01:18: args: {'cid2': '0', 'cid': '209'}
+2015-01-26 07:02:01: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-26 07:02:01: args: {'cid2': '0', 'cid': '105'}
+2015-01-26 07:09:41: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-26 07:09:41: args: {'cid2': '0', 'cid': '209'}
+2015-01-26 07:10:47: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-26 07:10:47: args: {'cid2': '0', 'cid': '105'}
+2015-01-26 07:20:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-26 07:20:05: args: {'cid2': '0', 'cid': '105'}
+2015-01-27 03:23:30: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-27 03:24:04: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-27 03:24:04: args: {'cid2': '0', 'cid': '203'}
+2015-01-27 04:50:11: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-27 04:50:48: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-27 04:50:48: args: {'cid2': '0', 'cid': '201'}
+2015-01-27 06:27:22: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-27 06:27:22: args: {'cid2': '164', 'cid': '27'}
+2015-01-27 07:32:22: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-27 07:32:22: args: {'cid2': '0', 'cid': '105'}
+2015-01-28 01:56:25: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-28 01:56:57: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-28 01:56:57: args: {'cid2': '0', 'cid': '203'}
+2015-01-28 04:58:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-28 04:58:50: args: {'cid2': '0', 'cid': '201'}
+2015-01-28 07:08:04: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-28 07:08:45: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-28 07:08:45: args: {'cid2': '0', 'cid': '105'}
+2015-01-28 07:21:04: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-29 03:29:10: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-29 03:29:47: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-29 03:29:47: args: {'cid2': '0', 'cid': '209'}
+2015-01-29 05:16:32: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-29 05:17:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-29 05:17:05: args: {'cid2': '0', 'cid': '107'}
+2015-01-29 06:17:24: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-29 06:17:24: args: {'cid2': '0', 'cid': '202'}
+2015-01-29 06:20:24: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-29 06:21:40: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-29 06:22:10: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-29 06:22:10: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-29 06:22:10: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-29 06:23:52: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-29 06:28:33: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-29 06:28:33: args: {'cid2': '0', 'cid': '107'}
+2015-01-29 08:00:28: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-29 08:00:28: args: {'cid2': '0', 'cid': '202'}
+2015-01-29 10:16:57: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-30 02:03:55: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-30 02:03:55: args: {'cid2': '0', 'cid': '203'}
+2015-01-30 02:04:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-30 02:04:13: args: {'cid2': '0', 'cid': '203'}
+2015-01-30 02:04:44: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-30 02:04:44: args: {'cid2': '0', 'cid': '203'}
+2015-01-31 03:37:15: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-31 03:38:06: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-31 03:38:06: args: {'cid2': '0', 'cid': '28'}
+2015-01-31 03:51:15: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-31 03:59:03: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-31 03:59:03: args: {'cid2': '0', 'cid': '201'}
+2015-01-31 03:59:17: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-31 04:01:11: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-31 04:10:58: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-31 04:29:48: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-31 04:30:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-31 04:30:36: args: {'cid2': '0', 'cid': '201'}
+2015-01-31 04:41:07: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-31 04:41:40: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-31 04:41:40: args: {'cid2': '0', 'cid': '201'}
+2015-01-31 04:42:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-31 04:42:18: args: {'cid2': '0', 'cid': '201'}
+2015-01-31 05:39:41: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-31 05:40:42: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-31 05:40:42: args: {'cid2': '0', 'cid': '203'}
+2015-01-31 05:56:01: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-31 05:56:01: args: {'cid2': '0', 'cid': '209'}
+2015-01-31 06:39:42: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-31 06:39:42: args: {'cid2': '0', 'cid': '105'}
+2015-01-31 06:40:11: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-01-31 06:40:56: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-31 06:40:56: args: {'cid2': '0', 'cid': '28'}
+2015-01-31 07:19:54: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-01-31 07:19:54: args: {'cid2': '0', 'cid': '105'}
+2015-02-01 03:29:14: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-01 03:31:10: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-01 03:31:10: args: {'cid2': '164', 'cid': '27'}
+2015-02-01 03:32:33: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-01 03:32:33: args: {'cid2': '0', 'cid': '28'}
+2015-02-01 03:54:43: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-01 03:55:30: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-01 03:55:30: args: {'cid2': '0', 'cid': '209'}
+2015-02-01 03:56:17: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-01 03:56:17: args: {'cid2': '164', 'cid': '27'}
+2015-02-01 04:58:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-01 06:35:55: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-01 06:36:40: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-01 06:36:40: args: {'cid2': '0', 'cid': '207'}
+2015-02-01 07:08:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-01 07:08:49: args: {'cid2': '0', 'cid': '105'}
+2015-02-01 07:58:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-01 07:59:16: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-01 07:59:16: args: {'cid2': '0', 'cid': '209'}
+2015-02-01 08:17:48: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-01 09:41:17: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-01 10:02:59: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-01 10:02:59: args: {'cid2': '0', 'cid': '207'}
+2015-02-01 10:03:33: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-01 10:03:33: args: {'cid2': '0', 'cid': '28'}
+2015-02-01 10:36:21: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-02 01:59:45: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-02 02:07:21: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-02 02:07:21: args: {'cid2': '0', 'cid': '203'}
+2015-02-02 04:35:45: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-02 04:36:42: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-02 04:36:42: args: {'cid2': '0', 'cid': '107'}
+2015-02-02 04:59:44: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-02 04:59:44: args: {'cid2': '0', 'cid': '201'}
+2015-02-03 02:15:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-03 02:16:11: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-03 02:16:11: args: {'cid2': '0', 'cid': '203'}
+2015-02-03 06:56:45: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-03 06:57:06: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-03 06:57:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-03 06:57:36: args: {'cid2': '0', 'cid': '105'}
+2015-02-03 09:02:31: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-03 09:02:31: args: {'cid2': '0', 'cid': '28'}
+2015-02-03 10:50:35: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-03 10:50:35: args: {'cid2': '0', 'cid': '28'}
+2015-02-04 03:01:03: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-04 03:01:41: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-04 03:01:41: args: {'cid2': '0', 'cid': '203'}
+2015-02-04 06:55:17: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-04 06:55:54: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-04 06:55:54: args: {'cid2': '0', 'cid': '209'}
+2015-02-04 07:37:58: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-04 07:37:58: args: {'cid2': '0', 'cid': '105'}
+2015-02-04 09:42:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-04 09:43:42: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-04 09:43:42: args: {'cid2': '164', 'cid': '27'}
+2015-02-04 10:17:23: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-04 10:18:55: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-04 10:18:55: args: {'cid2': '0', 'cid': '209'}
+2015-02-04 10:21:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-04 10:21:53: args: {'cid2': '0', 'cid': '201'}
+2015-02-04 10:25:20: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-04 10:25:20: args: {'cid2': '0', 'cid': '369'}
+2015-02-04 10:29:20: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-04 10:30:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-04 10:30:19: args: {'cid2': '164', 'cid': '27'}
+2015-02-05 09:47:01: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-05 09:47:30: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-05 09:47:30: args: {'cid2': '0', 'cid': '203'}
+2015-02-05 11:16:15: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-05 11:18:17: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-05 11:18:17: args: {'cid2': '0', 'cid': '202'}
+2015-02-05 01:40:03: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-05 01:40:40: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-05 01:40:40: args: {'cid2': '0', 'cid': '203'}
+2015-02-05 05:12:14: fetchHttp(GET): http://www.teleboy.ch/watchlist
+2015-02-05 05:12:14: <_LWPCookieJar.LWPCookieJar[Cookie(version=0, name='cinergy_s', value='rd6eg7j5thl0gdnhk3bq9vqmk2', port=None, port_specified=False, domain='www.teleboy.ch', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1423181534, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), Cookie(version=0, name='hl', value='de', port=None, port_specified=False, domain='www.teleboy.ch', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1454688734, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False)]>
+2015-02-05 05:12:14: logging in...
+2015-02-05 05:12:14: fetchHttp(POST): http://www.teleboy.ch/layer/login_check
+2015-02-05 05:12:14: args: {'y': '4', 'x': '3', 'login': 'hjfabius', 'password': 'hjfabius', 'keep_login': '1'}
+2015-02-05 05:12:15: login ok
+2015-02-05 05:12:15: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-05 05:12:15: args: {'cid2': '0', 'cid': '201'}
+2015-02-05 05:12:22: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-05 10:54:47: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-05 10:55:38: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-05 10:55:38: args: {'cid2': '0', 'cid': '28'}
+2015-02-05 10:56:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-05 10:56:05: args: {'cid2': '0', 'cid': '201'}
+2015-02-05 10:59:43: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-05 10:59:43: args: {'cid2': '0', 'cid': '201'}
+2015-02-05 11:21:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-05 11:21:49: args: {'cid2': '0', 'cid': '201'}
+2015-02-06 01:14:09: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-06 01:14:59: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-06 01:14:59: args: {'cid2': '0', 'cid': '203'}
+2015-02-06 03:39:42: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-06 03:40:35: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-06 03:40:35: args: {'cid2': '0', 'cid': '201'}
+2015-02-06 03:41:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-06 03:41:05: args: {'cid2': '0', 'cid': '209'}
+2015-02-06 06:26:40: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-06 06:27:15: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-06 06:27:15: args: {'cid2': '164', 'cid': '27'}
+2015-02-06 07:02:27: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-06 07:02:27: args: {'cid2': '0', 'cid': '105'}
+2015-02-07 10:28:18: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-07 10:29:00: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-07 10:29:00: args: {'cid2': '0', 'cid': '203'}
+2015-02-07 10:55:33: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-07 10:56:30: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-07 10:56:30: args: {'cid2': '0', 'cid': '28'}
+2015-02-07 12:23:35: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-07 12:24:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-07 12:24:36: args: {'cid2': '0', 'cid': '202'}
+2015-02-07 03:33:50: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-07 03:34:55: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-07 03:34:55: args: {'cid2': '0', 'cid': '209'}
+2015-02-07 05:50:37: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-07 06:30:28: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-07 07:45:01: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-07 07:45:55: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-07 07:45:55: args: {'cid2': '0', 'cid': '105'}
+2015-02-08 12:17:32: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-08 12:18:22: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-08 12:18:22: args: {'cid2': '0', 'cid': '202'}
+2015-02-08 12:49:56: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-08 12:51:29: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-08 12:51:29: args: {'cid2': '0', 'cid': '219'}
+2015-02-08 03:28:40: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-08 03:30:02: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-08 03:30:02: args: {'cid2': '0', 'cid': '205'}
+2015-02-08 03:36:51: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-08 03:37:43: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-08 03:37:43: args: {'cid2': '164', 'cid': '27'}
+2015-02-08 03:55:51: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-08 03:55:51: args: {'cid2': '0', 'cid': '205'}
+2015-02-08 06:46:51: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-08 06:47:29: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-08 06:47:29: args: {'cid2': '0', 'cid': '207'}
+2015-02-08 06:48:14: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-08 06:48:14: args: {'cid2': '0', 'cid': '209'}
+2015-02-08 06:48:56: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-08 06:48:56: args: {'cid2': '0', 'cid': '207'}
+2015-02-08 07:19:17: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-08 07:19:17: args: {'cid2': '0', 'cid': '105'}
+2015-02-08 10:01:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-08 10:02:58: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-08 10:02:58: args: {'cid2': '0', 'cid': '106'}
+2015-02-09 03:36:15: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-09 03:37:06: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-09 03:37:06: args: {'cid2': '0', 'cid': '203'}
+2015-02-09 05:16:22: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-09 05:16:59: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-09 05:16:59: args: {'cid2': '0', 'cid': '201'}
+2015-02-09 06:28:47: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-09 06:28:47: args: {'cid2': '164', 'cid': '27'}
+2015-02-09 06:57:24: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-09 06:58:23: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-09 06:58:23: args: {'cid2': '0', 'cid': '105'}
+2015-02-09 06:58:29: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-09 06:58:29: args: {'cid2': '0', 'cid': '207'}
+2015-02-09 07:12:26: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-09 07:13:09: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-09 07:13:09: args: {'cid2': '0', 'cid': '207'}
+2015-02-09 09:28:02: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-09 09:29:00: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-09 09:29:00: args: {'cid2': '164', 'cid': '27'}
+2015-02-09 09:29:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-09 09:29:50: args: {'cid2': '0', 'cid': '201'}
+2015-02-09 09:33:41: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-09 09:34:42: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-09 09:34:42: args: {'cid2': '0', 'cid': '106'}
+2015-02-10 12:40:40: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-10 12:41:34: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-10 12:41:34: args: {'cid2': '0', 'cid': '209'}
+2015-02-10 01:06:25: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-10 01:06:25: args: {'cid2': '0', 'cid': '203'}
+2015-02-10 03:15:05: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-10 03:15:42: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-10 03:15:42: args: {'cid2': '0', 'cid': '203'}
+2015-02-10 04:31:53: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-10 04:32:37: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-10 04:32:37: args: {'cid2': '0', 'cid': '201'}
+2015-02-10 10:01:16: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-10 10:02:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-10 10:02:13: args: {'cid2': '0', 'cid': '209'}
+2015-02-11 03:09:39: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-11 03:10:14: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-11 03:10:14: args: {'cid2': '0', 'cid': '203'}
+2015-02-11 04:22:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-11 04:22:50: args: {'cid2': '0', 'cid': '201'}
+2015-02-11 04:46:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-11 04:46:19: args: {'cid2': '0', 'cid': '201'}
+2015-02-11 05:36:53: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-11 05:39:09: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-11 05:39:09: args: {'cid2': '0', 'cid': '201'}
+2015-02-11 09:03:29: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-11 09:04:58: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-11 09:04:58: args: {'cid2': '0', 'cid': '209'}
+2015-02-11 10:22:56: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-11 10:23:29: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-11 10:23:29: args: {'cid2': '0', 'cid': '209'}
+2015-02-11 11:29:31: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-11 11:31:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-11 11:31:13: args: {'cid2': '0', 'cid': '209'}
+2015-02-12 02:13:47: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-12 02:14:15: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-12 02:14:15: args: {'cid2': '0', 'cid': '203'}
+2015-02-12 05:02:20: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-12 05:02:50: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-12 05:02:50: args: {'cid2': '0', 'cid': '201'}
+2015-02-13 12:16:05: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-13 12:16:36: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-13 12:16:36: args: {'cid2': '0', 'cid': '209'}
+2015-02-13 02:59:12: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-13 03:10:33: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-13 03:10:33: args: {'cid2': '0', 'cid': '203'}
+2015-02-13 03:37:13: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-13 03:38:22: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-13 03:38:22: args: {'cid2': '0', 'cid': '201'}
+2015-02-13 03:43:22: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-13 03:43:22: args: {'cid2': '0', 'cid': '209'}
+2015-02-13 04:00:07: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-13 04:03:12: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-13 04:03:12: args: {'cid2': '0', 'cid': '203'}
+2015-02-13 04:25:43: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-13 04:26:28: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-13 04:26:28: args: {'cid2': '0', 'cid': '201'}
+2015-02-13 06:55:29: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-13 07:04:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-13 07:04:05: args: {'cid2': '0', 'cid': '105'}
+2015-02-14 11:29:17: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-14 11:29:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-14 11:29:53: args: {'cid2': '0', 'cid': '202'}
+2015-02-14 06:14:29: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-14 06:15:09: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-14 06:15:09: args: {'cid2': '164', 'cid': '27'}
+2015-02-14 06:34:28: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-14 06:35:11: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-14 06:35:11: args: {'cid2': '0', 'cid': '209'}
+2015-02-15 11:37:34: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 11:38:03: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 11:38:03: args: {'cid2': '0', 'cid': '201'}
+2015-02-15 12:01:12: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 12:01:12: args: {'cid2': '0', 'cid': '201'}
+2015-02-15 12:03:44: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 12:04:15: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 12:04:15: args: {'cid2': '0', 'cid': '201'}
+2015-02-15 12:30:28: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 12:31:11: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 12:31:11: args: {'cid2': '0', 'cid': '202'}
+2015-02-15 02:31:02: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 02:31:48: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 02:31:48: args: {'cid2': '0', 'cid': '203'}
+2015-02-15 02:47:27: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 02:48:28: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 02:48:28: args: {'cid2': '0', 'cid': '205'}
+2015-02-15 06:29:06: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 06:29:49: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 06:29:49: args: {'cid2': '164', 'cid': '27'}
+2015-02-15 06:31:42: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 06:41:14: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 06:41:39: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 06:41:39: args: {'cid2': '164', 'cid': '27'}
+2015-02-15 06:41:52: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 06:41:52: args: {'cid2': '0', 'cid': '207'}
+2015-02-15 07:20:24: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 07:21:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 07:21:19: args: {'cid2': '164', 'cid': '27'}
+2015-02-15 08:23:10: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 08:23:57: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 08:23:57: args: {'cid2': '0', 'cid': '28'}
+2015-02-15 09:45:04: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 09:45:43: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 09:45:43: args: {'cid2': '0', 'cid': '209'}
+2015-02-15 09:46:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 09:46:19: args: {'cid2': '0', 'cid': '209'}
+2015-02-15 09:47:29: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 09:47:57: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 09:47:57: args: {'cid2': '0', 'cid': '209'}
+2015-02-15 09:48:49: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 09:49:37: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 09:49:37: args: {'cid2': '0', 'cid': '205'}
+2015-02-15 09:49:52: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 09:49:52: args: {'cid2': '0', 'cid': '209'}
+2015-02-15 09:54:15: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-15 09:55:02: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-15 09:55:02: args: {'cid2': '0', 'cid': '106'}
+2015-02-16 10:05:27: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-16 10:06:05: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 10:06:05: args: {'cid2': '0', 'cid': '207'}
+2015-02-16 10:06:26: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 10:06:26: args: {'cid2': '0', 'cid': '201'}
+2015-02-16 12:35:24: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-16 12:35:54: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 12:35:54: args: {'cid2': '0', 'cid': '209'}
+2015-02-16 04:08:48: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-16 04:09:41: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 04:09:41: args: {'cid2': '0', 'cid': '201'}
+2015-02-16 04:09:46: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 04:09:46: args: {'cid2': '0', 'cid': '203'}
+2015-02-16 04:33:01: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 04:33:01: args: {'cid2': '0', 'cid': '201'}
+2015-02-16 05:44:28: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-16 05:44:46: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-16 05:45:24: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 05:45:24: args: {'cid2': '0', 'cid': '201'}
+2015-02-16 07:34:07: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 07:34:07: args: {'cid2': '0', 'cid': '105'}
+2015-02-16 08:32:32: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-16 08:33:10: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 08:33:10: args: {'cid2': '0', 'cid': '209'}
+2015-02-16 08:36:43: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 08:36:43: args: {'cid2': '0', 'cid': '201'}
+2015-02-16 10:02:28: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-16 10:03:19: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 10:03:19: args: {'cid2': '164', 'cid': '27'}
+2015-02-16 10:08:01: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 10:08:01: args: {'cid2': '0', 'cid': '202'}
+2015-02-16 10:08:55: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-16 10:08:55: args: {'cid2': '0', 'cid': '219'}
+2015-02-17 12:29:37: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-17 12:30:20: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-17 12:30:20: args: {'cid2': '0', 'cid': '209'}
+2015-02-17 01:17:35: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-17 01:18:08: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-17 01:18:08: args: {'cid2': '0', 'cid': '209'}
+2015-02-17 03:43:25: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-17 03:43:53: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-17 03:43:53: args: {'cid2': '0', 'cid': '203'}
+2015-02-17 06:22:48: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-17 06:23:45: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-17 06:23:45: args: {'cid2': '0', 'cid': '207'}
+2015-02-18 06:37:19: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-18 06:41:31: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-18 06:43:07: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-18 06:43:07: args: {'cid2': '0', 'cid': '207'}
+2015-02-18 06:44:38: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-18 06:44:38: args: {'cid2': '164', 'cid': '27'}
+2015-02-18 07:03:32: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-18 07:05:04: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-18 07:05:04: args: {'cid2': '0', 'cid': '105'}
+2015-02-18 08:50:13: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-21 12:49:42: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-21 12:50:43: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-21 12:50:43: args: {'cid2': '0', 'cid': '207'}
+2015-02-21 12:53:25: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-21 12:53:25: args: {'cid2': '0', 'cid': '209'}
+2015-02-21 12:55:07: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-21 12:55:45: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-21 12:55:45: args: {'cid2': '0', 'cid': '209'}
+2015-02-21 02:08:42: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-21 02:09:13: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-21 02:09:13: args: {'cid2': '0', 'cid': '202'}
+2015-02-21 04:03:20: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-21 04:04:26: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-21 04:04:26: args: {'cid2': '0', 'cid': '209'}
+2015-02-21 04:04:54: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-21 06:38:00: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-21 06:38:31: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-21 06:38:31: args: {'cid2': '0', 'cid': '209'}
+2015-02-21 07:04:37: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-21 07:05:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-21 07:05:18: args: {'cid2': '0', 'cid': '208'}
+2015-02-21 07:05:18: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-21 07:05:18: args: {'cid2': '0', 'cid': '209'}
+2015-02-21 07:28:04: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-21 07:28:52: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-21 07:28:52: args: {'cid2': '0', 'cid': '105'}
+2015-02-22 12:32:38: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-22 12:38:44: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-22 12:38:44: args: {'cid2': '0', 'cid': '105'}
+2015-02-22 03:57:10: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-22 03:59:03: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-22 03:59:03: args: {'cid2': '0', 'cid': '205'}
+2015-02-22 06:52:38: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-22 06:53:37: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-22 06:53:37: args: {'cid2': '0', 'cid': '105'}
+2015-02-22 08:48:27: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-22 08:48:48: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-23 02:02:27: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-23 02:05:54: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-23 02:06:20: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-23 02:06:20: args: {'cid2': '0', 'cid': '202'}
+2015-02-23 02:52:48: fetchHttp(GET): http://www.teleboy.ch/tv/live_tv.php
+2015-02-23 02:53:23: fetchHttp(GET): http://www.teleboy.ch/tv/player/ajax/liveChannelParams
+2015-02-23 02:53:23: args: {'cid2': '0', 'cid': '203'}

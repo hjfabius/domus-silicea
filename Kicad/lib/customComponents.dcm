@@ -1,8 +1,13 @@
-EESchema-DOCLIB  Version 2.0  Date: 2/16/2015 14:46:12
+EESchema-DOCLIB  Version 2.0  Date: 2/19/2015 07:12:44
 #
 $CMP MCP1640
 D 0.65V Start-Up Synchronous Boost Regulator
 K Synchronous step-up DC-DC converter
+$ENDCMP
+#
+$CMP NRF24L01+
+D 2.4GHz Antenna Wireless Transceiver Module
+K 2.4GHz Antenna Wireless Transceiver 
 $ENDCMP
 #
 #End Doc Library

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="yamaha-display" version="0.0.5" name="Yamaha - Display" provider-name="hjfabius">
+	<requires></requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Yamaha Display</summary>
+		<description>Simple program to show the current status of Yamaha Amplifier.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+ 

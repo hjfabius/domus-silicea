@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="dell-off" version="0.0.5" name="Dell - Power Off" provider-name="hjfabius">
+	<requires></requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Dell Power Off</summary>
+		<description>Simple program to switch off the Dell computer.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+ 

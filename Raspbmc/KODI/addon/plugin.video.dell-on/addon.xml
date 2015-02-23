@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="dell-on" version="0.0.5" name="Dell - Power On" provider-name="hjfabius">
+	<requires></requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Dell Power on</summary>
+		<description>Simple program to switch on the Dell computer.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+ 
