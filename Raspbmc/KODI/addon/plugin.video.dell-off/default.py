@@ -13,5 +13,6 @@ time = 5000  # ms
 
 xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(title, text, time, __icon__))
 
-os.system("net rpc shutdown -I 192.168.0.20 -U username%password  -t 1");
+#os.system("net rpc shutdown -I 192.168.0.20 -U username%password  -t 1");
+os.system("net rpc shutdown -S computername -U username%password  -t 1");
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
