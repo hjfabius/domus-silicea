@@ -1,0 +1,294 @@
+EESchema Schematic File Version 2  date 3/4/2015 23:03:26
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:customComponents
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title "domus-silicea-raspberry.sch"
+Date "4 mar 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Connection ~ 7550 3400
+Wire Wire Line
+	8150 3400 7550 3400
+Wire Wire Line
+	7550 2600 7550 3700
+Connection ~ 5700 3900
+Wire Wire Line
+	5700 3900 5700 4250
+Wire Wire Line
+	5700 4250 6750 4250
+Wire Wire Line
+	6750 4250 6750 3900
+Wire Wire Line
+	6750 3900 7250 3900
+Wire Wire Line
+	4500 3250 4500 2300
+Wire Wire Line
+	4500 2300 4950 2300
+Wire Wire Line
+	4950 2300 4950 2550
+Wire Wire Line
+	3600 2450 4850 2450
+Wire Wire Line
+	4850 2450 4850 2550
+Wire Wire Line
+	6200 2500 6200 2300
+Wire Wire Line
+	6200 3700 6200 2900
+Wire Wire Line
+	1500 4100 1500 2450
+Wire Wire Line
+	1500 2450 1850 2450
+Wire Wire Line
+	3600 1950 3900 1950
+Wire Wire Line
+	3900 1950 3900 2050
+Wire Wire Line
+	1850 1750 1500 1750
+Wire Wire Line
+	1500 1750 1500 1600
+Wire Wire Line
+	3600 1750 3900 1750
+Wire Wire Line
+	3900 1750 3900 1550
+Wire Wire Line
+	1500 4600 1500 5050
+Connection ~ 1500 3900
+Wire Wire Line
+	6200 5050 6200 4100
+Wire Wire Line
+	6200 1900 6200 1550
+Wire Wire Line
+	5900 3900 1500 3900
+Wire Wire Line
+	5050 2550 5050 1550
+Wire Wire Line
+	7550 5050 7550 4100
+Wire Wire Line
+	7550 1550 7550 2100
+Wire Wire Line
+	8300 3600 8300 5050
+$Comp
+L GND #PWR?
+U 1 1 54F77E93
+P 8300 5050
+F 0 "#PWR?" H 8300 5050 30  0001 C CNN
+F 1 "GND" H 8300 4980 30  0001 C CNN
+	1    8300 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 54F77E4E
+P 7550 2350
+F 0 "R?" V 7630 2350 50  0000 C CNN
+F 1 "560" V 7550 2350 50  0000 C CNN
+	1    7550 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 54F77E43
+P 7550 1550
+F 0 "#PWR?" H 7550 1510 30  0001 C CNN
+F 1 "+3.3V" H 7550 1700 60  0000 C CNN
+	1    7550 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 54F77E24
+P 7550 5050
+F 0 "#PWR?" H 7550 5050 30  0001 C CNN
+F 1 "GND" H 7550 4980 30  0001 C CNN
+	1    7550 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L BC237 Q?
+U 1 1 54F77E0B
+P 7450 3900
+F 0 "Q?" H 7650 3800 50  0000 C CNN
+F 1 "P2N2222AG" H 7800 4050 50  0000 C CNN
+F 2 "TO92-EBC" H 7640 3900 30  0001 C CNN
+	1    7450 3900
+	1    0    0    -1  
+$EndComp
+Text Notes 6350 3650 0    60   ~ 0
+BC547B
+Text Notes 6350 2000 0    60   ~ 0
+VISHAY TSAL6200
+$Comp
+L +5V #PWR?
+U 1 1 54F7778A
+P 6200 1550
+F 0 "#PWR?" H 6200 1640 20  0001 C CNN
+F 1 "+5V" H 6200 1700 60  0000 C CNN
+	1    6200 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 54F77763
+P 6200 2100
+F 0 "D?" H 6200 2200 50  0000 C CNN
+F 1 "IR333C LED" V 6200 1800 50  0000 C CNN
+	1    6200 2100
+	0    -1   1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 54F77737
+P 6200 5050
+F 0 "#PWR?" H 6200 5050 30  0001 C CNN
+F 1 "GND" H 6200 4980 30  0001 C CNN
+	1    6200 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 54F776BF
+P 1500 5050
+F 0 "#PWR?" H 1500 5050 30  0001 C CNN
+F 1 "GND" H 1500 4980 30  0001 C CNN
+	1    1500 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 54F77665
+P 5050 1550
+F 0 "#PWR?" H 5050 1510 30  0001 C CNN
+F 1 "+3.3V" H 5050 1700 60  0000 C CNN
+	1    5050 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 54F7765A
+P 4500 3250
+F 0 "#PWR?" H 4500 3250 30  0001 C CNN
+F 1 "GND" H 4500 3180 30  0001 C CNN
+	1    4500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 54F77632
+P 3900 2050
+F 0 "#PWR?" H 3900 2050 30  0001 C CNN
+F 1 "GND" H 3900 1980 30  0001 C CNN
+	1    3900 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 54F775E3
+P 3900 1550
+F 0 "#PWR?" H 3900 1640 20  0001 C CNN
+F 1 "+5V" H 3900 1700 60  0000 C CNN
+	1    3900 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 54F775D8
+P 1500 1600
+F 0 "#PWR?" H 1500 1560 30  0001 C CNN
+F 1 "+3.3V" H 1500 1750 60  0000 C CNN
+	1    1500 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L TSOP4838 U?
+U 1 1 54F77298
+P 4950 2950
+F 0 "U?" V 4800 3200 60  0000 C CNN
+F 1 "TSOP4838" V 5350 2950 60  0000 C CNN
+	1    4950 2950
+	0    -1   1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 54F76C2A
+P 1500 4350
+F 0 "R?" V 1580 4350 50  0000 C CNN
+F 1 "10K" V 1500 4350 50  0000 C CNN
+	1    1500 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L BNC P?
+U 1 1 54F76B60
+P 8300 3400
+F 0 "P?" H 8310 3520 60  0000 C CNN
+F 1 "BNC" H 8410 3340 40  0000 C CNN
+	1    8300 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L BC237 Q?
+U 1 1 54F76732
+P 6100 3900
+F 0 "Q?" H 6300 3800 50  0000 C CNN
+F 1 "P2N2222AG" H 6450 4050 50  0000 C CNN
+F 2 "TO92-EBC" H 6290 3900 30  0001 C CNN
+	1    6100 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 54F76656
+P 6200 2700
+F 0 "D?" H 6200 2800 50  0000 C CNN
+F 1 "IR333C LED" V 6200 2400 50  0000 C CNN
+	1    6200 2700
+	0    -1   1    0   
+$EndComp
+$Comp
+L RASPBERRY_PI_B_REV2 P?
+U 1 1 54F763BF
+P 2750 2350
+F 0 "P?" H 2200 3300 60  0000 C CNN
+F 1 "RASPBERRY_PI_B_REV2" H 2800 1550 60  0000 C CNN
+	1    2750 2350
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
