@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 2/19/2015 07:02:02
+EESchema-DOCLIB  Version 2.0  Date: 3/4/2015 21:07:04
 #
 $CMP MCP1640
 D 0.65V Start-Up Synchronous Boost Regulator
@@ -8,6 +8,11 @@ $ENDCMP
 $CMP NRF24L01+
 D 2.4GHz Antenna Wireless Transceiver Module
 K 2.4GHz Antenna Wireless Transceiver 
+$ENDCMP
+#
+$CMP TSOP4838
+D IR Receiver Modules for Remote Control Systems
+K TSOP4838
 $ENDCMP
 #
 #End Doc Library
