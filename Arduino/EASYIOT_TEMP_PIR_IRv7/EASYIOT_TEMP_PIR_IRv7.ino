@@ -6,7 +6,7 @@
 #include <DomusSiliceaLogging.h>
 
 
-#define NODE_ID          3
+#define NODE_ID          4
 
 #define CHILD_ID_HUM     0
 #define CHILD_ID_TEMP    1
@@ -14,24 +14,24 @@
 #define CHILD_ID_IR_TX   3
 
 #define SKETCH_NAME      "EASYIOT_TEMP_PIR_IR"
-#define SKETCH_VERSION   "6.0"
+#define SKETCH_VERSION   "7.0"
 
-#define BATTERY_SLEEP_MS                 3600000    // Sleep time between reads (in milliseconds)
-#define BATTERY_MAX_SILENT_MS            86400000   // Force trasmission every day even if value does not change
+#define BATTERY_SLEEP_MS                 3600000UL    // Sleep time between reads (in milliseconds)
+#define BATTERY_MAX_SILENT_MS            86400000UL   // Force trasmission every day even if value does not change
 
 
 
 #define DHT_SENSOR_DIGITAL_INPUT     8
-#define DHT_SLEEP_MS                 30000      // Sleep time between reads (in milliseconds)
-#define DHT_MAX_SILENT_MS            3600000    // Force trasmission every hour even if value does not change
-//#define SLEEP_IN_MS 86400000                  // 1 day
+#define DHT_SLEEP_MS                 120000UL      // Sleep time between reads (in milliseconds)
+#define DHT_MAX_SILENT_MS            3600000UL    // Force trasmission every hour even if value does not change
+//#define SLEEP_IN_MS 86400000                    // 1 day
 
-#define PIR_SENSOR_DIGITAL_INPUT     2          // The digital input you attached your motion sensor.  (Only 2 and 3 generates interrupt!)
+#define PIR_SENSOR_DIGITAL_INPUT     2            // The digital input you attached your motion sensor.  (Only 2 and 3 generates interrupt!)
 #define INTERRUPT                    PIR_SENSOR_DIGITAL_INPUT-2 // Usually the interrupt = pin -2 (on uno/nano anyway)
-#define PIR_DISABLED_MS              30000      // Disable PIR for XX milliseconds (i.e. if a IR signal is trasmitted)
+#define PIR_DISABLED_MS              30000UL      // Disable PIR for XX milliseconds (i.e. if a IR signal is trasmitted)
 
-#define IR_TX_SENSOR_DIGITAL_OUTPUT  3          // The digital output you attached your ir led.  Reference constant, not used in the code
-#define IR_TX_SLEEP_MS               5000       // Sleep time between reads (in milliseconds)
+#define IR_TX_SENSOR_DIGITAL_OUTPUT  3            // The digital output you attached your ir led.  Reference constant, not used in the code
+#define IR_TX_SLEEP_MS               5000UL       // Sleep time between reads (in milliseconds)
 
 #define LED_STRIP_ON                 1111
 #define LED_STRIP_OFF                9999
@@ -52,16 +52,16 @@ IRsend    irsend;
 
 unsigned int      m_blnBatteryPowered = true;
 
-unsigned long     m_lngLastCheckDHT;
-float             m_fltLastTemperature;
-unsigned long     m_lngLastTxTemperature;
-float             m_fltLastHumidity;
-unsigned long     m_lngLastTxUmidity;
+unsigned long     m_lngLastCheckDHT       = -DHT_SLEEP_MS;    // To force initial trasmission after reboot
+float             m_fltLastTemperature    = 0;
+unsigned long     m_lngLastTxTemperature  = 0;
+float             m_fltLastHumidity       = 0;
+unsigned long     m_lngLastTxUmidity      = 0;
 
 
-int               m_intLastBatteryLevel;
-unsigned long     m_lngLastCheckBattery;
-unsigned long     m_lngLastTxBatteryLevel;
+int               m_intLastBatteryLevel   = 0;
+unsigned long     m_lngLastCheckBattery   = -BATTERY_SLEEP_MS;     // To force initial trasmission after reboot
+unsigned long     m_lngLastTxBatteryLevel = 0;
 
 boolean           m_blnLastPIRTripped;
 unsigned long     m_lngNextCheckPir;
@@ -81,7 +81,7 @@ void setup()
 { 
     m_objLogger.Init(DOMUSSILICEA_LOGLEVEL, 115200L);
     
-    gw.begin(mySensorsIncomingMessage, NODE_ID, true);
+    gw.begin(mySensorsIncomingMessage, NODE_ID, !m_blnBatteryPowered); /*If battery powered, not work how repeater*/
     gw.sendSketchInfo(SKETCH_NAME, SKETCH_VERSION);
     
     dht.setup(DHT_SENSOR_DIGITAL_INPUT, dht.DHT11); 
@@ -92,15 +92,15 @@ void setup()
     gw.present(CHILD_ID_HUM,      S_HUM);
     gw.present(CHILD_ID_TEMP,     S_TEMP);
     gw.present(CHILD_ID_PIR,      S_MOTION);
-    gw.present(CHILD_ID_IR_TX,    S_DIMMER);
-    gw.present(CHILD_ID_IR_TX,    S_LIGHT);
+    //gw.present(CHILD_ID_IR_TX,    S_DIMMER);
+    //gw.present(CHILD_ID_IR_TX,    S_LIGHT);
 
     // Read current value of light sensor
-    gw.request(CHILD_ID_IR_TX,    V_DIMMER);
-    gw.request(CHILD_ID_IR_TX,    V_LIGHT);
+    //gw.request(CHILD_ID_IR_TX,    V_DIMMER);
+    //gw.request(CHILD_ID_IR_TX,    V_LIGHT);
     
     // If powered by battery, than every hour (BATTERY_SLEEP_MS) a check of the battery level is performed
-    m_blnBatteryPowered = false; //(readVcc() > 3300);                    
+    //m_blnBatteryPowered = (readVcc() < 3300);                    
 
 }
 
@@ -110,11 +110,21 @@ void setup()
 /****************************************************************************/
 void loop()      
 {  
-    gw.process();
+
 
     updatePIR();    
     updateTemperatureAndHumidity();
     updateBatteryLevel();
+
+
+    //gw.process();
+
+    // Sleep until interrupt comes in on motion sensor. Send update every 30 seconds. 
+    gw.sleep(INTERRUPT,CHANGE, DHT_SLEEP_MS);
+    
+    //Or in case you don't have PIR
+    //gw.sleep(DHT_SLEEP_MS);
+
    
    //If millis is reaching the overflow (50 days, one hour before will reset the chip)
    /*
