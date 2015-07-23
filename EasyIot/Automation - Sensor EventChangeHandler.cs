@@ -34,7 +34,12 @@ public void Setup()
       }
 	  else if (
         	(m.Domain == Domains.MYSENSORS) && 
-        	((m.Address == "N3S2") || (m.Address == "N4S2") || (m.Address == "N5S2") )&& 
+        	(
+				(m.Address == "N3S2") || 
+				(m.Address == "N4S2") || 
+				(m.Address == "N5S2") || 
+				(m.Address == "N86S2") 
+			)&& 
         	(p.Property == "Sensor.Motion") && 
         	(p.Value == "1") &&
             (alarm.Value == "1")

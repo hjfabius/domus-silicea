@@ -6,7 +6,7 @@
 #include <DomusSiliceaLogging.h>
 
 
-#define NODE_ID          86
+#define NODE_ID          1
 
 #define CHILD_ID_HUM     0
 #define CHILD_ID_TEMP    1
@@ -14,7 +14,7 @@
 #define CHILD_ID_IR_TX   3
 
 #define SKETCH_NAME      "EASYIOT_TEMP_PIR_IR"
-#define SKETCH_VERSION   "7.0"
+#define SKETCH_VERSION   "8.0"
 
 #define BATTERY_SLEEP_MS                 3600000UL    // Sleep time between reads (in milliseconds)
 #define BATTERY_MAX_SILENT_MS            86400000UL   // Force trasmission every day even if value does not change
@@ -85,13 +85,13 @@ void setup()
     gw.sendSketchInfo(SKETCH_NAME, SKETCH_VERSION);
     
     dht.setup(DHT_SENSOR_DIGITAL_INPUT, dht.DHT11); 
-    pinMode(PIR_SENSOR_DIGITAL_INPUT, INPUT);   
+    //pinMode(PIR_SENSOR_DIGITAL_INPUT, INPUT);   
     
     
     // Register all sensors to gw (they will be created as child devices)
     gw.present(CHILD_ID_HUM,      S_HUM);
     gw.present(CHILD_ID_TEMP,     S_TEMP);
-    gw.present(CHILD_ID_PIR,      S_MOTION);
+    //gw.present(CHILD_ID_PIR,      S_MOTION);
     //gw.present(CHILD_ID_IR_TX,    S_DIMMER);
     //gw.present(CHILD_ID_IR_TX,    S_LIGHT);
 
@@ -112,7 +112,7 @@ void loop()
 {  
 
 
-    updatePIR();    
+    //updatePIR();    
     updateTemperatureAndHumidity();
     updateBatteryLevel();
 
@@ -120,10 +120,10 @@ void loop()
     //gw.process();
 
     // Sleep until interrupt comes in on motion sensor. Send update every 30 seconds. 
-    gw.sleep(INTERRUPT,CHANGE, DHT_SLEEP_MS);
+    //gw.sleep(INTERRUPT,CHANGE, DHT_SLEEP_MS);
     
     //Or in case you don't have PIR
-    //gw.sleep(DHT_SLEEP_MS);
+    gw.sleep(DHT_SLEEP_MS);
 
    
    //If millis is reaching the overflow (50 days, one hour before will reset the chip)

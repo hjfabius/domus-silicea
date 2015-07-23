@@ -8,13 +8,13 @@ public void Setup()
 		Console.WriteLine("Email Sender - Standard");  
 	  
 		System.Net.Mail.SmtpClient  	client 		= new System.Net.Mail.SmtpClient("smtp.gmail.com", 587);
-		client.Credentials = new System.Net.NetworkCredential("hjfabius@gmail.com", "fabius_00");
+		client.Credentials = new System.Net.NetworkCredential("username", "password");
 		client.EnableSsl = true;
 		client.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
 	  
 	  
-		System.Net.Mail.MailAddress 	fromMail 	= new System.Net.Mail.MailAddress("hjfabius@gmail.com", "hjfabius",  System.Text.Encoding.UTF8);
-		System.Net.Mail.MailAddress 	toMail 		= new System.Net.Mail.MailAddress("fabio.cristini@gmail.com");
+		System.Net.Mail.MailAddress 	fromMail 	= new System.Net.Mail.MailAddress("email", "name",  System.Text.Encoding.UTF8);
+		System.Net.Mail.MailAddress 	toMail 		= new System.Net.Mail.MailAddress("email");
 		System.Net.Mail.MailMessage 	message 	= new System.Net.Mail.MailMessage(fromMail, toMail);
 		message.Body = "This is a test e-mail message sent by an application. ";
 		message.BodyEncoding =  System.Text.Encoding.UTF8;
@@ -25,12 +25,22 @@ public void Setup()
 		string strFile = "http://192.168.0.14/cam.jpg";
 		string strLocalFile = "/tmp/cam.jpg";
 		
-		using(System.Net.WebClient objWebClient = new System.Net.WebClient())
+		/*using(System.Net.WebClient objWebClient = new System.Net.WebClient())
 		{
 			objWebClient.DownloadFile(strFile, strLocalFile);
 		}
 		
 		System.Net.Mail.Attachment objAttachment = new System.Net.Mail.Attachment(strLocalFile, System.Net.Mime.MediaTypeNames.Image.Jpeg);
+		*/
+		
+		Console.WriteLine("Reading from: ");  
+		Console.WriteLine(strFile);  
+		System.Net.WebRequest objWebRequest = System.Net.WebRequest.Create(strFile);
+
+		System.Net.WebResponse objWebResponse = objWebRequest.GetResponse();		
+
+		System.Net.Mail.Attachment objAttachment = new System.Net.Mail.Attachment(objWebResponse.GetResponseStream(), strLocalFile);
+		
 		// Add time stamp information for the file.
 		System.Net.Mime.ContentDisposition objContentDisposition = objAttachment.ContentDisposition;
 		objContentDisposition.CreationDate = System.IO.File.GetCreationTime(strFile);
