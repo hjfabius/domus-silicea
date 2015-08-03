@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' version='1.2' baseProfile='tiny' x='0in' y='0in' width='1.67in' height='2.3in' viewBox='0 0 120.8 165.6' >
+<g partID='620901'><g transform="matrix(1, 0, 0, 1, 0, -122.4)">
+<g id="breadboard">
+	<g>
+		<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" 		d="m77.60,	194.4,	0,		79.2" fill="none" id="path3848" stroke-width="5.04" stroke="#323232"/>
+		<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" 		d="m70.40,	194.4,	0,		79.2" fill="none" id="path3846" stroke-width="5.04" stroke="#e6c739"/>
+		<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" 		d="m63.20,	194.4,	0,		79.2" fill="none" id="path3850" stroke-width="5.04" stroke="#d2382b"/>
+																																																																		
+		<path style="color:#000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="0.25" 	d="m79.04,	197.4,	0,		75.0" fill="none" id="path3852" stroke-width="0.72" stroke="#ffffff"/>
+		<path style="color:#000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="0.25" 	d="m71.84,	197.4,	0,		75.0" fill="none" id="path3854" stroke-width="0.72" stroke="#ffffff"/>
+		<path style="color:#000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="0.25" 	d="m64.64,	197.4,	0,		75.0" fill="none" id="path3856" stroke-width="0.72" stroke="#ffffff"/>
+																																																																		
+		<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" 		d="m17.60,	148.8,	0,		124.8" fill="none" id="path13848" stroke-width="5.04" stroke="#dddddd"/>
+		<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" 		d="m10.40,	141.6,	0,		132.0" fill="none" id="path13846" stroke-width="5.04" stroke="#999999"/>
+		<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" 		d="m03.20,	134.4,	0,		139.2" fill="none" id="path13850" stroke-width="5.04" stroke="#323232"/>
+																																																																		
+		<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" 		d="m27.60,	148.8,	-12.5,	0"	   fill="none" id="path13858" stroke-width="5.04" stroke="#dddddd"/>
+		<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" 		d="m27.60,	141.6,	-19.7,	0"	   fill="none" id="path13856" stroke-width="5.04" stroke="#999999"/>
+		<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" 		d="m27.60,	134.4,	-26.9,	0"	   fill="none" id="path13860" stroke-width="5.04" stroke="#323232"/>
+																																																																		
+		<path style="color:#000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="0.25" 	d="m19.04,	150.8,	0,		121.6" fill="none" id="path13852" stroke-width="0.72" stroke="#ffffff"/>
+		<path style="color:#000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="0.25" 	d="m11.84,	143.6,	0,		128.8" fill="none" id="path13854" stroke-width="0.72" stroke="#ffffff"/>
+		<path style="color:#000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="0.25" 	d="m04.64,	136.4,	0,		136.0" fill="none" id="path13856" stroke-width="0.72" stroke="#ffffff"/>
+																																																																		
+		<path style="color:#000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="0.25" 	d="m27.60,	150.3,	-8.7,		0" fill="none" id="path13852" stroke-width="0.72" stroke="#ffffff"/>
+		<path style="color:#000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="0.25" 	d="m27.60,	143.1,	-15.9,		0" fill="none" id="path13854" stroke-width="0.72" stroke="#ffffff"/>
+		<path style="color:#000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="0.25" 	d="m27.60,	135.9,	-23.1,		0" fill="none" id="path13856" stroke-width="0.72" stroke="#ffffff"/>	
+		
+
+		<g transform="matrix(1, 0, 0, 1, 20, 0)">
+			<path style="display:inline" d="m3.6,129.6,0,64.8,93.6,0,0,-64.8,-93.6,0zM7.2,159.125c1.59058,0,2.875,1.28442,2.875,2.875,0,1.59058,-1.28442,2.875,-2.875,2.875,-1.59058,0,-2.875,-1.28442,-2.875,-2.875,0,-1.59058,1.28442,-2.875,2.875,-2.875zm86.4,0c1.59058,0,2.875,1.28442,2.875,2.875,0,1.59058,-1.28442,2.875,-2.875,2.875,-1.59058,0,-2.875,-1.28442,-2.875,-2.875,0,-1.59058,1.28442,-2.875,2.875,-2.875z" fill="#2ca02c" id="rect2999" stroke="none"/>
+			<rect style="fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;display:inline" stroke-opacity="1" fill-opacity="1" width="72" height="72" x="14.4" fill="#dbe3e2" y="126" id="rect3006" stroke-width="0.144" stroke="#000000"/>
+
+			<g transform="matrix(1, 0, 0, 1, -3.6, -86.4)">
+				<path style="opacity:0.95;fill-rule:evenodd;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;display:inline" stroke-opacity="0.39130435" fill-opacity="1" d="m61.2944,228.069a21.6,21.6,0,0,1,12.417,11.498" fill="#b7c8be" id="path3826" stroke-width="10.8" stroke="#ffffff"/>
+			</g>
+			<g transform="matrix(1, 0, 0, 1, -3.6, -86.4)">
+				<path style="opacity:0.95;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;display:inline" stroke-opacity="0.48369565" fill-opacity="1" d="m90,248.4a36,36,0,1,1,-72,0,36,36,0,1,1,72,0z" fill="url(#radialGradient3947)" id="path3780" stroke-width="0.144" stroke="#000000"/>
+			</g>
+			<g transform="matrix(1, 0, 0, 1, -3.6, -86.4)">
+				<path style="opacity:0.66515838;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;display:inline" stroke-opacity="0.66847827" d="m40.9324,236.021a18,18,0,0,1,4.22924,-3.30174" fill="none" id="path3824" stroke-width="18" stroke="#ffffff"/>
+			</g>			
+		</g>
+
+		<rect style="opacity:0.95;display:inline" width="2.16" height="7.2" x="76.52" fill="#cccccc" y="273.6" id="rect3858" stroke="none"/>
+		<rect style="opacity:0.95;display:inline" width="2.16" height="7.2" x="69.32" fill="#cccccc" y="273.6" id="rect3900" stroke="none"/>
+		<rect style="opacity:0.95;display:inline" width="2.16" height="7.2" x="62.12" fill="#cccccc" y="273.6" id="rect3902" stroke="none"/>
+                                                                               
+		<rect style="opacity:0.95;display:inline" width="2.16" height="7.2" x="16.52" fill="#cccccc" y="273.6" id="rect13858" stroke="none"/>
+		<rect style="opacity:0.95;display:inline" width="2.16" height="7.2" x="09.32" fill="#cccccc" y="273.6" id="rect13900" stroke="none"/>
+		<rect style="opacity:0.95;display:inline" width="2.16" height="7.2" x="02.12" fill="#cccccc" y="273.6" id="rect13902" stroke="none"/>
+
+		<rect style="opacity:0.51583707;display:inline" width="2.88" height="2.88" x="76.02" fill="none" y="279.36" id="connector1pin" stroke="none"/>
+		<rect style="opacity:0.51583707;display:inline" width="2.88" height="2.88" x="68.82" fill="none" y="279.36" id="connector2pin" stroke="none"/>
+		<rect style="opacity:0.51583707;display:inline" width="2.88" height="2.88" x="61.62" fill="none" y="279.36" id="connector3pin" stroke="none"/>
+		                                                                                           
+		<rect style="opacity:0.51583707;display:inline" width="2.88" height="2.88" x="16.02" fill="none" y="279.36" id="connector1pin" stroke="none"/>
+		<rect style="opacity:0.51583707;display:inline" width="2.88" height="2.88" x="08.82" fill="none" y="279.36" id="connector2pin" stroke="none"/>
+		<rect style="opacity:0.51583707;display:inline" width="2.88" height="2.88" x="01.62" fill="none" y="279.36" id="connector3pin" stroke="none"/>
+
+	</g>
+</g>
+</g>
+</g></svg>

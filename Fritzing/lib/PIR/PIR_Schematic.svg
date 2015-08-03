@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' version='1.2' baseProfile='tiny' x='0in' y='0in' width='2.3622in' height='1.77165in' viewBox='0 0 170.079 127.559' >
+<g partID='620901'>
+<g id="schematic">
+
+<rect style="stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" stroke-opacity="1" width="100" height="80" x="30" y="10"  id="rect1" fill="none"  stroke-width="1.43427" stroke="#000000"/>
+
+<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" d="m10,20,20,0" fill="none" id="path1" stroke-width="2.4" stroke="#000000"/>
+<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" d="m10,35,20,0" fill="none" id="path2" stroke-width="2.4" stroke="#000000"/>
+<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" d="m10,50,20,0" fill="none" id="path3" stroke-width="2.4" stroke="#000000"/>
+
+<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" d="m65,90,0,20" fill="none" id="path4" stroke-width="2.4" stroke="#000000"/>
+<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" d="m80,90,0,20" fill="none" id="path5" stroke-width="2.4" stroke="#000000"/>
+<path style="color:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" stroke-opacity="1" d="m95,90,0,20" fill="none" id="path6" stroke-width="2.4" stroke="#000000"/>
+
+<text style="text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;font-family:OCRA;-inkscape-font-specification:OCRA" font-size="10" fill="#000000" x="35" y="22" id="text1" stroke="none">GND</text>
+<text style="text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;font-family:OCRA;-inkscape-font-specification:OCRA" font-size="10" fill="#000000" x="35" y="37" id="text2" stroke="none">TRG</text>
+<text style="text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;font-family:OCRA;-inkscape-font-specification:OCRA" font-size="10" fill="#000000" x="35" y="53" id="text3" stroke="none">+3V3</text>
+
+<g transform="matrix(0,-1,1,0,69,85)">
+	<text style="text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;font-family:OCRA;-inkscape-font-specification:OCRA" font-size="10" fill="#000000" x="0" y="0" id="text4" stroke="none">VDD</text>
+	<text style="text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;font-family:OCRA;-inkscape-font-specification:OCRA" font-size="10" fill="#000000" x="0" y="15" id="text5" stroke="none">SIG</text>
+	<text style="text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;font-family:OCRA;-inkscape-font-specification:OCRA" font-size="10" fill="#000000" x="0" y="30" id="text6" stroke="none">GND</text>
+</g>
+
+<text style="text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;font-family:OCRA;-inkscape-font-specification:OCRA" font-size="10" fill="#000000" x="125" y="22" id="text7" stroke="none">HC-SR501</text>
+<text style="text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;font-family:OCRA;-inkscape-font-specification:OCRA" font-size="10" fill="#000000" x="125" y="37" id="text8" stroke="none">PIR</text>
+<text style="text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;font-family:OCRA;-inkscape-font-specification:OCRA" font-size="10" fill="#000000" x="125" y="53" id="text9" stroke="none">SENSOR</text>
+<rect width="5.66" height="5.66" fill="none"  x="127.5" y="17.5" id="connector1pinGND" stroke="none"/>
+<rect width="5.66" height="5.66" fill="none"  x="127.5" y="32.5" id="connector2pinTRG" stroke="none"/>
+<rect width="5.66" height="5.66" fill="none"  x="127.5" y="47.5" id="connector3pin3V3" stroke="none"/>
+                                       
+<rect width="5.66" height="5.66" fill="none"  x="42.5" y="107.5" id="connector4pinVDD" stroke="none"/>
+<rect width="5.66" height="5.66" fill="none"  x="57.5" y="107.5" id="connector5pinSIG" stroke="none"/>
+<rect width="5.66" height="5.66" fill="none"  x="72.5" y="107.5" id="connector6pinGND" stroke="none"/>
+
+
+</g>
+</g></svg>
