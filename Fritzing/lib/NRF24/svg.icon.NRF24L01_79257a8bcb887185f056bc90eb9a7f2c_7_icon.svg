@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE svg>
+<!-- Generator: Adobe Illustrator 13.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 14948)  -->
+<svg xmlns="http://www.w3.org/2000/svg" width="2.08333in" x="0px" version="1.1" y="0px" gorn="0"  height="3.61111in" viewBox="0 0 150 260" xmlns:xml="http://www.w3.org/XML/1998/namespace" id="Layer_1" enable-background="new 0 0 150 260" xml:space="preserve">
+    <desc >
+        <referenceFile >NRF24L01.svg</referenceFile>
+    </desc>
+    <rect width="147" x="1.833" y="-0.167"  height="260.666"/>
+    <path fill="#FFFFFF"  stroke="#000000" stroke-width="1" d="M136.645,127.75c0-9.389-8.512-17-19.01-17c-10.499,0-19.01,7.611-19.01,17c0,0.123,0.018,0.241,0.021,0.363v68.657c-0.003,0.105-0.021,0.208-0.021,0.313s0.018,0.208,0.021,0.313v0.019h0.001c0.231,7.944,8.635,14.334,18.988,14.334s18.757-6.39,18.988-14.334h0.021v-69.333h-0.019C136.628,127.972,136.645,127.863,136.645,127.75z"/>
+    <path fill="#B2B2B2"  d="M138.645,129.75c0-9.389-8.512-17-19.01-17c-10.499,0-19.01,7.611-19.01,17c0,0.123,0.018,0.241,0.021,0.363v68.657c-0.003,0.105-0.021,0.208-0.021,0.313s0.018,0.208,0.021,0.313v0.019h0.001c0.231,7.944,8.635,14.334,18.988,14.334s18.757-6.39,18.988-14.334h0.021v-69.333h-0.019C138.628,129.972,138.645,129.863,138.645,129.75z"/>
+    <circle fill="#FFFFFF" cx="50.25"  cy="226.906" r="4.125"/>
+    <circle fill="#FFFFFF" cx="70.375"  cy="226.906" r="4.125"/>
+    <circle fill="#FFFFFF" cx="90.063"  cy="226.906" r="4.125"/>
+    <circle fill="#FFFFFF" cx="31.125"  cy="226.906" r="4.125"/>
+    <circle fill="#FFFFFF" cx="31.125"  cy="238.375" r="4.125"/>
+    <circle fill="#FFFFFF" cx="50.25"  cy="238.375" r="4.125"/>
+    <circle fill="#FFFFFF" cx="70.375"  cy="238.375" r="4.125"/>
+    <circle fill="#FFFFFF" cx="90.063"  cy="238.375" r="4.125"/>
+    <g  transform="matrix(1 0 0 1 23.5 221.25)">
+        <g >
+            <g >
+                <text fill="#FFFFFF" font-family="Droid Sans"  font-size="7">VCC</text>
+            </g>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 41 221.25)">
+        <g >
+            <g >
+                <text fill="#FFFFFF" font-family="Droid Sans"  font-size="7">CSN</text>
+            </g>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 59.625 221.25)">
+        <g >
+            <g >
+                <text fill="#FFFFFF" font-family="Droid Sans"  font-size="7">MOSI</text>
+            </g>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 81.125 221.25)">
+        <g >
+            <g >
+                <text fill="#FFFFFF" font-family="Droid Sans"  font-size="7">IRQ</text>
+            </g>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 21.5 249.25)">
+        <g >
+            <g >
+                <text fill="#FFFFFF" font-family="Droid Sans"  font-size="7">GND</text>
+            </g>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 45.125 249.25)">
+        <g >
+            <g >
+                <text fill="#FFFFFF" font-family="Droid Sans"  font-size="7">CE</text>
+            </g>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 60.25 249.25)">
+        <g >
+            <g >
+                <text fill="#FFFFFF" font-family="Droid Sans"  font-size="7">SCK</text>
+            </g>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 80.75 249.25)">
+        <g >
+            <g >
+                <text fill="#FFFFFF" font-family="Droid Sans"  font-size="7">MISO</text>
+            </g>
+        </g>
+    </g>
+    <polygon fill="#FFFF00" points="146.792,7.208 146.792,2.875 105.938,2.875 105.958,7.208 105.958,7.208 105.958,40.042 99.958,40.042 99.958,6.875 99.917,6.792 99.938,2.729 82.906,2.75 82.938,6.75 82.958,6.875 82.958,40.042 76.625,40.042 76.625,6.875 76.641,6.828 76.625,2.906 60.293,2.875 60.293,6.875 60.291,6.875 60.291,40.042 54.625,40.042 54.625,3.208 37.125,3.208 37.125,83.208 42.125,83.208 42.125,64.542 111.792,64.542 111.792,60.208 42.125,60.208 42.125,6.708 49.458,6.708 49.458,41.375 49.501,41.708 49.501,44.292 65.501,44.25 65.459,40.458 65.458,40.042 65.458,7.208 71.458,7.208 71.458,41.375 71.417,41.625 71.417,44.208 88.141,44.172 88.141,40.234 88.125,40.042 88.125,7.042 94.791,7.042 94.791,40.042 94.797,40.234 94.781,43.531 111.126,43.542 111.126,40.042 111.125,40.042 111.125,7.208 " />
+    <rect width="23.5" x="10.5" y="83.5" fill="#736357"  height="8.5"/>
+    <rect width="23.5" x="36.5" y="111" fill="#736357"  height="8.5"/>
+    <rect width="23.5" x="64.5" y="111" fill="#736357"  height="8.5"/>
+    <rect width="23.5" x="51.5" y="124.5" fill="#736357"  height="8.5"/>
+    <rect width="23.5" x="11.5" y="142.5" fill="#736357"  height="8.5"/>
+    <rect width="23.5" x="11.5" y="163.5" fill="#736357"  height="8.5"/>
+    <rect width="23.5" x="11.5" y="181.5" fill="#736357"  height="8.5"/>
+    <rect width="23.5" x="11.5" y="195" fill="#736357"  height="8.5"/>
+    <rect width="8" x="38" y="83.5" fill="#736357"  height="23.5"/>
+    <rect width="8" x="86.5" y="137.75" fill="#736357"  height="23.5"/>
+    <rect width="8" x="112.5" y="215.75" fill="#736357"  height="23.5"/>
+    <rect width="8" x="51.375" y="83.5" fill="#736357"  height="23.5"/>
+    <rect width="8" x="64.75" y="83.5" fill="#736357"  height="23.5"/>
+    <rect width="8" x="78.125" y="83.5" fill="#736357"  height="23.5"/>
+    <rect width="8" x="91.5" y="83.5" fill="#736357"  height="23.5"/>
+    <rect width="8" x="115.5" y="83.25" fill="#736357"  height="23.5"/>
+    <g  transform="matrix(4.489659e-011 -1 1 4.489659e-011 16 66.5)">
+        <g >
+            <g >
+                <text fill="#FFFFFF" font-family="Droid Sans"  font-size="12">NRF24L01</text>
+            </g>
+        </g>
+    </g>
+</svg>

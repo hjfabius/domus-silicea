@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Generator: Adobe Illustrator 13.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 14948)  -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0.604736in" x="0px" version="1.2" y="0px" gorn="0"  height="1.07232in" viewBox="0 0 43.541 77.207" baseProfile="tiny" xmlns:xml="http://www.w3.org/XML/1998/namespace" id="Layer_1" xml:space="preserve">
+    <desc >
+        <referenceFile >NRF24L01.svg</referenceFile>
+    </desc>
+    <rect width="43.541"  height="77.207"/>
+    <path fill="#FFFFFF"  stroke="#000000" stroke-width="1" d="M39.931,37.887c0-2.78-2.522-5.035-5.631-5.035c-3.11,0-5.63,2.255-5.63,5.035c0,0.037,0.005,0.072,0.006,0.108v20.336c-0.001,0.03-0.006,0.063-0.006,0.093c0,0.031,0.005,0.062,0.006,0.093v0.006l0,0c0.069,2.354,2.558,4.246,5.625,4.246s5.556-1.893,5.624-4.246h0.008V37.986h-0.006C39.926,37.953,39.931,37.921,39.931,37.887z"/>
+    <path fill="#B2B2B2"  d="M40.523,38.48c0-2.781-2.521-5.036-5.631-5.036c-3.11,0-5.631,2.255-5.631,5.036c0,0.035,0.005,0.071,0.007,0.107v20.335c-0.001,0.031-0.007,0.063-0.007,0.094s0.005,0.063,0.007,0.092v0.007l0,0c0.068,2.353,2.558,4.245,5.624,4.245s5.556-1.893,5.625-4.245h0.006V38.578h-0.006C40.518,38.546,40.523,38.513,40.523,38.48z"/>
+    <circle fill="#FFFFFF" cx="14.341" gorn="0.4"  cy="67.257" r="1.222" id="connector1pin"/>
+    <circle fill="#FFFFFF" cx="20.301" gorn="0.5"  cy="67.257" r="1.222" id="connector2pin"/>
+    <circle fill="#FFFFFF" cx="26.133" gorn="0.6"  cy="67.257" r="1.222" id="connector3pin"/>
+    <circle fill="#FFFFFF" cx="8.676" gorn="0.7"  cy="67.257" r="1.221" id="connector0pin"/>
+    <circle fill="#FFFFFF" cx="8.676" gorn="0.8"  cy="70.653" r="1.221" id="connector4pin"/>
+    <circle fill="#FFFFFF" cx="14.341" gorn="0.9"  cy="70.653" r="1.222" id="connector5pin"/>
+    <circle fill="#FFFFFF" cx="20.301" gorn="0.10"  cy="70.653" r="1.222" id="connector6pin"/>
+    <circle fill="#FFFFFF" cx="26.133" gorn="0.11"  cy="70.653" r="1.222" id="connector7pin"/>
+    <g  transform="matrix(1 0 0 1 6.417 65.582)">
+        <g >
+            <text fill="#FFFFFF" font-family="Droid Sans"  font-size="2.0734">V</text>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 7.8159 65.582)">
+        <g >
+            <text fill="#FFFFFF" font-family="Droid Sans"  font-size="2.0734">C</text>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 9.3511 65.582)">
+        <g >
+            <text fill="#FFFFFF" font-family="Droid Sans"  font-size="2.0734">C</text>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 11.6006 65.582)">
+        <g >
+            <text fill="#FFFFFF" font-family="Droid Sans"  font-size="2.0734">CSN</text>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 17.1177 65.582)">
+        <g >
+            <text fill="#FFFFFF" font-family="Droid Sans"  font-size="2.0734">MOSI</text>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 23.4858 65.582)">
+        <g >
+            <text fill="#FFFFFF" font-family="Droid Sans"  font-size="2.0734">IRQ</text>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 5.8252 73.874)">
+        <g >
+            <text fill="#FFFFFF" font-family="Droid Sans"  font-size="2.0734">GND</text>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 12.8228 73.874)">
+        <g >
+            <text fill="#FFFFFF" font-family="Droid Sans"  font-size="2.0734">CE</text>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 17.3022 73.874)">
+        <g >
+            <text fill="#FFFFFF" font-family="Droid Sans"  font-size="2.0734">SCK</text>
+        </g>
+    </g>
+    <g  transform="matrix(1 0 0 1 23.3745 73.874)">
+        <g >
+            <text fill="#FFFFFF" font-family="Droid Sans"  font-size="2.0734">MISO</text>
+        </g>
+    </g>
+    <polygon fill="#FFFF00" points="42.936,2.184 42.936,0.9 30.835,0.9 30.841,2.184 30.841,2.184 30.841,11.908 29.064,11.908 29.064,2.085 29.052,2.06 29.058,0.858 24.013,0.863 24.022,2.048 24.029,2.085 24.029,11.908 22.153,11.908 22.153,2.085 22.157,2.071 22.153,0.909 17.315,0.9 17.315,2.085 17.314,2.085 17.314,11.908 15.637,11.908 15.637,1 10.453,1 10.453,24.694 11.934,24.694 11.934,19.165 32.569,19.165 32.569,17.882 11.934,17.882 11.934,2.035 14.106,2.035 14.106,12.304 14.119,12.403 14.119,13.168 18.858,13.155 18.846,12.032 18.846,11.908 18.846,2.184 20.622,2.184 20.622,12.304 20.61,12.378 20.61,13.143 25.563,13.132 25.563,11.966 25.559,11.908 25.559,2.135 27.533,2.135 27.533,11.908 27.535,11.966 27.53,12.941 32.372,12.945 32.372,11.908 32.372,11.908 32.372,2.184 " />
+    <rect width="6.96" x="2.567" y="24.781" fill="#736357"  height="2.517"/>
+    <rect width="6.96" x="10.269" y="32.926" fill="#736357"  height="2.519"/>
+    <rect width="6.96" x="18.562" y="32.926" fill="#736357"  height="2.519"/>
+    <rect width="6.961" x="14.711" y="36.926" fill="#736357"  height="2.517"/>
+    <rect width="6.96" x="2.864" y="42.257" fill="#736357"  height="2.517"/>
+    <rect width="6.96" x="2.864" y="48.478" fill="#736357"  height="2.517"/>
+    <rect width="6.96" x="2.864" y="53.809" fill="#736357"  height="2.517"/>
+    <rect width="6.96" x="2.864" y="57.807" fill="#736357"  height="2.518"/>
+    <rect width="2.369" x="10.712" y="24.781" fill="#736357"  height="6.96"/>
+    <rect width="2.37" x="25.078" y="40.85" fill="#736357"  height="6.96"/>
+    <rect width="2.369" x="32.779" y="63.952" fill="#736357"  height="6.961"/>
+    <rect width="2.369" x="14.674" y="24.781" fill="#736357"  height="6.96"/>
+    <rect width="2.369" x="18.636" y="24.781" fill="#736357"  height="6.96"/>
+    <rect width="2.37" x="22.597" y="24.781" fill="#736357"  height="6.96"/>
+    <rect width="2.37" x="26.558" y="24.781" fill="#736357"  height="6.96"/>
+    <rect width="2.369" x="33.667" y="24.707" fill="#736357"  height="6.96"/>
+    <g  transform="matrix(4.489660e-011 -1 1 4.489660e-011 4.1953 19.7461)">
+        <g >
+            <text fill="#FFFFFF" font-family="Droid Sans"  font-size="3.5543">NRF24L01</text>
+        </g>
+    </g>
+</svg>

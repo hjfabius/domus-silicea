@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="55" version="1.1" gorn="0"  height="102.71875" id="svg2">
+    <desc >
+        <referenceFile >NRF24L01_PCB.svg</referenceFile>
+    </desc>
+    <defs  id="defs4"/>
+    <metadata  id="metadata7">
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+            <cc:Work xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" rdf:about="">
+                <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">image/svg+xml</dc:format>
+                <dc:type xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://purl.org/dc/dcmitype/StillImage" xmlns:dc="http://purl.org/dc/elements/1.1/"/>
+                <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/"/>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <g  transform="translate(-188.0625,-263.28125)">
+        <g >
+            <g gorn="0.3.0.0"  id="layer2"/>
+        </g>
+    </g>
+    <g  transform="translate(-188.0625,-263.28125)">
+        <g >
+            <g gorn="0.4.0.0"  style="display:none" id="layer3"/>
+        </g>
+    </g>
+    <g  transform="translate(-188.0625,-263.28125)">
+        <g >
+            <g gorn="0.5.0.0"  id="layer1">
+                <g gorn="0.5.0.0.0"  id="copper0">
+                    <g  transform="matrix(1.25,0,0,1.25,183.60892,345.55535)">
+                        <g >
+                            <circle fill="none" cx="25.92" gorn="0.5.0.0.0.0.0.0"  cy="4.3200002" stroke="#ffbf00" id="connector7pad" r="1.584" stroke-width="1.15199995" d="m 27.504,4.3200002 c 0,0.874819 -0.709181,1.584 -1.584,1.584 -0.874819,0 -1.584,-0.709181 -1.584,-1.584 0,-0.8748191 0.709181,-1.584 1.584,-1.584 0.874819,0 1.584,0.7091809 1.584,1.584 z"/>
+                        </g>
+                    </g>
+                    <g  transform="matrix(1.25,0,0,1.25,192.35893,345.55535)">
+                        <g >
+                            <circle fill="none" cx="25.92" gorn="0.5.0.0.0.1.0.0"  cy="4.3200002" stroke="#ffbf00" id="connector7pad-1" r="1.584" stroke-width="1.15199995" d="m 27.504,4.3200002 c 0,0.874819 -0.709181,1.584 -1.584,1.584 -0.874819,0 -1.584,-0.709181 -1.584,-1.584 0,-0.8748191 0.709181,-1.584 1.584,-1.584 0.874819,0 1.584,0.7091809 1.584,1.584 z"/>
+                        </g>
+                    </g>
+                    <g  transform="matrix(1.25,0,0,1.25,174.85892,345.55535)">
+                        <g >
+                            <circle fill="none" cx="25.92" gorn="0.5.0.0.0.2.0.0"  cy="4.3200002" stroke="#ffbf00" id="connector7pad-7" r="1.584" stroke-width="1.15199995" d="m 27.504,4.3200002 c 0,0.874819 -0.709181,1.584 -1.584,1.584 -0.874819,0 -1.584,-0.709181 -1.584,-1.584 0,-0.8748191 0.709181,-1.584 1.584,-1.584 0.874819,0 1.584,0.7091809 1.584,1.584 z"/>
+                        </g>
+                    </g>
+                    <g  transform="matrix(1.25,0,0,1.25,201.10893,345.55535)">
+                        <g >
+                            <circle fill="none" cx="25.92" gorn="0.5.0.0.0.3.0.0"  cy="4.3200002" stroke="#ffbf00" id="connector7pad-4" r="1.584" stroke-width="1.15199995" d="m 27.504,4.3200002 c 0,0.874819 -0.709181,1.584 -1.584,1.584 -0.874819,0 -1.584,-0.709181 -1.584,-1.584 0,-0.8748191 0.709181,-1.584 1.584,-1.584 0.874819,0 1.584,0.7091809 1.584,1.584 z"/>
+                        </g>
+                    </g>
+                    <g  transform="matrix(1.25,0,0,1.25,183.59404,354.39464)">
+                        <g >
+                            <circle fill="none" cx="25.92" gorn="0.5.0.0.0.4.0.0"  cy="4.3200002" stroke="#ffbf00" id="connector7pad-0" r="1.584" stroke-width="1.15199995" d="m 27.504,4.3200002 c 0,0.874819 -0.709181,1.584 -1.584,1.584 -0.874819,0 -1.584,-0.709181 -1.584,-1.584 0,-0.8748191 0.709181,-1.584 1.584,-1.584 0.874819,0 1.584,0.7091809 1.584,1.584 z"/>
+                        </g>
+                    </g>
+                    <g  transform="matrix(1.25,0,0,1.25,192.37381,354.39464)">
+                        <g >
+                            <circle fill="none" cx="25.92" gorn="0.5.0.0.0.5.0.0"  cy="4.3200002" stroke="#ffbf00" id="connector7pad-1-9" r="1.584" stroke-width="1.15199995" d="m 27.504,4.3200002 c 0,0.874819 -0.709181,1.584 -1.584,1.584 -0.874819,0 -1.584,-0.709181 -1.584,-1.584 0,-0.8748191 0.709181,-1.584 1.584,-1.584 0.874819,0 1.584,0.7091809 1.584,1.584 z"/>
+                        </g>
+                    </g>
+                    <g  transform="matrix(1.25,0,0,1.25,174.81428,354.39464)">
+                        <g >
+                            <circle fill="none" cx="25.92" gorn="0.5.0.0.0.6.0.0"  cy="4.3200002" stroke="#ffbf00" id="connector7pad-7-4" r="1.584" stroke-width="1.15199995" d="m 27.504,4.3200002 c 0,0.874819 -0.709181,1.584 -1.584,1.584 -0.874819,0 -1.584,-0.709181 -1.584,-1.584 0,-0.8748191 0.709181,-1.584 1.584,-1.584 0.874819,0 1.584,0.7091809 1.584,1.584 z"/>
+                        </g>
+                    </g>
+                    <g  transform="matrix(1.25,0,0,1.25,201.15357,354.39464)">
+                        <g >
+                            <circle fill="none" cx="25.92" gorn="0.5.0.0.0.7.0.0"  cy="4.3200002" stroke="#ffbf00" id="connector7pad-4-8" r="1.584" stroke-width="1.15199995" d="m 27.504,4.3200002 c 0,0.874819 -0.709181,1.584 -1.584,1.584 -0.874819,0 -1.584,-0.709181 -1.584,-1.584 0,-0.8748191 0.709181,-1.584 1.584,-1.584 0.874819,0 1.584,0.7091809 1.584,1.584 z"/>
+                        </g>
+                    </g>
+                </g>
+                <rect width="54.714287" x="188.29463" y="263.45358" fill="none" gorn="0.5.0.0.1"  height="102.41428" stroke="#ffffff" style="stroke-miterlimit:4;stroke-dasharray:none" id="silkscreen" stroke-width="0.1">
+                    <desc  id="desc3007-2">pcb</desc>
+                    <title  id="title3005-4">pcb</title>
+                </rect>
+            </g>
+        </g>
+    </g>
+</svg>

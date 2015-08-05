@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' version='1.2' baseProfile='tiny' x='0in' y='0in' width='0.611111in' height='1.14132in' viewBox='0 0 44 82.175' >
+<g partID='6209011'>
+	<g xmlns="http://www.w3.org/2000/svg" id="silkscreen">
+		<rect style="stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"  width="43.7" height="81.9" x="0" y="0"  id="rect1" fill="none"  stroke-width="0.16" stroke="#000000"/>
+	</g>
+</g>
+<g partID='6209012'>
+	<g xmlns="http://www.w3.org/2000/svg" id="copper0">
+		<g xmlns="http://www.w3.org/2000/svg" id="copper1">
+			 <rect xmlns="http://www.w3.org/2000/svg"    x="13.42" y="68.22" width="3.96" height="3.96"  fill="none" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="15.4" cy="70.2" r="1.98" fill="none" id="connector1pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="22.6" cy="70.2" r="1.98" fill="none" id="connector2pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="29.8" cy="70.2" r="1.98" fill="none" id="connector3pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="37.0" cy="70.2" r="1.98" fill="none" id="connector4pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="15.4" cy="77.4" r="1.98" fill="none" id="connector5pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="22.6" cy="77.4" r="1.98" fill="none" id="connector6pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="29.8" cy="77.4" r="1.98" fill="none" id="connector7pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="37.0" cy="77.4" r="1.98" fill="none" id="connector8pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+		</g>
+	</g>
+</g>
+<g partID='6209013'>
+	<g xmlns="http://www.w3.org/2000/svg" id="copper1">
+			 <rect xmlns="http://www.w3.org/2000/svg"    x="13.42" y="68.22" width="3.96" height="3.96"  fill="none" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="15.4" cy="70.2" r="1.98" fill="none" id="connector1pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="22.6" cy="70.2" r="1.98" fill="none" id="connector2pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="29.8" cy="70.2" r="1.98" fill="none" id="connector3pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="37.0" cy="70.2" r="1.98" fill="none" id="connector4pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="15.4" cy="77.4" r="1.98" fill="none" id="connector5pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="22.6" cy="77.4" r="1.98" fill="none" id="connector6pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="29.8" cy="77.4" r="1.98" fill="none" id="connector7pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+			 <circle xmlns="http://www.w3.org/2000/svg" cx="37.0" cy="77.4" r="1.98" fill="none" id="connector8pin" stroke="rgb(255, 191, 0)" stroke-width="1.44"/>
+	</g>
+</g>
+
+</svg>
