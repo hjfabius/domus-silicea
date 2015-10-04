@@ -1,19 +1,22 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <!-- Created with Fritzing (http://www.fritzing.org/) -->
 <svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' version='1.2' baseProfile='tiny' x='0in' y='0in' width='0.411in' height='0.221189in' viewBox='0 0 29.592 15.9256' >
-<g partID='341360'><g xmlns="http://www.w3.org/2000/svg" gorn="0.2.9" id="copper0">
- <rect xmlns="http://www.w3.org/2000/svg" height="4.104" fill="none" x="1.84772" y="1.836" width="4.13019" stroke="#F7BD13" stroke-width="1.23181"/>
- <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.1" cx="3.91281" cy="3.888" fill="none" r="2.0651" connectorname="1" stroke="#F7BD13" stroke-width="1.23181" id="connector6pin"/>
- <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.2" cx="3.91281" cy="11.088" fill="none" r="2.0651" connectorname="2" stroke="#F7BD13" stroke-width="1.23181" id="connector7pin"/>
- <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.3" cx="11.1588" cy="3.888" fill="none" r="2.0651" connectorname="3" stroke="#F7BD13" stroke-width="1.23181" id="connector4pin"/>
- <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.4" cx="11.1588" cy="11.088" fill="none" r="2.0651" connectorname="4" stroke="#F7BD13" stroke-width="1.23181" id="connector5pin"/>
- <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.5" cx="18.4047" cy="3.888" fill="none" r="2.0651" connectorname="5" stroke="#F7BD13" stroke-width="1.23181" id="connector2pin"/>
- <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.6" cx="18.4047" cy="11.088" fill="none" r="2.0651" connectorname="6" stroke="#F7BD13" stroke-width="1.23181" id="connector3pin"/>
- <rect xmlns="http://www.w3.org/2000/svg" height="4.104" fill="none" x="23.5856" y="1.836" width="4.13019" stroke="#F7BD13" stroke-width="1.23181"/>
- <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.8" cx="25.6507" cy="3.888" fill="none" r="2.0651" connectorname="7" stroke="#F7BD13" stroke-width="1.23181" id="connector0pin"/>
- <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.9" cx="25.6507" cy="11.088" fill="none" r="2.0651" connectorname="8" stroke="#F7BD13" stroke-width="1.23181" id="connector1pin"/>
+<g partID='341360'>
+	<g xmlns="http://www.w3.org/2000/svg" gorn="0.2.9" id="copper0">
+	 <rect xmlns="http://www.w3.org/2000/svg" height="4.104" fill="none" x="1.84772" y="1.836" width="4.13019" stroke="#F7BD13" stroke-width="1.23181"/>
+	 <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.1" cx="3.91281" cy="3.888" fill="none" r="2.0651" connectorname="1" stroke="#F7BD13" stroke-width="1.23181" id="connector6pin"/>
+	 <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.2" cx="3.91281" cy="11.088" fill="none" r="2.0651" connectorname="2" stroke="#F7BD13" stroke-width="1.23181" id="connector7pin"/>
+	 <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.3" cx="11.1588" cy="3.888" fill="none" r="2.0651" connectorname="3" stroke="#F7BD13" stroke-width="1.23181" id="connector4pin"/>
+	 <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.4" cx="11.1588" cy="11.088" fill="none" r="2.0651" connectorname="4" stroke="#F7BD13" stroke-width="1.23181" id="connector5pin"/>
+	 <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.5" cx="18.4047" cy="3.888" fill="none" r="2.0651" connectorname="5" stroke="#F7BD13" stroke-width="1.23181" id="connector2pin"/>
+	 <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.6" cx="18.4047" cy="11.088" fill="none" r="2.0651" connectorname="6" stroke="#F7BD13" stroke-width="1.23181" id="connector3pin"/>
+	 <rect xmlns="http://www.w3.org/2000/svg" height="4.104" fill="none" x="23.5856" y="1.836" width="4.13019" stroke="#F7BD13" stroke-width="1.23181"/>
+	 <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.8" cx="25.6507" cy="3.888" fill="none" r="2.0651" connectorname="7" stroke="#F7BD13" stroke-width="1.23181" id="connector0pin"/>
+	 <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.9.9" cx="25.6507" cy="11.088" fill="none" r="2.0651" connectorname="8" stroke="#F7BD13" stroke-width="1.23181" id="connector1pin"/>
+	</g>
 </g>
-</g><g partID='341361'><g xmlns="http://www.w3.org/2000/svg" gorn="0.2" id="copper1">
+<g partID='341361'>
+ <g xmlns="http://www.w3.org/2000/svg" gorn="0.2" id="copper1">
  <rect xmlns="http://www.w3.org/2000/svg" height="4.104" fill="none" x="1.84772" y="1.836" width="4.13019" stroke="#F7BD13" stroke-width="1.23181"/>
  <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.1" cx="3.91281" cy="3.888" fill="none" r="2.0651" connectorname="1" stroke="#F7BD13" stroke-width="1.23181" id="connector0pad"/>
  <circle xmlns="http://www.w3.org/2000/svg" gorn="0.2.2" cx="3.91281" cy="11.088" fill="none" r="2.0651" connectorname="2" stroke="#F7BD13" stroke-width="1.23181" id="connector1pad"/>

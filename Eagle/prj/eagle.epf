@@ -348,14 +348,8 @@ UsedLibrary="C:/EAGLE-7.3.0/lbr/zetex.lbr"
 UsedLibrary="C:/EAGLE-7.3.0/lbr/zilog.lbr"
 
 [Win_1]
-Type="Control Panel"
-Loc="-8 -30 591 369"
-State=2
-Number=0
-
-[Win_2]
 Type="Schematic Editor"
-Loc="54 -8 1357 737"
+Loc="62 0 1365 745"
 State=1
 Number=1
 File="domus-silicea-board01-schematic.sch"
@@ -398,7 +392,14 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
+Views=" 1: -41.2655 -26.7269 205.231 103.909"
 Sheet="1"
+
+[Win_2]
+Type="Control Panel"
+Loc="54 -8 1357 737"
+State=1
+Number=0
 
 [Desktop]
 Screen="1366 768"
