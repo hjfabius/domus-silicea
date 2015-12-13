@@ -35,7 +35,7 @@
 #define debug(x,...)
 #endif
 
-#define BAUD_RATE 115200
+#define BAUD_RATE 9600
 
 #define AUTO 0xFF // 0-254. Id 255 is reserved for auto initialization of nodeId.
 #define NODE_SENSOR_ID 0xFF // Node child id is always created for when a node

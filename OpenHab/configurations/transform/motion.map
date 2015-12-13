@@ -1,0 +1,5 @@
+OPEN=Motion
+CLOSED=No Motion
+-=Undefined
+1=Motion
+0=No Motion

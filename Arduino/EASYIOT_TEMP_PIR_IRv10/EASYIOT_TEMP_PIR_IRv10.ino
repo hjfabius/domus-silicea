@@ -7,7 +7,7 @@
 
 
 #define SKETCH_NAME      "EASYIOT_TEMP_PIR_IR"
-#define SKETCH_VERSION   "9.0"
+#define SKETCH_VERSION   "10.0"
 
 #define DEEP_SLEEP_MS                300000    // milliseconds = 5 minutes
 #define COUNTER_FORCE_SEND_BATTERY      144    // 144*DEEP_SLEEP_MS = 12 hours       
@@ -25,9 +25,6 @@
 #define LED_STRIP_OFF                 9999
 
 #define DOMUSSILICEA_LOGLEVEL        DOMUSSILICEA_LOG_LEVEL_VERBOSE
-
-
-#define SKETCH_NAME_FULL SKETCH_NAME + " v"+SKETCH_VERSION + " node:" + NODE_ID   
 
 /****************************************************************************/
 /* Includes                                                                 */

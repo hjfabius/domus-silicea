@@ -1,0 +1,24 @@
+// persistence strategies have a name and a definition and are referred to in the "Items" section
+Strategies 
+{
+	// for rrd charts, we need a cron strategy
+	everyMinute : "0 * * * * ?"
+    everyHour 	: "0 0 * * * ?"
+    everyDay  	: "0 0 0 * * ?"
+
+    // if no strategy is specified for an item entry below, the default list will be used
+    default = everyChange		
+}
+
+Items 
+{
+
+	* : strategy = everyChange, everyDay, restoreOnStartup
+	
+	// let's only store temperature values in rrd
+	ds_Light*,ds_Temperature*, ds_Humidity*: strategy = everyMinute, everyChange, restoreOnStartup
+	ds_Battery*	: strategy = everyHour, everyChange, restoreOnStartup
+	ds_Window*, ds_Motion* : strategy = everyMinute, everyChange
+	
+	ds_Sensors_Communication* : strategy = everyChange, restoreOnStartup
+}

@@ -1,0 +1,374 @@
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+import org.joda.time.*
+import java.util.*
+import org.eclipse.xtext.xbase.lib.*
+import org.openhab.core.items.*
+
+
+var String ArduinoUpdate = ""
+var String sketchName = ""
+
+var int V_TEMP = 0
+var int V_HUM = 1
+var int V_LIGHT = 2
+var int V_DIMMER = 3
+var int V_PRESSURE = 4
+var int V_FORECAST = 5
+var int V_RAIN = 6
+var int V_RAINRATE = 7
+var int V_WIND = 8
+var int V_GUST = 9
+var int V_DIRECTION = 10
+var int V_UV = 11
+var int V_WEIGHT = 12
+var int V_DISTANCE = 13
+var int V_IMPEDANCE = 14
+var int V_ARMED = 15
+var int V_TRIPPED = 16
+var int V_WATT = 17
+var int V_KWH = 18
+var int V_SCENE_ON = 19
+var int V_SCENE_OFF = 20
+var int V_HEATER = 21
+var int V_HEATER_SW = 22
+var int V_LIGHT_LEVEL = 23
+var int V_VAR1 = 24
+var int V_VAR2 = 25
+var int V_VAR3 = 26
+var int V_VAR4 = 27
+var int V_VAR5 = 28
+var int V_UP = 29
+var int V_DOWN = 30
+var int V_STOP = 31
+var int V_IR_SEND = 32
+var int V_IR_RECEIVE = 33
+var int V_FLOW = 34
+var int V_VOLUME = 35
+var int V_LOCK_STATUS = 36
+var int V_DUST_LEVEL = 37
+var int V_VOLTAGE = 38
+var int V_CURRENT = 39
+var int msgPresentation = 0
+var int msgSet = 1
+var int msgReq = 2
+var int msgInternal = 3
+var int msgStream = 4
+var int alarmArmor = 1
+
+// Internal Commands
+
+var int I_BATTERY_LEVEL = 0
+var int I_TIME = 1
+var int I_VERSION = 2
+var int I_ID_REQUEST = 3
+var int I_ID_RESPONSE = 4
+var int I_INCLUSION_MODE = 5
+var int I_CONFIG = 6
+var int I_FIND_PARENT = 7
+var int I_FIND_PARENT_RESPONSE = 8
+var int I_LOG_MESSAGE = 9
+var int I_CHILDREN = 10
+var int I_SKETCH_NAME = 11
+var int I_SKETCH_VERSION = 12
+var int I_REBOOT = 13
+var int I_GATEWAY_READY = 14
+
+// Mappings
+var HashMap<String, String> sensorToItemsMap = newLinkedHashMap(
+
+	"ds_Temp_A_Playroom"  	 			-> "5;1;"								,
+	"ds_Temp_FF_BedroomChildren"		-> "4;1;"								,
+	"ds_Temp_FF_Bedroom"		        -> "1;1;"								,
+	"ds_Temp_FF_LivingRoom"  	 		-> "3;1;"								,
+	"ds_Temp_FF_Kitchen"  	 		    -> "86;1;"								,
+						
+	"ds_Humidity_A_Playroom"  	 	    -> "5;0;"								,
+	"ds_Humidity_FF_BedroomChildren"    -> "4;0;"								,
+	"ds_Humidity_FF_Bedroom"  	 	    -> "1;0;"								,
+	"ds_Humidity_FF_LivingRoom"  	 	-> "3;0;"								,
+	"ds_Humidity_FF_Kitchen"  	 	    -> "86;0;"								,
+	
+	"ds_Contact_A_Playroom"				-> "5;2;"								,
+	"ds_Contact_FF_BedroomChildren"  	-> "4;2;"								,
+	"ds_Contact_FF_Bedroom"  	 		-> "1;2;"								,
+	"ds_Contact_FF_LivingRoom"  	 	-> "3;2;"								,
+	"ds_Contact_FF_Kitchen"  	 		-> "86;2;"								,
+	
+	"ds_Battery_A_Playroom"  	 	 	-> "5;255;"								,
+	"ds_Battery_FF_BedroomChildren"	    -> "4;255;"								,
+	"ds_Battery_FF_Bedroom"  	 	 	-> "1;255;"								,
+	"ds_Battery_FF_LivingRoom"  	 	-> "3;255;"								,
+	"ds_Battery_FF_Kitchen"  	    	-> "86;255;"							,
+	"ds_Battery_GF_Corridor"			-> "6;255;"							,
+	
+	"ds_Dimmer_FF_LivingRoom_Ceiling"	-> "3;3;"								,
+
+	"ds_Watt_GF_Corridor"				-> "6;4;"								,
+	"ds_KWH_GF_Corridor"				-> "6;4;"								,
+	"ds_PulseCount_GF_Corridor"			-> "6;4;"								,
+	
+	
+	"5;1;"								-> "ds_Temp_A_Playroom"  	 			,	
+	"4;1;"								-> "ds_Temp_FF_BedroomChildren"		    ,
+	"1;1;"								-> "ds_Temp_FF_Bedroom"		            ,
+	"3;1;"								-> "ds_Temp_FF_LivingRoom"  	 		,
+	"86;1;"								-> "ds_Temp_FF_Kitchen"  	 		    ,
+								                                                ,
+	"5;0;"								-> "ds_Humidity_A_Playroom"  	 	    ,
+	"4;0;"								-> "ds_Humidity_FF_BedroomChildren"     ,
+	"1;0;"								-> "ds_Humidity_FF_Bedroom"  	 	    ,
+	"3;0;"								-> "ds_Humidity_FF_LivingRoom"  	 	,
+	"86;0;"								-> "ds_Humidity_FF_Kitchen"  	 	    ,
+	
+	"5;2;"								-> "ds_Contact_A_Playroom"				,
+	"4;2;"								-> "ds_Contact_FF_BedroomChildren"  	,
+	"1;2;"								-> "ds_Contact_FF_Bedroom"  	 		,
+	"3;2;"								-> "ds_Contact_FF_LivingRoom"  	 		,
+	"86;2;"								-> "ds_Contact_FF_Kitchen"  	 		,
+
+	"5;255;"							-> "ds_Generic_A_Playroom"  	 	 	,
+	"4;255;"							-> "ds_Generic_FF_BedroomChildren"	    ,
+	"1;255;"							-> "ds_Generic_FF_Bedroom"  	 	 	,
+	"3;255;"							-> "ds_Generic_FF_LivingRoom"  	 	 	,
+	"86;255;"							-> "ds_Generic_FF_Kitchen"  			,	    
+	"6;255;"							-> "ds_Generic_GF_Corridor"				,
+	
+	"3;3;"								-> "ds_Dimmer_FF_LivingRoom_Ceiling"	,
+	
+	"6;4;1;0;17;"						-> "ds_Watt_GF_Corridor"				,
+	"6;4;1;0;18;"						-> "ds_KWH_GF_Corridor"					,
+	"6;4;1;0;24;"						-> "ds_PulseCount_GF_Corridor"			,
+	"6;4;"								-> "ds_PulseCount_GF_Corridor"
+)
+    
+
+//receiving msg from mysensors gateway
+rule "Arduino sends to Openhab"
+    when
+        Item Arduino received update
+    then
+	
+        var String lineBuffer =  Arduino.state.toString.split("\n")
+        for (String line : lineBuffer) {
+            var String[] message = line.split(";")
+            var Integer nodeId = new Integer(message.get(0))
+            var Integer childId = new Integer(message.get(1))
+            var Integer msgType = new Integer(message.get(2))
+            var Integer ack = new Integer(message.get(3))
+            var Integer subType = new Integer(message.get(4))
+			var String msg = ""
+			if( message.size>5)
+			{
+				msg = message.get(5)
+			}
+			
+			println(" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  ")
+			println("      nodeId     = " + nodeId)
+			println("      childId    = " + childId)
+			println("      msgType    = " + msgType)
+			println("      ack        = " + ack)
+			println("      subType    = " + subType)
+			println("      msg        = " + msg)
+			println("      sensor     = " + sensorToItemsMap.get( nodeId + ";" + childId + ";") )
+			
+			
+			if(msgType == 1 ) /*SET - his message is sent from or to a sensor when a sensor value should be updated*/
+			{
+                if (subType == V_TEMP)
+				{
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";"), msg)
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";")+"_Changed", new DateTimeType().toString)
+				}
+                if (subType == V_HUM)
+				{
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";"), msg)
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";")+"_Changed", new DateTimeType().toString)
+                }
+                if (subType == V_WATT)
+				{
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";1;0;" + subType + ";"), msg)
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";1;0;" + subType + ";")+"_Changed", new DateTimeType().toString)
+                }
+                if (subType == V_KWH)
+				{
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";1;0;" + subType + ";"), msg)
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";1;0;" + subType + ";")+"_Changed", new DateTimeType().toString)
+                }
+                if (subType == V_VAR1)
+				{
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";1;0;" + subType + ";"), msg)
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";1;0;" + subType + ";")+"_Changed", new DateTimeType().toString)
+                }
+                if (subType == V_TRIPPED)
+				{
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";")+"_Changed", new DateTimeType().toString)
+					switch msg
+					{
+						case "1": 
+							postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";"), "OPEN")
+						default: 
+							postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";"), "CLOSED")
+					}
+                }
+                if (subType == V_DIMMER)
+				{
+					//postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";"), msg)
+                }				
+            }    
+			
+			if(msgType == 2) /*REQUEST - Requests a variable value (usually from an actuator destined for controller).*/
+			{
+				if ( (sensorToItemsMap.get( nodeId + ";" + childId + ";") == "ds_PulseCount_GF_Corridor") &&
+					 (subType == V_VAR1 )
+				   )
+				{
+					sendCommand(Arduino, "6;4;1;0;24;" +   ds_PulseCount_GF_Corridor.state + "\n");
+				}
+				
+				
+				
+			}
+				
+            // Internal Command
+            if(msgType == 3) /*INTERNAL - This is a special internal message. See table below for the details
+							Type					Value	Comment
+							I_BATTERY_LEVEL			0	Use this to report the battery level (in percent 0-100).
+							I_TIME					1	Sensors can request the current time from the Controller using this message. The time will be reported as the seconds since 1970
+							I_VERSION				2	Used to request gateway version from controller.
+							I_ID_REQUEST			3	Use this to request a unique node id from the controller.
+							I_ID_RESPONSE			4	Id response back to sensor. Payload contains sensor id.
+							I_INCLUSION_MODE		5	Start/stop inclusion mode of the Controller (1=start, 0=stop).
+							I_CONFIG				6	Config request from node. Reply with (M)etric or (I)mperal back to sensor.
+							I_FIND_PARENT			7	When a sensor starts up, it broadcast a search request to all neighbor nodes. They reply with a I_FIND_PARENT_RESPONSE.
+							I_FIND_PARENT_RESPONSE	8	Reply message type to I_FIND_PARENT request.
+							I_LOG_MESSAGE			9	Sent by the gateway to the Controller to trace-log a message
+							I_CHILDREN				10	A message that can be used to transfer child sensors (from EEPROM routing table) of a repeating node.
+							I_SKETCH_NAME			11	Optional sketch name that can be used to identify sensor in the Controller GUI
+							I_SKETCH_VERSION		12	Optional sketch version that can be reported to keep track of the version of sensor in the Controller GUI.
+							I_REBOOT				13	Used by OTA firmware updates. Request for node to reboot.
+							I_GATEWAY_READY			14	Send by gateway to controller when startup is complete.
+							I_REQUEST_SIGNING		15	Used between sensors when initialting signing.
+							I_GET_NONCE				16	Used between sensors when requesting nonce.
+							I_GET_NONCE_RESPONSE	17	Used between sensors for nonce response.
+							*/			
+			{
+                if(subType == I_SKETCH_NAME){
+					println("Sketch name: " + msg )
+					sketchName=msg
+                }
+                if(subType == I_SKETCH_VERSION)
+				{
+					println("Sketch name: " + sketchName )
+					println("Sketch version: " + msg )
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";").replace("Generic","Sketch") ,  sketchName +  " - Version: " + msg)
+					sketchName = ""
+					
+                }
+				if(subType == I_BATTERY_LEVEL)
+				{
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";").replace("Generic","Battery") , msg)
+					postUpdate(sensorToItemsMap.get( nodeId + ";" + childId + ";").replace("Generic","Battery")+"_Changed", new DateTimeType().toString)
+                    println (sensorToItemsMap.get( nodeId + ";" + childId + ";").replace("Generic","Battery") + " = " + msg )
+                }
+				
+				
+            }
+			
+			println(" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  ")
+				
+            }   
+        }
+end
+
+
+
+/*
+rule "myLights"
+	when
+		Item ds_Light_FF_LivingRoom_Ceiling received command
+	then
+		println(" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  ")
+		println("      ds_Light_FF_LivingRoom_Ceiling")
+		if(receivedCommand == ON) 
+		{
+			println("      Sending command ON")
+			//sendCommand(Arduino, "3;3;1;1;2;1\n")
+			sendCommand(Arduino, sensorToItemsMap.get("ds_Light_FF_LivingRoom_Ceiling") + "1;1;" + V_LIGHT + ";1\n")
+		}
+		if(receivedCommand == OFF) 
+		{
+			println("      Sending command OFF")
+			//sendCommand(Arduino, "3;3;1;1;2;0\n")
+			sendCommand(Arduino, sensorToItemsMap.get("ds_Light_FF_LivingRoom_Ceiling") + "1;1;" + V_LIGHT + ";0\n")
+		}
+		println(" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  ")
+end
+*/
+rule "ds_Dimmer_FF_LivingRoom_Ceiling"
+	when
+		Item ds_Dimmer_FF_LivingRoom_Ceiling received command
+	
+	then
+		println(" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  ")
+		println("      ds_Dimmer_FF_LivingRoom_Ceiling command")
+		
+		var Number percent = 0
+		if(ds_Dimmer_FF_LivingRoom_Ceiling.state instanceof DecimalType) percent = ds_Dimmer_FF_LivingRoom_Ceiling.state as DecimalType
+		
+		if(receivedCommand==INCREASE) percent = percent + 5
+		if(receivedCommand==DECREASE) percent = percent - 5
+		if(percent<0)   percent = 0
+		if(percent>100) percent = 100
+
+		println("      ds_Dimmer_FF_LivingRoom_Ceiling percent: " + percent + "; receivedCommand:" + receivedCommand + "; dimmer:" + (percent/5).intValue)
+		postUpdate(ds_Dimmer_FF_LivingRoom_Ceiling, percent);		
+
+		
+		if(percent == 0) 
+		{
+			//Switch off the light
+			sendCommand(Arduino, sensorToItemsMap.get("ds_Dimmer_FF_LivingRoom_Ceiling") + "1;0;" + V_LIGHT + ";0\n")
+			println("      ds_Dimmer_FF_LivingRoom_Ceiling OFF")
+		}
+		else
+		{
+			//Switch on the light
+			sendCommand(Arduino, sensorToItemsMap.get("ds_Dimmer_FF_LivingRoom_Ceiling") + "1;0;" + V_LIGHT + ";1\n")
+			println("      ds_Dimmer_FF_LivingRoom_Ceiling ON")
+			//and update the intensity
+			println("      ds_Dimmer_FF_LivingRoom_Ceiling value:" + (percent/5).intValue )
+			sendCommand(Arduino, sensorToItemsMap.get("ds_Dimmer_FF_LivingRoom_Ceiling") + "1;0;" + V_DIMMER + ";" + (percent/5).intValue + "\n")
+		}
+end
+
+
+
+rule "Reset Motion Detectors"
+	when
+		System started or
+		Time cron "0 */5 * * * ?"
+	then
+		ds_Motion.members.forEach(i|
+			i.postUpdate(CLOSED)
+		)
+end
+
+
+
+
+
+rule "Set sunset and sunrise"
+when
+System started or
+//Time cron "0/5 * * * * ?"
+//Time cron "0 * * * * ?"
+Time cron "0 0 * * * ?"
+then
+	//postUpdate("ds_Temp_FF_Bedroom_Changed", new DateTimeType().toString)
+	//callScript("updateSunriseSunset.script")
+	var org.joda.time.DateTime sunrise = new org.joda.time.DateTime((ds_Sunrise_Time.state as DateTimeType).calendar.timeInMillis)
+	var org.joda.time.DateTime sunset = new org.joda.time.DateTime((ds_Sunset_Time.state as DateTimeType).calendar.timeInMillis)
+	ds_Sunrise_Sunset.postUpdate(String::format("%02d:%02d / %02d:%02d", sunrise.getHourOfDay(), sunrise.getMinuteOfHour(), sunset.getHourOfDay(), sunset.getMinuteOfHour()))
+end

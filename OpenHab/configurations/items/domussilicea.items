@@ -1,0 +1,127 @@
+//String Arduino "Arduino" { serial="COM7@115200" }
+//String Arduino "Arduino" { serial="COM7@9600" }
+//String Arduino "Arduino" { serial="/dev/ttyUSB0" }
+String Arduino "Arduino" {serial="/dev/ttyAMA0@9600"}
+
+
+/* groups */
+Group 							All
+Group 							ds_Group_A  							"Soffitta" 							<attic>			(All)
+Group 							ds_Group_FF 							"Primo Piano" 						<firstfloor>	(All)
+Group 							ds_Group_GF 							"Piano Terra" 						<groundfloor>	(All)
+Group 							ds_Group_G  							"Locale Caldaia" 					<garage>		(All)
+Group 							ds_Group_O  							"Giardino"							<garden> 		(All)
+Group 							ds_Group_A_Office  						"Ufficio" 							<office>		(ds_Group_A)
+Group 							ds_Group_A_Playroom  					"Sala Giochi" 						<attic>			(ds_Group_A)
+Group 							ds_Group_FF_BedroomChildren 			"Cameretta" 						<bedroom> 		(ds_Group_FF)
+Group 							ds_Group_FF_Bedroom 					"Camera" 							<bedroom> 		(ds_Group_FF)
+Group 							ds_Group_FF_StairUp 					"Scala Soffitta" 					<corridor> 		(ds_Group_FF)
+Group 							ds_Group_FF_Bathroom 					"Bagno" 							<bath> 			(ds_Group_FF)
+Group 							ds_Group_FF_LivingRoom					"Sala" 								<sofa> 			(ds_Group_FF)
+Group 							ds_Group_FF_StairDown					"Scala Garage" 						<corridor> 		(ds_Group_FF)
+Group 							ds_Group_GF_Bathroom 					"Lavanderia" 						<bath> 			(ds_Group_GF)
+Group 							ds_Group_GF_Bedroom 					"Stanza Ospiti" 					<bedroom> 		(ds_Group_GF)
+Group 							ds_Group_GF_Corridor 					"Corridoio" 						<corridor> 		(ds_Group_GF)
+Group 							ds_Group_GF_Stair 						"Scala" 							<corridor> 		(ds_Group_GF)
+Group 							ds_Group_GF_Garage 						"Garage" 							<garage> 		(ds_Group_GF)
+Group 							ds_Group_GF_Atelier						"Atelier" 							<settings> 		(ds_Group_GF)
+			
+/* active groups */			
+Group:Switch:OR(ON, OFF) 		ds_Light 								"Luci [(%d)]" 										(All)
+Group:Number:AVG 				ds_Temperature							"Temperatura [%.1f °C]" 			<temperature>	(Status)
+Group:Number:AVG 				ds_Humidity								"Umidità [%.1f %%]" 				<humidity>		(Status)
+Group:Number:MIN 				ds_Battery								"Batterie [%.1f %%]" 				<battery>		(Status)
+Group:Contact:OR(OPEN, CLOSED) 	ds_Window 								"Finestre [%s]"						<contact>		(All)
+Group:Contact:OR(OPEN, CLOSED) 	ds_Motion 								"Movimento [MAP(motion.map):%s]"	<motion>		(All)
+Group:DateTime:MIN				ds_Sensors_Communication				"Comunicazione sensori [%1$tA, %1$td.%1$tm.%1$tY %1$tT]" <network> (All)
+Group:Number					ds_Energy								"Energia"							<energy_elettric>	(All)
+
+	
+/* lights */	
+//Switch 							ds_Light_FF_LivingRoom_Ceiling 		"Divano" 											(ds_Light, ds_Group_FF_LivingRoom)
+Dimmer 							ds_Dimmer_FF_LivingRoom_Ceiling			"Divano [%d %%]" 					<slider>		(ds_Light, ds_Group_FF_LivingRoom) 
+
+
+/* Indoor Temperatures */
+Number 							ds_Temp_A_Playroom  	 				"Temperatura Sala Giochi [%.1f °C]"											<temperature>	(ds_Temperature, ds_Group_A_Playroom)
+DateTime 						ds_Temp_A_Playroom_Changed 				"Temperatura Sala Giochi modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]" 	<temperature> 	(ds_Sensors_Communication)
+Number 							ds_Temp_FF_BedroomChildren  			"Temperatura Cameretta [%.1f °C]"											<temperature>	(ds_Temperature, ds_Group_FF_BedroomChildren)
+DateTime 						ds_Temp_FF_BedroomChildren_Changed 		"Temperatura Cameretta modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"	<temperature> 	(ds_Sensors_Communication)
+Number 							ds_Temp_FF_Bedroom  	 				"Temperatura Camera [%.1f °C]"												<temperature>	(ds_Temperature, ds_Group_FF_Bedroom)
+DateTime 						ds_Temp_FF_Bedroom_Changed 				"Temperatura Camera modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<temperature> 	(ds_Sensors_Communication)
+Number 							ds_Temp_FF_LivingRoom  	 				"Temperatura Sala [%.1f °C]"												<temperature>	(ds_Temperature, ds_Group_FF_LivingRoom)
+DateTime 						ds_Temp_FF_LivingRoom_Changed 			"Temperatura Sala modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<temperature> 	(ds_Sensors_Communication)
+Number 							ds_Temp_FF_Kitchen  	 				"Temperatura Cucina [%.1f °C]"												<temperature>	(ds_Temperature, ds_Group_FF_LivingRoom)
+DateTime 						ds_Temp_FF_Kitchen_Changed 				"Temperatura Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<temperature> 	(ds_Sensors_Communication)
+Number							ds_Temp_ChartPeriod   					"Visualizza Trends"															<temperature>
+
+
+
+/* Indoor Humidity */
+Number 							ds_Humidity_A_Playroom  	 			"Umidità Sala Giochi [%.1f %%]"												<humidity>		(ds_Humidity, ds_Group_A_Playroom)
+DateTime 						ds_Humidity_A_Playroom_Changed 			"Umidità Sala Giochi modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<humidity> 		(ds_Sensors_Communication)
+Number 							ds_Humidity_FF_BedroomChildren  		"Umidità Cameretta [%.1f %%]"												<humidity>		(ds_Humidity, ds_Group_FF_BedroomChildren)
+DateTime 						ds_Humidity_FF_BedroomChildren_Changed 	"Umidità Cameretta modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<humidity> 		(ds_Sensors_Communication)
+Number 							ds_Humidity_FF_Bedroom  	 			"Umidità Camera [%.1f %%]"													<humidity>		(ds_Humidity, ds_Group_FF_Bedroom)
+DateTime 						ds_Humidity_FF_Bedroom_Changed 			"Umidità Camera modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<humidity> 		(ds_Sensors_Communication)
+Number 							ds_Humidity_FF_LivingRoom  	 			"Umidità Sala [%.1f %%]"													<humidity>		(ds_Humidity, ds_Group_FF_LivingRoom)
+DateTime 						ds_Humidity_FF_LivingRoom_Changed 		"Umidità Sala modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<humidity> 		(ds_Sensors_Communication)
+Number 							ds_Humidity_FF_Kitchen  	 			"Umidità Cucina [%.1f %%]"													<humidity>		(ds_Humidity, ds_Group_FF_LivingRoom)
+DateTime 						ds_Humidity_FF_Kitchen_Changed 			"Umidità Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<humidity> 		(ds_Sensors_Communication)
+Number 							ds_Humidity_ChartPeriod					"Visualizza Trends"															<humidity>
+
+/* Indoor Movement */
+Contact 						ds_Contact_A_Playroom  	 				"Movimento Sala Giochi [MAP(motion.map):%s]" 								<motion>	(ds_Motion, ds_Group_A_Playroom)
+DateTime 						ds_Contact_A_Playroom_Changed 			"Movimento Sala Giochi modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"	<motion> 	(ds_Sensors_Communication)
+Contact 						ds_Contact_FF_BedroomChildren  			"Movimento Cameretta [MAP(motion.map):%s]"	 								<motion>	(ds_Motion, ds_Group_FF_BedroomChildren)
+DateTime 						ds_Contact_FF_BedroomChildren_Changed 	"Movimento Cameretta modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<motion> 	(ds_Sensors_Communication)
+/*Contact 						ds_Contact_FF_Bedroom  	 				"Movimento Camera [MAP(motion.map):%s]"		 								<motion>	(ds_Motion, ds_Group_FF_Bedroom)*/
+/*DateTime 						ds_Contact_FF_Bedroom_Changed 			"Movimento Camera modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<motion> 	(ds_Sensors_Communication)*/
+Contact 						ds_Contact_FF_LivingRoom  	 			"Movimento Sala [MAP(motion.map):%s]"		 								<motion>	(ds_Motion, ds_Group_FF_LivingRoom)
+DateTime 						ds_Contact_FF_LivingRoom_Changed 		"Movimento Sala modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<motion> 	(ds_Sensors_Communication)
+Contact 						ds_Contact_FF_Kitchen  	 				"Movimento Cucina [MAP(motion.map):%s]"		 								<motion>	(ds_Motion, ds_Group_FF_LivingRoom)
+DateTime 						ds_Contact_FF_Kitchen_Changed 			"Movimento Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<motion> 	(ds_Sensors_Communication)
+Number 							ds_Contact_ChartPeriod					"Visualizza Trends"															<motion>
+
+/* Energy meeter */
+Number 							ds_PulseCount_GF_Corridor				"Inpulsi Elettrici [%d]"													<energy_elettric>	(ds_Group_GF_Corridor, ds_Energy)	
+DateTime 						ds_PulseCount_GF_Corridor_Changed 		"Inpulsi Elettrici modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<energy_elettric>	(ds_Sensors_Communication)
+Number 							ds_Watt_GF_Corridor						"Watt [%d]"																	<energy_elettric>	(ds_Group_GF_Corridor, ds_Energy)
+DateTime 						ds_Watt_GF_Corridor_Changed 			"Watt modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"						<energy_elettric>	(ds_Sensors_Communication)
+Number 							ds_KWH_GF_Corridor						"KWattOra [%.3f]"															<energy_elettric>	(ds_Group_GF_Corridor, ds_Energy)
+DateTime 						ds_KWH_GF_Corridor_Changed 				"KWattOra modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"					<energy_elettric>	(ds_Sensors_Communication)
+
+
+/* Sensor battery */
+Number 							ds_Battery_A_Playroom  	 	 			"Batteria Sala Giochi [%.1f %%]"											<battery>	(ds_Battery, ds_Group_A_Playroom)
+DateTime 						ds_Battery_A_Playroom_Changed 			"Batteria Sala Giochi modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<battery> 	(ds_Sensors_Communication)
+Number 							ds_Battery_FF_BedroomChildren			"Batteria Cameretta [%.1f %%]"												<battery>	(ds_Battery, ds_Group_FF_BedroomChildren)
+DateTime						ds_Battery_FF_BedroomChildren_Changed 	"Batteria Cameretta modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<battery>	(ds_Sensors_Communication)
+Number 							ds_Battery_FF_Bedroom  	 	 			"Batteria Camera [%.1f %%]"													<battery>	(ds_Battery, ds_Group_FF_Bedroom)
+DateTime						ds_Battery_FF_Bedroom_Changed 			"Batteria Camera modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<battery>	(ds_Sensors_Communication)
+Number 							ds_Battery_FF_LivingRoom  	 			"Batteria Sala [%.1f %%]"													<battery>	(ds_Battery, ds_Group_FF_LivingRoom)
+DateTime						ds_Battery_FF_LivingRoom_Changed 		"Batteria Sala modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<battery>	(ds_Sensors_Communication)
+Number 							ds_Battery_FF_Kitchen  	 	 			"Batteria Cucina [%.1f %%]"													<battery>	(ds_Battery, ds_Group_FF_LivingRoom)
+DateTime						ds_Battery_FF_Kitchen_Changed 			"Batteria Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<battery>	(ds_Sensors_Communication)
+Number 							ds_Battery_GF_Corridor  	 	 		"Batteria Corridoio [%.1f %%]"												<battery>	(ds_Battery, ds_Group_FF_LivingRoom)
+DateTime						ds_Battery_GF_Corridor_Changed 			"Batteria Corridoio modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<battery>	(ds_Sensors_Communication)
+
+
+/* Sensor Sketch */
+String 							ds_Sketch_A_Playroom  	 	 			"Sketch Sala Giochi [%s]"													<network> 	(ds_Sensors_Communication)
+String 							ds_Sketch_FF_BedroomChildren			"Sketch Cameretta [%s]"													    <network> 	(ds_Sensors_Communication)
+String 							ds_Sketch_FF_Bedroom  	 	 			"Sketch Camera [%s]"														<network> 	(ds_Sensors_Communication)
+String 							ds_Sketch_FF_LivingRoom  	 			"Sketch Sala [%s]"															<network> 	(ds_Sensors_Communication)
+String 							ds_Sketch_FF_Kitchen  	 	 			"Sketch Cucina [%s]"														<network> 	(ds_Sensors_Communication)
+String 							ds_Sketch_GF_Corridor  	 	 			"Sketch Corridoio [%s]"														<network> 	(ds_Sensors_Communication)
+
+
+/* NTP binding - Date*/
+DateTime						ds_Date									"Data [%1$tA, %1$td.%1$tm.%1$tY]"											<calendar>	{ ntp="Europe/Rome:it_IT" }
+/* Alba e tramonto */		
+String 							ds_Sunrise_Sunset 						"Alba / Tramonto [%s]" 														<sun>
+DateTime 						ds_Sunrise_Time 						"Alba [%1$tH:%1$tM]" 																	{astro="planet=sun, type=rise, property=start"}
+DateTime 						ds_Sunset_Time 							"Tramonto [%1$tH:%1$tM]" 																{astro="planet=sun, type=set, property=end"}
+
+/* Camera Switch*/
+Number							ds_Cameras_Switch   					"Telecamera"																<camera>
