@@ -13,12 +13,14 @@ Strategies
 Items 
 {
 
-	* : strategy = everyChange, everyDay, restoreOnStartup
+	* 							:	strategy = everyMinute, everyChange, restoreOnStartup
 	
 	// let's only store temperature values in rrd
-	ds_Light*,ds_Temperature*, ds_Humidity*: strategy = everyMinute, everyChange, restoreOnStartup
-	ds_Battery*	: strategy = everyHour, everyChange, restoreOnStartup
-	ds_Window*, ds_Motion* : strategy = everyMinute, everyChange
-	
-	ds_Sensors_Communication* : strategy = everyChange, restoreOnStartup
+	ds_Light*					: 	strategy = everyMinute, everyChange, restoreOnStartup
+	ds_Temperature*				: 	strategy = everyMinute, everyChange, restoreOnStartup
+	ds_Humidity*				: 	strategy = everyMinute, everyChange, restoreOnStartup
+	ds_Battery*					: 	strategy = everyMinute, everyChange, restoreOnStartup
+	ds_Window*					: 	strategy = everyMinute, everyChange, restoreOnStartup
+	ds_Motion* 					: 	strategy = everyMinute, everyChange, restoreOnStartup
+	ds_Sensors_Communication*  	: 	strategy = everyMinute, everyChange, restoreOnStartup
 }
