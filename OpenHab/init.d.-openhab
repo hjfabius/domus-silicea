@@ -1,7 +1,11 @@
 #! /bin/sh
 ### BEGIN INIT INFO
-# Provides: openhab Required-Start: $remote_fs $syslog Required-Stop: $remote_fs $syslog Default-Start: 2 3 4 5 Default-Stop: 0 1 6 Short-Description: 
-# OpenHAB Daemon
+# Provides:          openhab
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: OpenHAB Daemon
 ### END INIT INFO
 
 # Author: Thomas Brettinger 
@@ -13,7 +17,6 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 
 DESC="Open Home Automation Bus Daemon"
 NAME=openhab
-#DAEMON=/usr/bin/java
 DAEMON=/usr/local/jdk1.8.0_65/bin/java
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
@@ -48,54 +51,8 @@ DAEMON_ARGS="-Dgnu.io.rxtx.SerialPorts=/dev/ttyAMA0 -Dosgi.clean=true -Declipse.
 #
 do_start()
 {
-   echo $(date + "%T") > $ECLIPSEHOME/logs/daemon_start.log
-   echo "Waiting network to be ready" >> $ECLIPSEHOME/logs/daemon_start.log
-   #Wait network is ready  (timeout 5 seconds)
-   WAIT_LOOP=10 #10 seconds
-   while [ 1 ]; do
-      if [ $(ip add sh dev eth0 | grep inet | wc -l) -ne 0 ]; then
-          break
-      fi
-      sleep 1
-      $((WAIT_LOOP--))
-      if [$WAIT_LOOP -eq 0]; then
-          break
-      fi
-    done
-    echo "Nnetwork ready" >> $ECLIPSEHOME/logs/daemon_start.log
-
     #To copy on ramdrive the latest version of the historical data saved on google drive
-    cd $ECLIPSEHOME/etc/rrd4j/
-    echo "New folder set "  >> $ECLIPSEHOME/logs/daemon_start.log
-    pwd  >> $ECLIPSEHOME/logs/daemon_start.log
-
-
-    echo $(date + "%T") >> $ECLIPSEHOME/logs/daemon_start.log
-    echo "Syncronization will start in 10 seconds" >> $ECLIPSEHOME/logs/daemon_start.log
-    sleep 10
-
-    /usr/local/bin/gdrive pull -no-prompt -force >>  $ECLIPSEHOME/logs/daemon_start.log
-    #sudo chown -R openhab:openhab /opt/openhab
-
-    echo $(date + "%T") >> $ECLIPSEHOME/logs/daemon_start.log
-    echo "Syncronization completed" >> $ECLIPSEHOME/logs/daemon_start.log
-    echo "Files downloaded: $(ls | wc -l)" >> $ECLIPSEHOME/logs/daemon_start.log
-
-    sudo chown -R openhab:openhab /opt/openhab
-    sudo touch *
-
-    echo $(date + "%T") >> $ECLIPSEHOME/logs/daemon_start.log
-    echo "Start daemon" >> $ECLIPSEHOME/logs/daemon_start.log
-
-    
-    do_start_org
-
-    return "$?"
-}
-
-# Original start
-do_start_org()
-{
+    $ECLIPSEHOME/openhab_boot.sh    
 
     # Return
     #   0 if daemon has been started
@@ -115,28 +72,6 @@ do_start_org()
 # Function that stops the daemon/service
 #
 do_stop()
-{
-    echo $(date + "%T") >> $ECLIPSEHOME/logs/daemon_stop.log
-    echo "Stop daemon" >> $ECLIPSEHOME/logs/daemon_stop.log
-    do_stop_org 
-    RETVAL = "$?"
-
-    #To copy to google drive the latest version of the historical data saved on ramdrive
-    cd $ECLIPSEHOME/etc/rrd4j/
-    sudo touch *
-    
-    echo $(date + "%T") >> $ECLIPSEHOME/logs/daemon_stop.log
-    echo "Copying files on remote drive" >> $ECLIPSEHOME/logs/daemon_stop.log
-    /usr/local/bin/gdrive push -no-prompt >  $ECLIPSEHOME/logs/daemon_stop.log
-
-    echo $(date + "%T") >> $ECLIPSEHOME/logs/daemon_stop.log
-    echo "Files copied on remote drive" >> $ECLIPSEHOME/logs/daemon_stop.log
-    
-    return "$RETVAL"
-
-}
-
-do_stop_org()
 {
 
     # Return
