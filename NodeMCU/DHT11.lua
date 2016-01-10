@@ -99,3 +99,4 @@ local DHT11 = {}
 	end
 
 return DHT11
+

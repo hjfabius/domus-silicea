@@ -16,3 +16,4 @@ WIFI.start()
 --DHT11.update()
 print ("domus-silicea - init.lua - Script Ended")
 
+

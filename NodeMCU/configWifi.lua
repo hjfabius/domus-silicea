@@ -10,3 +10,4 @@ local configWifi = {}
     configWifi.MAC  = ""
     
 return configWifi 
+

@@ -47,3 +47,4 @@ local MQTT = {}
 	end
 
 return MQTT
+
