@@ -1,8 +1,7 @@
 #!/bin/bash
-echo $(date + "%T") >> /opt/openhab/logs/openhab_start.log
+date >> /opt/openhab/logs/openhab_start.log
 echo "openhab_boot.sh - start" >> /opt/openhab/logs/openhab_start.log
 cd /opt/openhab/etc/rrd4j/
-return 0
 
 echo "Chack that online files are recent enough" >> /opt/openhab/logs/openhab_start.log
 intDelta=999999
