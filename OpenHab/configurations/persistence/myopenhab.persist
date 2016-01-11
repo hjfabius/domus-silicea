@@ -16,11 +16,11 @@ Items
 	* : strategy = everyChange, everyDay
 	
 	// let's only store temperature values in rrd
-	ds_Light*                  : strategy = everyMinute, everyChange
-        ds_Temperature*            : strategy = everyMinute, everyChange
-        ds_Humidity*               : strategy = everyMinute, everyChange
-	ds_Battery*	           : strategy = everyMinute, everyChange
-	ds_Window*                 : strategy = everyMinute, everyChange
-        ds_Motion*                 : strategy = everyMinute, everyChange	
-	ds_Sensors_Communication*  : strategy = everyMinute, everyChange
+	ds_Light*                  : strategy = everyDay, everyChange
+        ds_Temperature*            : strategy = everyDay, everyChange
+        ds_Humidity*               : strategy = everyDay, everyChange
+	ds_Battery*	           : strategy = everyDay, everyChange
+	ds_Window*                 : strategy = everyDay, everyChange
+        ds_Motion*                 : strategy = everyDay, everyChange	
+	ds_Sensors_Communication*  : strategy = everyDay, everyChange
 }
