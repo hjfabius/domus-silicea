@@ -1,5 +1,9 @@
 #!/bin/bash
+<<<<<<< HEAD
 date  >> /opt/openhab/logs/openhab_start.log
+=======
+date >> /opt/openhab/logs/openhab_start.log
+>>>>>>> 7a0725295c5586ce8c7ae26ba3ce58e9891f9851
 echo "openhab_boot.sh - start" >> /opt/openhab/logs/openhab_start.log
 cd /opt/openhab/etc/rrd4j/
 
