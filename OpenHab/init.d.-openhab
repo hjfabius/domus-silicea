@@ -17,6 +17,7 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 
 DESC="Open Home Automation Bus Daemon"
 NAME=openhab
+#DAEMON=/usr/bin/java
 DAEMON=/usr/local/jdk1.8.0_65/bin/java
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
@@ -26,6 +27,7 @@ HTTPSPORT=8443
 TELNETPORT=5555
 # be sure you are adopting the user to your local OH user 
 RUN_AS=openhab
+#RUN_AS=root
 
 # get path to equinox jar inside $eclipsehome folder
 cp=$(find $ECLIPSEHOME/server -name "org.eclipse.equinox.launcher_*.jar" | sort | tail -1);
@@ -52,7 +54,7 @@ DAEMON_ARGS="-Dgnu.io.rxtx.SerialPorts=/dev/ttyAMA0 -Dosgi.clean=true -Declipse.
 do_start()
 {
     #To copy on ramdrive the latest version of the historical data saved on google drive
-    $ECLIPSEHOME/openhab_boot.sh    
+    #$ECLIPSEHOME/openhab_boot.sh  
 
     # Return
     #   0 if daemon has been started
@@ -73,7 +75,6 @@ do_start()
 #
 do_stop()
 {
-
     # Return
     #   0 if daemon has been stopped
     #   1 if daemon was already stopped
