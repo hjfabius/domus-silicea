@@ -32,7 +32,7 @@ local MQTT = {}
 			register_myself()
 			-- And then pings each 10000 milliseconds
 			tmr.stop(6)
-			tmr.alarm(6, 10000, 1, send_ping)
+			tmr.alarm(6, config.MQTT_PingInterval, 1, send_ping)
 		end) 
 
 	end
