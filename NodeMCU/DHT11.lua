@@ -91,8 +91,8 @@ local DHT11 = {}
 		
 		ChecksumTest=(DHT11.Humidity + DHT11.HumidityDec + DHT11.Temperature + DHT11.TemperatureDec) % 0xFF
 
-		print ("Temperature:       "  .. DHT11.Temperature .. "." .. DHT11.TemperatureDec)
-		print ("Humidity:          "  .. DHT11.Humidity    .. "." .. DHT11.HumidityDec)
+		--print ("Temperature:       "  .. DHT11.Temperature .. "." .. DHT11.TemperatureDec)
+		--print ("Humidity:          "  .. DHT11.Humidity    .. "." .. DHT11.HumidityDec)
 		
 		return ChecksumTest == Checksum
 		

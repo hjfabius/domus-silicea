@@ -6,20 +6,18 @@ local gasMeter = {}
     gasMeter.m3GasDec = 0
     gasMeter.m3GasCent = 0
 
-    local function debounce2(func)
-        local last = 0
-        local delay = config.Debounce_GasMeter
-        return function (...)
-            local now = tmr.now()
-            if now - last < delay then return end
-    
-            last = now
-            return func(...)
-        end
+    local lastBounce = 0
+
+    local function debounceGas(level)
+        local now = tmr.now()
+        if level == 0 then return end
+        if now - lastBounce < config.Debounce_GasMeter then return end
+        lastBounce = now
+        return onGPIOGasMeterUp()
     end
 
     function onGPIOGasMeterUp()
-        print('Rilevato valore a 1 sul pin 3')
+        print('Found value 1 on pin ' .. config.GPIO_GasMeter)
         gasMeter.m3GasCent = gasMeter.m3GasCent + 1
         if gasMeter.m3GasCent == 10 then
             gasMeter.m3GasCent = 0
@@ -35,7 +33,7 @@ local gasMeter = {}
     function gasMeter.start()
         print ("domus-silicea - gasMeter.start()") 
         gpio.mode(config.GPIO_GasMeter, gpio.INT)
-        gpio.trig(config.GPIO_GasMeter, 'up', debounce2(onGPIOGasMeterUp))
+        gpio.trig(config.GPIO_GasMeter, 'up', debounceGas)
     end
 
   
