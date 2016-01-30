@@ -2,6 +2,10 @@ local gasMeter = {}
     
     print ("domus-silicea - gasMeter.lua - Script Starting") 
 
+    gasMeter.m3GasBase = 0
+    gasMeter.m3GasBaseDec = 0
+    gasMeter.m3GasBaseCent = 0
+
     gasMeter.m3Gas = 0
     gasMeter.m3GasDec = 0
     gasMeter.m3GasCent = 0
@@ -28,7 +32,24 @@ local gasMeter = {}
             gasMeter.m3Gas = gasMeter.m3Gas + 1
         end
     end
-    
+
+
+    function gasMeter.gasMeterUpdate(baseValue)
+        print("domus-silicea - gasMeter.gasMeterUpdate(" .. baseValue .. ")")
+        gasMeter.m3GasBase = tonumber(baseValue) / 100
+        gasMeter.m3GasBaseDec = (tonumber(baseValue) / 10) % 10
+        gasMeter.m3GasBaseCent = tonumber(baseValue) % 10
+
+        gasValue = gasMeter.m3GasCent + gasMeter.m3GasDec*10 + gasMeter.m3Gas*100
+
+        if tonumber(baseValue) > gasValue then
+            gasValue = tonumber(baseValue) + gasValue
+            gasMeter.m3Gas = gasValue / 100
+            gasMeter.m3GasDec = (gasValue / 10) % 10
+            gasMeter.m3GasCent = gasValue % 10
+        end
+        
+    end
 
     function gasMeter.start()
         print ("domus-silicea - gasMeter.start()") 

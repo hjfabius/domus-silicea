@@ -13,8 +13,11 @@ local MQTT = {}
 
 	-- Sends my id to the broker for registration
 	local function register_myself()  
-		m:subscribe(config.MQTT_EndPoint .. config.MQTT_ID,0,function(conn)
+		m:subscribe(config.MQTT_EndPoint .. config.MQTT_ID .. "/" .. config.MQTT_ServerEndPoint .. "/#",0,function(conn)
 			print("Successfully subscribed to data endpoint")
+            MQTT.send_Message("V_SKETCH_NAME",      config.SketchName .. " - NodeID=" .. node.chipid() )
+            MQTT.send_Message("V_SKETCH_VERSION",   config.SketchVersion)
+
 		end)
 	end
 
@@ -25,6 +28,12 @@ local MQTT = {}
 		  if data ~= nil then
 			print(topic .. ": " .. data)
 			-- do something, we have received a message
+
+            if topic == config.MQTT_EndPoint .. config.MQTT_ID .. "/" .. config.MQTT_ServerEndPoint .. "/V_GAS" then 
+                if config.GPIO_GasMeter >= 0 then 
+                    gasMeter.gasMeterUpdate(data)
+                end
+            end
 		  end
 		end)
 		-- Connect to broker

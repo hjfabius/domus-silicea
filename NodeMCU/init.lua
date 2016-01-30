@@ -10,10 +10,18 @@ function startup()
     
     config         = require "config"   
     configWifi     = require "configWifi"   
-    DHT11          = require "DHT11" 
-    gasMeter       = require "gasMeter"
-    waterMeter     = require "waterMeter"
-    powerMeter     = require "powerMeter"
+    if config.GPIO_DHT11 >=0 then 
+        DHT11          = require "DHT11" 
+    end
+    if config.GPIO_GasMeter >=0 then 
+        gasMeter       = require "gasMeter"
+    end 
+    if config.GPIO_WaterMeter >=0 then 
+        waterMeter     = require "waterMeter"
+    end
+    if config.GPIO_PowerMeter >=0 then 
+        powerMeter     = require "powerMeter"
+    end
     WIFI           = require "WIFI"
     MQTT           = require "MQTT"
     app            = require "app"   
