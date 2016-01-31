@@ -5,16 +5,17 @@ local config = {}
     -- Timers
     -- 0 - Init Boot
     -- 1 - Wifi Get IP, App Msg Send interval
+    -- 2 - GasMeterDebounce
     -- 6 - MQTT Ping
 
     config.NodeName = 'Node_' .. node.chipid()
     config.SketchName = 'NodeMCU'
-    config.SketchVersion = '1.0'
+    config.SketchVersion = '2.0'
     if node.chipid() == 798202 then
         config.NodeName = 'GF_Bathroom'
     end
 
-    config.app_SendMsgInterval  = 10000 --ms
+    config.app_SendMsgInterval  = 60000 --ms
 
 
 	--print ("domus-silicea - config.lua - Config DHT11") 
@@ -22,15 +23,15 @@ local config = {}
 
     --print ("domus-silicea - config.lua - Config Gas Meter") 
     config.GPIO_GasMeter        = 6
-    config.Debounce_GasMeter    = 400000 --us 
+    config.Debounce_GasMeter    = 200 --ms 
 
     --print ("domus-silicea - config.lua - Config Water Meter") 
     config.GPIO_WaterMeter      = 1
-    config.Debounce_WaterMeter  = 200000 --us 
+    config.Debounce_WaterMeter  = 200 --ms 
 
     --print ("domus-silicea - config.lua - Config Power Meter") 
     config.GPIO_PowerMeter      = -1
-    config.Debounce_PowerMeter  = 400000 --us 
+    config.Debounce_PowerMeter  = 200 --ms 
 
     --print ("domus-silicea - config.lua - Config PIR Sensor") 
     config.GPIO_PIR             = 3

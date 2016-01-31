@@ -7,7 +7,8 @@ local MQTT = {}
 	-- Sends a simple ping to the broker
 	local function send_ping()  
         --print("MQTT Ping")
-		m:publish(config.MQTT_EndPoint .. "ping","MQTT_ID = " .. config.MQTT_ID .. "\nIP     = " .. configWifi.IP .. "\nMAC    = " .. configWifi.MAC,0,0)
+		MQTT.send_Message("PING",      "MQTT_ID = " .. config.MQTT_ID .. "\nIP     = " .. configWifi.IP .. "\nMAC    = " .. configWifi.MAC)
+        MQTT.send_Message("V_SKETCH",      config.SketchName .. " - Version: " .. config.SketchVersion .. " - NodeID=" .. node.chipid() )
 	end
 
 
@@ -15,9 +16,7 @@ local MQTT = {}
 	local function register_myself()  
 		m:subscribe(config.MQTT_EndPoint .. config.MQTT_ID .. "/" .. config.MQTT_ServerEndPoint .. "/#",0,function(conn)
 			print("Successfully subscribed to data endpoint")
-            MQTT.send_Message("V_SKETCH_NAME",      config.SketchName .. " - NodeID=" .. node.chipid() )
-            MQTT.send_Message("V_SKETCH_VERSION",   config.SketchVersion)
-
+            MQTT.send_Message("V_SKETCH",      config.SketchName .. " - Version: " .. config.SketchVersion .. " - NodeID=" .. node.chipid() )
 		end)
 	end
 
@@ -28,12 +27,6 @@ local MQTT = {}
 		  if data ~= nil then
 			print(topic .. ": " .. data)
 			-- do something, we have received a message
-
-            if topic == config.MQTT_EndPoint .. config.MQTT_ID .. "/" .. config.MQTT_ServerEndPoint .. "/V_GAS" then 
-                if config.GPIO_GasMeter >= 0 then 
-                    gasMeter.gasMeterUpdate(data)
-                end
-            end
 		  end
 		end)
 		-- Connect to broker

@@ -2,12 +2,8 @@ local powerMeter = {}
 	
 	print ("domus-silicea - powerMeter.lua - Script Starting") 
 
-    powerMeter.Wh = 0
-    powerMeter.WhDec = 0
-    powerMeter.WhCent = 0
-    powerMeter.WhMilli = 0
-
     local lastBounce = 0
+    local counter = 0
 
     local function debouncePower(level)
         local now = tmr.now()
@@ -18,20 +14,9 @@ local powerMeter = {}
     end
 
     function onGPIOPowerMeterUp()
-        print('Found value 1 on pin ' .. config.GPIO_PowerMeter)
-        powerMeter.WhMilli = powerMeter.WhMilli + 1
-        if powerMeter.WhMilli == 10 then
-            powerMeter.WhMilli = 0
-            powerMeter.WhCent = powerMeter.WhCent + 1
-        end
-        if powerMeter.WhCent == 10 then
-            powerMeter.WhCent = 0
-            powerMeter.WhDec = powerMeter.WhDec + 1
-        end
-        if powerMeter.WhDec == 10 then
-            powerMeter.WhDec = 0
-            powerMeter.Wh = powerMeter.Wh + 1
-        end
+        print('domus-silicea - waterMeter - Found value 1 on pin ' .. config.GPIO_PowerMeter)
+        counter = counter + 1
+        MQTT.send_Message("V_POWER", counter)
     end
     
 
@@ -42,7 +27,4 @@ local powerMeter = {}
     end
 
    
-
 return powerMeter
-
-
