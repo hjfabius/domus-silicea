@@ -418,110 +418,61 @@ rule "Energy per minute"
 when
 Time cron "0 * * * * ?"
 then
-	var delta = 0
+	logDebug("domus-silicea", "--------------------------------------------------- Start ------")
+	var Number delta = 0
+	
 	try
 	{
-		delta = (ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(1)) as DecimalType)
+		ds_Gas_GF_Bathroom_Minute.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(1)))
 	}
-	catch(Exception e) {
-	{
-		delta = 0
-	}
-	
-	if (delta != null)
-	{
-		ds_Gas_GF_Bathroom_Minute.postUpdate(delta)
-	}
-	else
+	catch(Exception e)
 	{
 		ds_Gas_GF_Bathroom_Minute.postUpdate(0)
 	}
 	
+	try
+	{
+		ds_Gas_GF_Bathroom_Hour.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)))
+	}
+	catch(Exception e)
+	{
+		ds_Gas_GF_Bathroom_Hour.postUpdate(0)
+	}
+
 	
 	try
 	{
-		delta = (ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)) as DecimalType)
+		ds_Gas_GF_Bathroom_Day.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)))
 	}
-	catch(Exception e) {
+	catch(Exception e)
 	{
-		delta = 0
+		ds_Gas_GF_Bathroom_Day.postUpdate(0)
 	}
-	
-	if (delta != null)
-	{
-		ds_Gas_GF_Bathroom_Minute.postUpdate(delta)
-	}
-	else
-	{
-		ds_Gas_GF_Bathroom_Minute.postUpdate(0)
-	}
-
 
 	try
 	{
-		delta = (ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)) as DecimalType)
+		ds_Gas_GF_Bathroom_Week.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)))
 	}
-	catch(Exception e) {
+	catch(Exception e)
 	{
-		delta = 0
+		ds_Gas_GF_Bathroom_Week.postUpdate(0)
 	}
+
 	
-	if (delta != null)
-	{
-		ds_Gas_GF_Bathroom_Minute.postUpdate(delta)
-	}
-	else
-	{
-		ds_Gas_GF_Bathroom_Minute.postUpdate(0)
-	}
-
-
-
 	try
 	{
-		delta = (ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)) as DecimalType)
+		ds_Gas_GF_Bathroom_Month.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusMonths(1)))
 	}
-	catch(Exception e) {
+	catch(Exception e)
 	{
-		delta = 0
+		ds_Gas_GF_Bathroom_Month.postUpdate(0)
 	}
+	logDebug("domus-silicea", "--------------------------------------------------- End ------")
 	
-	if (delta != null)
-	{
-		ds_Gas_GF_Bathroom_Minute.postUpdate(delta)
-	}
-	else
-	{
-		ds_Gas_GF_Bathroom_Minute.postUpdate(0)
-	}
 
-
-
-	try
-	{
-		delta = (ds_Gas_GF_Bathroom.deltaSince(now.minusMonths(1)) as DecimalType)
-	}
-	catch(Exception e) {
-	{
-		delta = 0
-	}
-	
-	if (delta != null)
-	{
-		ds_Gas_GF_Bathroom_Minute.postUpdate(delta)
-	}
-	else
-	{
-		ds_Gas_GF_Bathroom_Minute.postUpdate(0)
-	}
-
-
-
-	
-	//	
 //	ds_Gas_GF_Bathroom_Hour.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)))
-//    ds_Gas_GF_Bathroom_Day.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)))
-//    ds_Gas_GF_Bathroom_Week.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)))
+//  ds_Gas_GF_Bathroom_Day.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)))
+//  ds_Gas_GF_Bathroom_Week.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)))
 //	ds_Gas_GF_Bathroom_Month.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusMonths(1)))
 end
 

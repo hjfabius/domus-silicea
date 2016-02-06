@@ -67,6 +67,12 @@ sitemap domussilicea label="Domus Silicea"
 			Group label="Trends" icon="energy_elettric"
 			{			
 				Switch item=ds_Energy_ChartPeriod mappings=[0="No", 1="Orario", 2="Giornaliero", 3="Settimanale", 4="Bi-settimanale", 5="Mensile"]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom&period=h&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==1]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom&period=D&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==2]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom&period=W&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==3]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom&period=2W&random=60&h=300&w=1000" visibility=[ds_Energy_ChartPeriod==4]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom&period=M&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==5]						
+
 				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Minute&period=h&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==1]			
 				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Minute&period=D&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==2]			
 				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Minute&period=W&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==3]			
