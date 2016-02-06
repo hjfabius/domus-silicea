@@ -16,11 +16,13 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Temp_FF_LivingRoom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Text item=ds_Temp_FF_Kitchen valuecolor=[>30="red", >24="orange", >=17="green", <17="blue"]			
 			Text item=ds_Temp_FF_Kitchen_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
+			Text item=ds_Temp_GF_Bathroom valuecolor=[>30="red", >24="orange", >=17="green", <17="blue"]			
+			Text item=ds_Temp_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Switch item=ds_Temp_ChartPeriod mappings=[0="No", 1="Giornaliero", 2="Settimanale", 3="Bi-settimanale", 4="Mensile"]			
-			Image url="http://localhost:8080/chart?groups=ds_Temperature&period=D&random=1&h=300&w=1000" visibility=[ds_Temp_ChartPeriod==1]			
-			Image url="http://localhost:8080/chart?groups=ds_Temperature&period=W&random=1&h=300&w=1000" visibility=[ds_Temp_ChartPeriod==2]			
-			Image url="http://localhost:8080/chart?groups=ds_Temperature&period=2W&random=1&h=300&w=1000" visibility=[ds_Temp_ChartPeriod==3]			
-			Image url="http://localhost:8080/chart?groups=ds_Temperature&period=M&random=1&h=300&w=1000" visibility=[ds_Temp_ChartPeriod==4]			
+			Image url="http://localhost:8080/chart?groups=ds_Temperature&period=D&random=60&h=300&w=1000" visibility=[ds_Temp_ChartPeriod==1]			
+			Image url="http://localhost:8080/chart?groups=ds_Temperature&period=W&random=60&h=300&w=1000" visibility=[ds_Temp_ChartPeriod==2]			
+			Image url="http://localhost:8080/chart?groups=ds_Temperature&period=2W&random=60&h=300&w=1000" visibility=[ds_Temp_ChartPeriod==3]			
+			Image url="http://localhost:8080/chart?groups=ds_Temperature&period=M&random=60&h=300&w=1000" visibility=[ds_Temp_ChartPeriod==4]			
 		}		
 		Group item=ds_Humidity valuecolor=[>80="red", >70="orange", >=40="green", >20="orange", <20="red"] {
 			Text item=ds_Humidity_A_Playroom valuecolor=[>80="red", >70="orange", >=40="green", >20="orange", <20="red"]			
@@ -33,25 +35,56 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Humidity_FF_LivingRoom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Text item=ds_Humidity_FF_Kitchen valuecolor=[>80="red", >70="orange", >=40="green", >20="orange", <20="red"]			
 			Text item=ds_Humidity_FF_Kitchen_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
+			Text item=ds_Humidity_GF_Bathroom valuecolor=[>80="red", >70="orange", >=40="green", >20="orange", <20="red"]			
+			Text item=ds_Humidity_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Switch item=ds_Humidity_ChartPeriod mappings=[0="No", 1="Giornaliero", 2="Settimanale", 3="Bi-settimanale", 4="Mensile"]			
-			Image url="http://localhost:8080/chart?groups=ds_Humidity&period=D&random=1&h=300&w=1000" visibility=[ds_Humidity_ChartPeriod==1]			
-			Image url="http://localhost:8080/chart?groups=ds_Humidity&period=W&random=1&h=300&w=1000" visibility=[ds_Humidity_ChartPeriod==2]			
-			Image url="http://localhost:8080/chart?groups=ds_Humidity&period=2W&random=1&h=300&w=1000" visibility=[ds_Humidity_ChartPeriod==3]			
-			Image url="http://localhost:8080/chart?groups=ds_Humidity&period=M&random=1&h=300&w=1000" visibility=[ds_Humidity_ChartPeriod==4]			
+			Image url="http://localhost:8080/chart?groups=ds_Humidity&period=D&random=60&h=300&w=1000" visibility=[ds_Humidity_ChartPeriod==1]			
+			Image url="http://localhost:8080/chart?groups=ds_Humidity&period=W&random=60&h=300&w=1000" visibility=[ds_Humidity_ChartPeriod==2]			
+			Image url="http://localhost:8080/chart?groups=ds_Humidity&period=2W&random=60&h=300&w=1000" visibility=[ds_Humidity_ChartPeriod==3]			
+			Image url="http://localhost:8080/chart?groups=ds_Humidity&period=M&random=60&h=300&w=1000" visibility=[ds_Humidity_ChartPeriod==4]			
 		}		
 		Group item=ds_Battery {
 			Text item=ds_Battery_A_Playroom			
 			Text item=ds_Battery_FF_BedroomChildren			
 			Text item=ds_Battery_FF_Bedroom			
-			Text item=ds_Battery_FF_LivingRoom			
 			Text item=ds_Battery_FF_Kitchen			
-			Text item=ds_Battery_GF_Corridor			
 		}		
 		Group item=ds_Window		
 		Group item=ds_Energy {
-			Text item=ds_PulseCount_GF_Corridor			
 			Text item=ds_Watt_GF_Corridor			
-			Text item=ds_KWH_GF_Corridor			
+			Text item=ds_Watt_GF_Corridor_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
+			Text item=ds_KWH_GF_Corridor		
+			Text item=ds_KWH_GF_Corridor_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
+			Text item=ds_Gas_GF_Bathroom			
+			Text item=ds_Gas_GF_Bathroom_Minute 
+			Text item=ds_Gas_GF_Bathroom_Hour 	
+			Text item=ds_Gas_GF_Bathroom_Day
+			Text item=ds_Gas_GF_Bathroom_Week
+			Text item=ds_Gas_GF_Bathroom_Month
+			Text item=ds_Gas_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
+			Text item=ds_Water_GF_Bathroom			
+			Text item=ds_Water_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
+			Group label="Trends" icon="energy_elettric"
+			{			
+				Switch item=ds_Energy_ChartPeriod mappings=[0="No", 1="Orario", 2="Giornaliero", 3="Settimanale", 4="Bi-settimanale", 5="Mensile"]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Minute&period=h&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==1]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Minute&period=D&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==2]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Minute&period=W&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==3]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Minute&period=2W&random=60&h=300&w=1000" visibility=[ds_Energy_ChartPeriod==4]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Minute&period=M&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==5]						
+				
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Hour&period=h&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==1]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Hour&period=D&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==2]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Hour&period=W&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==3]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Hour&period=2W&random=60&h=300&w=1000" visibility=[ds_Energy_ChartPeriod==4]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Hour&period=M&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==5]						
+
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Day&period=h&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==1]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Day&period=D&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==2]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Day&period=W&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==3]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Day&period=2W&random=60&h=300&w=1000" visibility=[ds_Energy_ChartPeriod==4]			
+				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Day&period=M&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==5]						
+			}
 		}		
 		Group item=ds_Motion valuecolor=[OPEN="red", "CLOSED"="green"] labelcolor=[OPEN="red", "CLOSED"="green"] {
 			Text item=ds_Contact_A_Playroom valuecolor=[OPEN="red", "CLOSED"="green"] labelcolor=[OPEN="red", "CLOSED"="green"]			
@@ -62,11 +95,13 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Contact_FF_LivingRoom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Text item=ds_Contact_FF_Kitchen valuecolor=[OPEN="red", "CLOSED"="green"] labelcolor=[OPEN="red", "CLOSED"="green"]			
 			Text item=ds_Contact_FF_Kitchen_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
+			Text item=ds_Contact_GF_Bathroom valuecolor=[OPEN="red", "CLOSED"="green"] labelcolor=[OPEN="red", "CLOSED"="green"]			
+			Text item=ds_Contact_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Switch item=ds_Contact_ChartPeriod mappings=[0="No", 1="Giornaliero", 2="Settimanale", 3="Bi-settimanale", 4="Mensile"]			
-			Image url="http://localhost:8080/chart?groups=ds_Motion&period=D&random=1&h=300&w=1000" visibility=[ds_Contact_ChartPeriod==1]			
-			Image url="http://localhost:8080/chart?groups=ds_Motion&period=W&random=1&h=300&w=1000" visibility=[ds_Contact_ChartPeriod==2]			
-			Image url="http://localhost:8080/chart?groups=ds_Motion&period=2W&random=1&h=300&w=1000" visibility=[ds_Contact_ChartPeriod==3]			
-			Image url="http://localhost:8080/chart?groups=ds_Motion&period=M&random=1&h=300&w=1000" visibility=[ds_Contact_ChartPeriod==4]			
+			Image url="http://localhost:8080/chart?groups=ds_Motion&period=D&random=60&h=300&w=1000" visibility=[ds_Contact_ChartPeriod==1]			
+			Image url="http://localhost:8080/chart?groups=ds_Motion&period=W&random=60&h=300&w=1000" visibility=[ds_Contact_ChartPeriod==2]			
+			Image url="http://localhost:8080/chart?groups=ds_Motion&period=2W&random=60&h=300&w=1000" visibility=[ds_Contact_ChartPeriod==3]			
+			Image url="http://localhost:8080/chart?groups=ds_Motion&period=M&random=60&h=300&w=1000" visibility=[ds_Contact_ChartPeriod==4]			
 		}		
 	}	
 	Frame label="Telecamere" {
@@ -80,30 +115,34 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Temp_FF_Bedroom_Changed			
 			Text item=ds_Temp_FF_LivingRoom_Changed			
 			Text item=ds_Temp_FF_Kitchen_Changed			
+			Text item=ds_Temp_GF_Bathroom_Changed			
 			Text item=ds_Humidity_A_Playroom_Changed			
 			Text item=ds_Humidity_FF_BedroomChildren_Changed			
 			Text item=ds_Humidity_FF_Bedroom_Changed			
 			Text item=ds_Humidity_FF_LivingRoom_Changed			
-			Text item=ds_Humidity_FF_Kitchen_Changed			
+			Text item=ds_Humidity_FF_Kitchen_Changed		
+			Text item=ds_Humidity_GF_Bathroom_Changed						
 			Text item=ds_Contact_A_Playroom_Changed			
 			Text item=ds_Contact_FF_BedroomChildren_Changed			
 			Text item=ds_Contact_FF_LivingRoom_Changed			
 			Text item=ds_Contact_FF_Kitchen_Changed			
-			Text item=ds_PulseCount_GF_Corridor_Changed			
+			Text item=ds_Contact_GF_Bathroom_Changed			
 			Text item=ds_Watt_GF_Corridor_Changed			
+			Text item=ds_Gas_GF_Bathroom_Changed
+			Text item=ds_Water_GF_Bathroom_Changed
 			Text item=ds_KWH_GF_Corridor_Changed			
 			Text item=ds_Battery_A_Playroom_Changed			
 			Text item=ds_Battery_FF_BedroomChildren_Changed			
 			Text item=ds_Battery_FF_Bedroom_Changed			
 			Text item=ds_Battery_FF_LivingRoom_Changed			
 			Text item=ds_Battery_FF_Kitchen_Changed			
-			Text item=ds_Battery_GF_Corridor_Changed			
 			Text item=ds_Sketch_A_Playroom			
 			Text item=ds_Sketch_FF_BedroomChildren			
 			Text item=ds_Sketch_FF_Bedroom			
 			Text item=ds_Sketch_FF_LivingRoom			
 			Text item=ds_Sketch_FF_Kitchen			
 			Text item=ds_Sketch_GF_Corridor			
+			Text item=ds_Sketch_GF_Bathroom			
 		}		
 		Text item=ds_Date		
 		Text item=ds_Sunrise_Sunset		
@@ -135,6 +174,9 @@ sitemap domussilicea label="Domus Silicea"
 			Group item=ds_Group_FF_LivingRoom {
 				Image url="http://192.168.0.14/cam.jpg" refresh=1000				
 				Slider item=ds_Dimmer_FF_LivingRoom_Ceiling switchSupport				
+				Slider item=ds_KODI_Volume step=10
+				Text item=ds_KODI_Status
+				Text item=ds_KODI_Title
 				Text item=ds_Temp_FF_LivingRoom				
 				Text item=ds_Temp_FF_Kitchen				
 				Text item=ds_Humidity_FF_LivingRoom				
@@ -148,12 +190,18 @@ sitemap domussilicea label="Domus Silicea"
 			Group item=ds_Group_FF_StairDown			
 		}		
 		Group item=ds_Group_GF {
-			Group item=ds_Group_GF_Bathroom			
+			Group item=ds_Group_GF_Bathroom	{
+				Text item=ds_Gas_GF_Bathroom							
+				Text item=ds_Water_GF_Bathroom						
+				Text item=ds_Temp_GF_Bathroom				
+				Text item=ds_Humidity_GF_Bathroom				
+			}
 			Group item=ds_Group_GF_Bedroom			
 			Group item=ds_Group_GF_Corridor {
-				Text item=ds_PulseCount_GF_Corridor				
 				Text item=ds_Watt_GF_Corridor				
+				Text item=ds_Watt_GF_Corridor_Changed 								
 				Text item=ds_KWH_GF_Corridor				
+				Text item=ds_KWH_GF_Corridor_Changed 								
 			}			
 			Group item=ds_Group_GF_Stair			
 			Group item=ds_Group_GF_Garage			

@@ -5,7 +5,7 @@ import org.joda.time.*
 import java.util.*
 import org.eclipse.xtext.xbase.lib.*
 import org.openhab.core.items.*
-
+import org.openhab.model.script.debug
 
 var String ArduinoUpdate = ""
 var String sketchName = ""
@@ -372,3 +372,158 @@ then
 	var org.joda.time.DateTime sunset = new org.joda.time.DateTime((ds_Sunset_Time.state as DateTimeType).calendar.timeInMillis)
 	ds_Sunrise_Sunset.postUpdate(String::format("%02d:%02d / %02d:%02d", sunrise.getHourOfDay(), sunrise.getMinuteOfHour(), sunset.getHourOfDay(), sunset.getMinuteOfHour()))
 end
+
+
+//rule "MQTT updates"
+//when	
+//	Item ds_Group_MQTT received update 
+//then
+//	ds_Group_MQTT.members.forEach[i |
+//		ds_Sensors_Communication.members.forEach[j |
+//			if(j.name == (i.name + "_Changed"))
+//			{
+//				var Calendar cal = Calendar::getInstance()
+//				cal.setTime(i.lastUpdate)
+//				postUpdate(j, new DateTimeType(cal))
+//				return true
+//			}
+//		]
+//	]
+//end
+
+rule "Gas Meter updates"
+when	
+	Item ds_Gas_GF_Bathroom_Pulse received update 
+then
+	//Reset pulse variable
+	if ((ds_Gas_GF_Bathroom_Pulse.state as DecimalType) == 0)
+	{
+		return true
+	}
+	
+	postUpdate(ds_Gas_GF_Bathroom_Pulse, 0)
+	
+	//Initialize GasMeter variable if null
+	if (ds_Gas_GF_Bathroom.state == Uninitialized) 
+	{
+		//It could happen if a pulse is sent just after openhab reboot and persistance not yet restore the last value
+        return true//    postUpdate(ds_Gas_GF_Bathroom, 0.00)
+    }
+	//Increment GasMeter variable
+	postUpdate(ds_Gas_GF_Bathroom, 0.01 + (ds_Gas_GF_Bathroom.state as DecimalType))
+end
+
+
+rule "Energy per minute"
+when
+Time cron "0 * * * * ?"
+then
+	var delta = 0
+	try
+	{
+		delta = (ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(1)) as DecimalType)
+	}
+	catch(Exception e) {
+	{
+		delta = 0
+	}
+	
+	if (delta != null)
+	{
+		ds_Gas_GF_Bathroom_Minute.postUpdate(delta)
+	}
+	else
+	{
+		ds_Gas_GF_Bathroom_Minute.postUpdate(0)
+	}
+	
+	
+	try
+	{
+		delta = (ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)) as DecimalType)
+	}
+	catch(Exception e) {
+	{
+		delta = 0
+	}
+	
+	if (delta != null)
+	{
+		ds_Gas_GF_Bathroom_Minute.postUpdate(delta)
+	}
+	else
+	{
+		ds_Gas_GF_Bathroom_Minute.postUpdate(0)
+	}
+
+
+	try
+	{
+		delta = (ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)) as DecimalType)
+	}
+	catch(Exception e) {
+	{
+		delta = 0
+	}
+	
+	if (delta != null)
+	{
+		ds_Gas_GF_Bathroom_Minute.postUpdate(delta)
+	}
+	else
+	{
+		ds_Gas_GF_Bathroom_Minute.postUpdate(0)
+	}
+
+
+
+	try
+	{
+		delta = (ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)) as DecimalType)
+	}
+	catch(Exception e) {
+	{
+		delta = 0
+	}
+	
+	if (delta != null)
+	{
+		ds_Gas_GF_Bathroom_Minute.postUpdate(delta)
+	}
+	else
+	{
+		ds_Gas_GF_Bathroom_Minute.postUpdate(0)
+	}
+
+
+
+	try
+	{
+		delta = (ds_Gas_GF_Bathroom.deltaSince(now.minusMonths(1)) as DecimalType)
+	}
+	catch(Exception e) {
+	{
+		delta = 0
+	}
+	
+	if (delta != null)
+	{
+		ds_Gas_GF_Bathroom_Minute.postUpdate(delta)
+	}
+	else
+	{
+		ds_Gas_GF_Bathroom_Minute.postUpdate(0)
+	}
+
+
+
+	
+	//	
+//	ds_Gas_GF_Bathroom_Hour.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)))
+//    ds_Gas_GF_Bathroom_Day.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)))
+//    ds_Gas_GF_Bathroom_Week.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)))
+//	ds_Gas_GF_Bathroom_Month.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusMonths(1)))
+end
+
+
+// to debug use logDebug("domus-silicea", "your message")
