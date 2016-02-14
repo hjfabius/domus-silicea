@@ -418,7 +418,7 @@ rule "Energy per minute"
 when
 Time cron "0 * * * * ?"
 then
-	logDebug("domus-silicea", "--------------------------------------------------- Start ------")
+	//logDebug("domus-silicea", "--------------------Energy per minute------------ Start ------")
 	var Number delta = 0
 	
 	try
@@ -449,6 +449,44 @@ then
 		ds_Gas_GF_Bathroom_Day.postUpdate(0)
 	}
 
+
+	try
+	{
+		if(ds_Gas_GF_Alarm.state == ON)
+		{
+			logDebug("domus-silicea", "--------------------Energy per minute------------ Check Caldaia ------")
+			delta = ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(5))
+			logDebug("domus-silicea", "Delta: " + delta)
+			if(delta < 0.01)
+			{
+				logDebug("domus-silicea", "--------------------Energy per minute------------ ALLARME - Caldaia Spenta ------")
+				sendMail("youremail@gmail.com", "Domus Silicea - ALLARME CALDAIA", "Attenzione, non c'e' stato alcun consumo di gas negli ultimi 5 minuti.")	
+				ds_Gas_GF_Alarm.postUpdate(OFF)
+			}
+		}
+	}
+	catch(Exception e)
+	{
+		logDebug("domus-silicea", "--------------------Energy per minute------------ Error Check Caldaia ------")
+	}
+
+
+	
+//	ds_Gas_GF_Bathroom_Hour.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)))
+//  ds_Gas_GF_Bathroom_Day.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)))
+//  ds_Gas_GF_Bathroom_Week.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)))
+//	ds_Gas_GF_Bathroom_Month.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusMonths(1)))
+end
+
+
+rule "Energy per day"
+when
+Time cron "0 0 0/4 * * ?"
+then
+	//logDebug("domus-silicea", "--------------------- Energy per day ------------- Start ------")
+	var Number delta = 0
+	
+
 	try
 	{
 		ds_Gas_GF_Bathroom_Week.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)))
@@ -467,7 +505,7 @@ then
 	{
 		ds_Gas_GF_Bathroom_Month.postUpdate(0)
 	}
-	logDebug("domus-silicea", "--------------------------------------------------- End ------")
+	//logDebug("domus-silicea", "--------------------------------------------------- End ------")
 	
 
 //	ds_Gas_GF_Bathroom_Hour.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)))
@@ -476,5 +514,8 @@ then
 //	ds_Gas_GF_Bathroom_Month.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusMonths(1)))
 end
 
+
+
+// to debug use logDebug("domus-silicea", "your message")
 
 // to debug use logDebug("domus-silicea", "your message")

@@ -62,6 +62,7 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Gas_GF_Bathroom_Week
 			Text item=ds_Gas_GF_Bathroom_Month
 			Text item=ds_Gas_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
+			Switch item=ds_Gas_GF_Alarm
 			Text item=ds_Water_GF_Bathroom			
 			Text item=ds_Water_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
 			Group label="Trends" icon="energy_elettric"
