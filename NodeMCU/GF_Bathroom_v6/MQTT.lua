@@ -5,11 +5,11 @@ local MQTT = {}
 	m = nil
 
 	-- Sends a simple ping to the broker
-	local function send_ping()  
-        --print("MQTT Ping")
-		--MQTT.send_Message("PING",      "MQTT_ID = " .. config.MQTT_ID .. "\nIP     = " .. configWifi.IP .. "\nMAC    = " .. configWifi.MAC)
-        MQTT.send_Message("V_SKETCH",      config.SketchName .. " - Version: " .. config.SketchVersion .. " - NodeID: " .. node.chipid() .. " - IP: " .. configWifi.IP)
-	end
+	--local function send_ping()  
+    --    --print("MQTT Ping")
+	--	--MQTT.send_Message("PING",      "MQTT_ID = " .. config.MQTT_ID .. "\nIP     = " .. configWifi.IP .. "\nMAC    = " .. configWifi.MAC)
+    --    MQTT.send_Message("V_SKETCH",      config.SketchName .. " - Version: " .. config.SketchVersion .. " - NodeID: " .. node.chipid() .. " - IP: " .. configWifi.IP)
+	--end
 
 
 	-- Sends my id to the broker for registration
@@ -32,9 +32,6 @@ local MQTT = {}
 		-- Connect to broker
 		m:connect(config.MQTT_Host, config.MQTT_Port, 0, 1, function(con) 
 			register_myself()
-			-- And then pings each 60000 milliseconds
-			tmr.stop(6)
-			tmr.alarm(6, config.MQTT_PingInterval, 1, send_ping)
 		end) 
 
 	end

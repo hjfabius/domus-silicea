@@ -3,6 +3,7 @@ local app = {}
 	print ("domus-silicea - app.lua - Script Starting") 
 
     function app.refreshAndSend()
+        MQTT.send_Message("V_SKETCH",      config.SketchName .. " - Version: " .. config.SketchVersion .. " - NodeID: " .. node.chipid() .. " - IP: " .. configWifi.IP)
     
         if config.GPIO_DHT11 >= 0 then
             DHT11.update()
@@ -21,8 +22,6 @@ local app = {}
             end
         end
 
-        
-        --MQTT.send_Message("V_TEMP", DHT11.Temperature )
     end
 
 	function app.start()  

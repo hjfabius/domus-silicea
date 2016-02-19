@@ -8,7 +8,6 @@ local config = {}
     -- 2 - GasMeterDebounce
     -- 3 - WaterMeterPollingShort
     -- 4 - WaterMeterPollingLong
-    -- 6 - MQTT Ping
 
     config.NodeName = 'Node_' .. node.chipid()
     config.SketchName = 'NodeMCU'
@@ -30,7 +29,7 @@ local config = {}
     config.MinPeriod_GasMeter   = 2000 --ms  
 
     --print ("domus-silicea - config.lua - Config Water Meter") 
-    config.GPIO_WaterMeter         = 1
+    config.GPIO_WaterMeter         = 1 
     config.PollingShort_WaterMeter = 1 --ms 
     config.PollingLong_WaterMeter  = 5 --ms 
 
@@ -50,15 +49,12 @@ local config = {}
     config.GPIO_GasAnalog       = -1
 
 	--print ("domus-silicea - config.lua - Config MQTT") 
-	config.MQTT_Host            = "192.168.0.11" 
+	config.MQTT_Host            = "192.168.0.10" 
 	config.MQTT_Port            = 1883
   
 	config.MQTT_ID              = config.NodeName
 	config.MQTT_EndPoint        = "domus-silicea/"
     config.MQTT_ServerEndPoint  = "OPENHAB"
-    config.MQTT_PingInterval    = 60000 --ms
-
-
 
 return config 
 

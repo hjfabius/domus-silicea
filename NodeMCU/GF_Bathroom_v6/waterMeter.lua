@@ -21,7 +21,7 @@ local waterMeter = {}
     end
 
     function onGPIOWaterPollingShort()
-        if (gpio.read(config.GPIO_WaterMeter) == 1 then
+        if (gpio.read(config.GPIO_WaterMeter) == 1) then
             counterHigh = counterHigh + 1
         else
             counterLow = counterLow + 1
