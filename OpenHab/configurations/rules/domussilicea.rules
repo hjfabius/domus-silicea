@@ -414,11 +414,37 @@ then
 end
 
 
+rule "Water Meter updates"
+when	
+	Item ds_Water_GF_Bathroom_Pulse received update 
+then
+	//Reset pulse variable
+	if ((ds_Water_GF_Bathroom_Pulse.state as DecimalType) == 0)
+	{
+		return true
+	}
+		
+	//Initialize GasMeter variable if null
+	if (ds_Water_GF_Bathroom.state == Uninitialized) 
+	{
+		//It could happen if a pulse is sent just after openhab reboot and persistance not yet restore the last value
+        postUpdate(ds_Water_GF_Bathroom_Pulse, 0)
+		return true
+    }
+	//Increment GasMeter variable
+	postUpdate(ds_Water_GF_Bathroom, (ds_Water_GF_Bathroom_Pulse.state as DecimalType) + (ds_Water_GF_Bathroom.state as DecimalType))
+	postUpdate(ds_Water_GF_Bathroom_Pulse, 0)
+end
+
+
+
+
 rule "Energy per minute"
 when
 Time cron "0 * * * * ?"
 then
 	//logDebug("domus-silicea", "--------------------Energy per minute------------ Start ------")
+	//logDebug("domus-silicea", "--------------------Energy per minute------------ Gas ------")
 	var Number delta = 0
 	
 	try
@@ -450,17 +476,53 @@ then
 	}
 
 
+	//logDebug("domus-silicea", "--------------------Energy per minute------------ Water ------")
+
+	try
+	{
+		ds_Water_GF_Bathroom_Minute.postUpdate(ds_Water_GF_Bathroom.deltaSince(now.minusMinutes(1)))
+	}
+	catch(Exception e)
+	{
+		ds_Water_GF_Bathroom_Minute.postUpdate(0)
+	}
+	
+	try
+	{
+		ds_Water_GF_Bathroom_Hour.postUpdate(ds_Water_GF_Bathroom.deltaSince(now.minusHours(1)))
+	}
+	catch(Exception e)
+	{
+		ds_Water_GF_Bathroom_Hour.postUpdate(0)
+	}
+
+	
+	try
+	{
+		ds_Water_GF_Bathroom_Day.postUpdate(ds_Water_GF_Bathroom.deltaSince(now.minusDays(1)))
+	}
+	catch(Exception e)
+	{
+		ds_Water_GF_Bathroom_Day.postUpdate(0)
+	}
+
+
+
+
+	//logDebug("domus-silicea", "--------------------Energy per minute------------ Check Alarm ------")
+	
 	try
 	{
 		if(ds_Gas_GF_Alarm.state == ON)
 		{
 			logDebug("domus-silicea", "--------------------Energy per minute------------ Check Caldaia ------")
-			delta = ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(5))
-			logDebug("domus-silicea", "Delta: " + delta)
+			delta = ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(60))
+			//logDebug("domus-silicea", "Delta: " + delta)
 			if(delta < 0.01)
 			{
 				logDebug("domus-silicea", "--------------------Energy per minute------------ ALLARME - Caldaia Spenta ------")
-				sendMail("youremail@gmail.com", "Domus Silicea - ALLARME CALDAIA", "Attenzione, non c'e' stato alcun consumo di gas negli ultimi 5 minuti.")	
+				sendMail("fabio.cristini@gmail.com;fabio.cristini@pmi.com;elena.avanzi.ch@gmail.com", "Domus Silicea - ALLARME CALDAIA", "Attenzione, non c'e' stato alcun consumo di gas negli ultimi 60 minuti.")	
+				//callScript("alarm_heating")
 				ds_Gas_GF_Alarm.postUpdate(OFF)
 			}
 		}
@@ -487,6 +549,7 @@ then
 	var Number delta = 0
 	
 
+	//logDebug("domus-silicea", "--------------------- Energy per day ------------- Gas ------")
 	try
 	{
 		ds_Gas_GF_Bathroom_Week.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)))
@@ -505,6 +568,28 @@ then
 	{
 		ds_Gas_GF_Bathroom_Month.postUpdate(0)
 	}
+
+
+	//logDebug("domus-silicea", "--------------------- Energy per day ------------- Water ------")
+	try
+	{
+		ds_Water_GF_Bathroom_Week.postUpdate(ds_Water_GF_Bathroom.deltaSince(now.minusWeeks(1)))
+	}
+	catch(Exception e)
+	{
+		ds_Water_GF_Bathroom_Week.postUpdate(0)
+	}
+
+	
+	try
+	{
+		ds_Water_GF_Bathroom_Month.postUpdate(ds_Water_GF_Bathroom.deltaSince(now.minusMonths(1)))
+	}
+	catch(Exception e)
+	{
+		ds_Water_GF_Bathroom_Month.postUpdate(0)
+	}
+
 	//logDebug("domus-silicea", "--------------------------------------------------- End ------")
 	
 

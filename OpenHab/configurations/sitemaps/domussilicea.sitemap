@@ -55,6 +55,7 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Watt_GF_Corridor_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
 			Text item=ds_KWH_GF_Corridor		
 			Text item=ds_KWH_GF_Corridor_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
+			Switch item=ds_Gas_GF_Alarm
 			Text item=ds_Gas_GF_Bathroom			
 			Text item=ds_Gas_GF_Bathroom_Minute 
 			Text item=ds_Gas_GF_Bathroom_Hour 	
@@ -62,10 +63,7 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Gas_GF_Bathroom_Week
 			Text item=ds_Gas_GF_Bathroom_Month
 			Text item=ds_Gas_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
-			Switch item=ds_Gas_GF_Alarm
-			Text item=ds_Water_GF_Bathroom			
-			Text item=ds_Water_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
-			Group label="Trends" icon="energy_elettric"
+			Group label="Trend Gas" icon="chart"
 			{			
 				Switch item=ds_Energy_ChartPeriod mappings=[0="No", 1="Orario", 2="Giornaliero", 3="Settimanale", 4="Bi-settimanale", 5="Mensile"]			
 				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom&period=h&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==1]			
@@ -92,6 +90,42 @@ sitemap domussilicea label="Domus Silicea"
 				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Day&period=2W&random=60&h=300&w=1000" visibility=[ds_Energy_ChartPeriod==4]			
 				Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Day&period=M&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==5]						
 			}
+
+			Text item=ds_Water_GF_Bathroom			
+			Text item=ds_Water_GF_Bathroom_Minute 
+			Text item=ds_Water_GF_Bathroom_Hour 	
+			Text item=ds_Water_GF_Bathroom_Day
+			Text item=ds_Water_GF_Bathroom_Week
+			Text item=ds_Water_GF_Bathroom_Month
+			Text item=ds_Water_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
+			Group label="Trend Acqua" icon="chart"
+			{			
+				Switch item=ds_Energy_ChartPeriod mappings=[0="No", 1="Orario", 2="Giornaliero", 3="Settimanale", 4="Bi-settimanale", 5="Mensile"]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom&period=h&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==1]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom&period=D&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==2]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom&period=W&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==3]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom&period=2W&random=60&h=300&w=1000" visibility=[ds_Energy_ChartPeriod==4]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom&period=M&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==5]						
+
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Minute&period=h&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==1]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Minute&period=D&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==2]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Minute&period=W&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==3]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Minute&period=2W&random=60&h=300&w=1000" visibility=[ds_Energy_ChartPeriod==4]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Minute&period=M&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==5]						
+				
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Hour&period=h&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==1]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Hour&period=D&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==2]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Hour&period=W&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==3]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Hour&period=2W&random=60&h=300&w=1000" visibility=[ds_Energy_ChartPeriod==4]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Hour&period=M&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==5]						
+
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Day&period=h&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==1]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Day&period=D&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==2]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Day&period=W&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==3]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Day&period=2W&random=60&h=300&w=1000" visibility=[ds_Energy_ChartPeriod==4]			
+				Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Day&period=M&random=60&h=300&w=1000"  visibility=[ds_Energy_ChartPeriod==5]						
+			}
+
 		}		
 		Group item=ds_Motion valuecolor=[OPEN="red", "CLOSED"="green"] labelcolor=[OPEN="red", "CLOSED"="green"] {
 			Text item=ds_Contact_A_Playroom valuecolor=[OPEN="red", "CLOSED"="green"] labelcolor=[OPEN="red", "CLOSED"="green"]			

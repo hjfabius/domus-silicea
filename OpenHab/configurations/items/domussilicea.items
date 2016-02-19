@@ -107,8 +107,14 @@ Number 							ds_Gas_GF_Bathroom_Day					"Gas m3 per giorno [%.2f]"													
 Number 							ds_Gas_GF_Bathroom_Week					"Gas m3 per settimana [%.2f]"												<fire>					(ds_Group_GF_Bathroom, ds_Energy) 		
 Number 							ds_Gas_GF_Bathroom_Month				"Gas m3 per mese [%.2f]"													<fire>					(ds_Group_GF_Bathroom, ds_Energy) 		
 DateTime 						ds_Gas_GF_Bathroom_Changed 				"Gas m3 modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"					<fire>					(ds_Sensors_Communication)
-Number 							ds_Water_GF_Bathroom					"Water m3 [%.2f]"															<water>					(ds_Group_GF_Bathroom, ds_Energy, ds_Group_MQTT) 		{mqtt="<[openhab:domus-silicea/GF_Bathroom/V_WATER:state:default]"}
-DateTime 						ds_Water_GF_Bathroom_Changed 			"Water m3 modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"					<water>					(ds_Sensors_Communication)
+Number 							ds_Water_GF_Bathroom_Pulse				"Acqua Pulse [%.2f]"														<water>					(ds_Group_GF_Bathroom, ds_Energy, ds_Group_MQTT) 		{mqtt="<[openhab:domus-silicea/GF_Bathroom/V_WATER:state:default]"}
+Number 							ds_Water_GF_Bathroom					"Acqua m3 [%.2f]"															<water>					(ds_Group_GF_Bathroom, ds_Energy, ds_Group_MQTT) 		{mqtt="<[openhab:domus-silicea/GF_Bathroom/V_WATER_VALUE:state:default]"}
+Number 							ds_Water_GF_Bathroom_Minute				"Acqua m3 per minuto [%.2f]"												<water>					(ds_Group_GF_Bathroom, ds_Energy) 		
+Number 							ds_Water_GF_Bathroom_Hour				"Acqua m3 per ora [%.2f]"													<water>					(ds_Group_GF_Bathroom, ds_Energy) 		
+Number 							ds_Water_GF_Bathroom_Day				"Acqua m3 per giorno [%.2f]"												<water>					(ds_Group_GF_Bathroom, ds_Energy) 		
+Number 							ds_Water_GF_Bathroom_Week				"Acqua m3 per settimana [%.2f]"												<water>					(ds_Group_GF_Bathroom, ds_Energy) 		
+Number 							ds_Water_GF_Bathroom_Month				"Acqua m3 per mese [%.2f]"													<water>					(ds_Group_GF_Bathroom, ds_Energy) 		
+DateTime 						ds_Water_GF_Bathroom_Changed 			"Acqua m3 modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"					<water>					(ds_Sensors_Communication)
 Number							ds_Energy_ChartPeriod   				"Visualizza Trends"															<energy_elettric>
 Switch							ds_Gas_GF_Alarm							"Allarme Gas"																						(ds_Group_GF_Bathroom, ds_Energy) 		
 

@@ -1,0 +1,1 @@
+sendMail("youremail@gmail.com", "Domus Silicea - ALLARME CALDAIA", "Attenzione, non c'e' stato alcun consumo di gas negli ultimi 60 minuti.")	
