@@ -1,0 +1,22 @@
+// persistence strategies have a name and a definition and are referred to in the "Items" section
+Strategies 
+{
+    // if no strategy is specified for an item entry below, the default list will be used
+    everyMinute : "0 * * * * ?"		
+	everyHour   : "0 0 * * * ?"
+    everyDay    : "0 0 0 * * ?"	
+    default = everyChange
+}
+
+Items 
+{
+	* 					: strategy = everyChange, restoreOnStartup	
+	ds_Temperature* 	: strategy = everyChange, everyMinute, restoreOnStartup	
+	ds_Humidity* 		: strategy = everyChange, everyMinute, restoreOnStartup	
+	ds_Motion*		 	: strategy = everyChange, everyMinute, restoreOnStartup	
+	ds_Gas*		 		: strategy = everyChange, everyMinute, restoreOnStartup	
+	ds_Water*		 	: strategy = everyChange, everyMinute, restoreOnStartup	
+	ds_Energy*		 	: strategy = everyChange, everyMinute, restoreOnStartup	
+	ds_Battery*		 	: strategy = everyChange, everyMinute, restoreOnStartup	
+	ds_Presences*		: strategy = everyChange, everyMinute, restoreOnStartup	
+}

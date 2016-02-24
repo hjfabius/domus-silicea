@@ -1,3 +1,5 @@
+import java.util.Date
+
 import org.openhab.core.library.types.*
 import org.openhab.core.persistence.*
 import org.openhab.model.script.actions.*
@@ -75,6 +77,8 @@ var int I_SKETCH_VERSION = 12
 var int I_REBOOT = 13
 var int I_GATEWAY_READY = 14
 
+var Number LightBrightnessBeforePause
+
 // Mappings
 var HashMap<String, String> sensorToItemsMap = newLinkedHashMap(
 
@@ -144,7 +148,11 @@ var HashMap<String, String> sensorToItemsMap = newLinkedHashMap(
 )
     
 
-//receiving msg from mysensors gateway
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
 rule "Arduino sends to Openhab"
     when
         Item Arduino received update
@@ -284,28 +292,8 @@ end
 
 
 
-/*
-rule "myLights"
-	when
-		Item ds_Light_FF_LivingRoom_Ceiling received command
-	then
-		println(" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  ")
-		println("      ds_Light_FF_LivingRoom_Ceiling")
-		if(receivedCommand == ON) 
-		{
-			println("      Sending command ON")
-			//sendCommand(Arduino, "3;3;1;1;2;1\n")
-			sendCommand(Arduino, sensorToItemsMap.get("ds_Light_FF_LivingRoom_Ceiling") + "1;1;" + V_LIGHT + ";1\n")
-		}
-		if(receivedCommand == OFF) 
-		{
-			println("      Sending command OFF")
-			//sendCommand(Arduino, "3;3;1;1;2;0\n")
-			sendCommand(Arduino, sensorToItemsMap.get("ds_Light_FF_LivingRoom_Ceiling") + "1;1;" + V_LIGHT + ";0\n")
-		}
-		println(" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  ")
-end
-*/
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
 rule "ds_Dimmer_FF_LivingRoom_Ceiling"
 	when
 		Item ds_Dimmer_FF_LivingRoom_Ceiling received command
@@ -345,6 +333,11 @@ end
 
 
 
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
 rule "Reset Motion Detectors"
 	when
 		System started or
@@ -357,23 +350,28 @@ end
 
 
 
-
-
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
 rule "Set sunset and sunrise"
-when
-System started or
-//Time cron "0/5 * * * * ?"
-//Time cron "0 * * * * ?"
-Time cron "0 0 * * * ?"
-then
-	//postUpdate("ds_Temp_FF_Bedroom_Changed", new DateTimeType().toString)
-	//callScript("updateSunriseSunset.script")
-	var org.joda.time.DateTime sunrise = new org.joda.time.DateTime((ds_Sunrise_Time.state as DateTimeType).calendar.timeInMillis)
-	var org.joda.time.DateTime sunset = new org.joda.time.DateTime((ds_Sunset_Time.state as DateTimeType).calendar.timeInMillis)
-	ds_Sunrise_Sunset.postUpdate(String::format("%02d:%02d / %02d:%02d", sunrise.getHourOfDay(), sunrise.getMinuteOfHour(), sunset.getHourOfDay(), sunset.getMinuteOfHour()))
+	when
+		System started or
+		//Time cron "0/5 * * * * ?"
+		//Time cron "0 * * * * ?"
+		Time cron "0 0 * * * ?"
+	then
+		//callScript("updateSunriseSunset.script")
+		if (ds_Sunrise_Time.state == Undefined || ds_Sunrise_Time.state == Uninitialized || ds_Sunset_Time.state == Undefined || ds_Sunset_Time.state == Uninitialized)
+		{
+			return true
+		}
+		var org.joda.time.DateTime sunrise = new org.joda.time.DateTime((ds_Sunrise_Time.state as DateTimeType).calendar.timeInMillis)
+		var org.joda.time.DateTime sunset = new org.joda.time.DateTime((ds_Sunset_Time.state as DateTimeType).calendar.timeInMillis)
+		ds_Sunrise_Sunset.postUpdate(String::format("%02d:%02d / %02d:%02d", sunrise.getHourOfDay(), sunrise.getMinuteOfHour(), sunset.getHourOfDay(), sunset.getMinuteOfHour()))
 end
 
 
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
 //rule "MQTT updates"
 //when	
 //	Item ds_Group_MQTT received update 
@@ -391,133 +389,82 @@ end
 //	]
 //end
 
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
 rule "Gas Meter updates"
-when	
-	Item ds_Gas_GF_Bathroom_Pulse received update 
-then
-	//Reset pulse variable
-	if ((ds_Gas_GF_Bathroom_Pulse.state as DecimalType) == 0)
-	{
-		return true
-	}
-	
-	postUpdate(ds_Gas_GF_Bathroom_Pulse, 0)
-	
-	//Initialize GasMeter variable if null
-	if (ds_Gas_GF_Bathroom.state == Uninitialized) 
-	{
-		//It could happen if a pulse is sent just after openhab reboot and persistance not yet restore the last value
-        return true//    postUpdate(ds_Gas_GF_Bathroom, 0.00)
-    }
-	//Increment GasMeter variable
-	postUpdate(ds_Gas_GF_Bathroom, 0.01 + (ds_Gas_GF_Bathroom.state as DecimalType))
-end
-
-
-rule "Water Meter updates"
-when	
-	Item ds_Water_GF_Bathroom_Pulse received update 
-then
-	//Reset pulse variable
-	if ((ds_Water_GF_Bathroom_Pulse.state as DecimalType) == 0)
-	{
-		return true
-	}
+	when	
+		Item ds_Gas_GF_Bathroom_Pulse received update 
+	then
+		//Reset pulse variable
+		if ((ds_Gas_GF_Bathroom_Pulse.state as DecimalType) == 0)
+		{
+			ds_Gas_GF_Bathroom_Changed.postUpdate(new DateTimeType().toString)
+			return true
+		}
 		
-	//Initialize GasMeter variable if null
-	if (ds_Water_GF_Bathroom.state == Uninitialized) 
-	{
-		//It could happen if a pulse is sent just after openhab reboot and persistance not yet restore the last value
-        postUpdate(ds_Water_GF_Bathroom_Pulse, 0)
-		return true
-    }
-	//Increment GasMeter variable
-	postUpdate(ds_Water_GF_Bathroom, (ds_Water_GF_Bathroom_Pulse.state as DecimalType) + (ds_Water_GF_Bathroom.state as DecimalType))
-	postUpdate(ds_Water_GF_Bathroom_Pulse, 0)
+		ds_Gas_GF_Bathroom_Pulse.postUpdate(0)
+		
+		//Initialize GasMeter variable if null
+		if (ds_Gas_GF_Bathroom.state == Uninitialized) 
+		{
+			//It could happen if a pulse is sent just after openhab reboot and persistance not yet restore the last value
+			return true//    postUpdate(ds_Gas_GF_Bathroom, 0.00)
+		}
+		//Increment GasMeter variable
+		ds_Gas_GF_Bathroom.postUpdate(0.01 + (ds_Gas_GF_Bathroom.state as DecimalType))
+		ds_Gas_GF_Bathroom_Changed.postUpdate(new DateTimeType().toString)
 end
 
 
 
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Water Meter updates"
+	when	
+		Item ds_Water_GF_Bathroom_Pulse received update 
+	then
+		//Reset pulse variable
+		if ((ds_Water_GF_Bathroom_Pulse.state as DecimalType) == 0)
+		{
+			ds_Water_GF_Bathroom_Changed.postUpdate(new DateTimeType().toString)
+			return true
+		}
+			
+		//Initialize GasMeter variable if null
+		if (ds_Water_GF_Bathroom.state == Uninitialized) 
+		{
+			//It could happen if a pulse is sent just after openhab reboot and persistance not yet restore the last value
+			ds_Water_GF_Bathroom_Pulse.postUpdate(0)
+			return true
+		}
+		//Increment GasMeter variable
+		ds_Water_GF_Bathroom.postUpdate( (ds_Water_GF_Bathroom_Pulse.state as DecimalType)/10000 + (ds_Water_GF_Bathroom.state as DecimalType))
+		ds_Water_GF_Bathroom_Changed.postUpdate(new DateTimeType().toString)
+		ds_Water_GF_Bathroom_Pulse.postUpdate(0)
+end
 
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
 rule "Energy per minute"
-when
-Time cron "0 * * * * ?"
-then
-	//logDebug("domus-silicea", "--------------------Energy per minute------------ Start ------")
-	//logDebug("domus-silicea", "--------------------Energy per minute------------ Gas ------")
-	var Number delta = 0
-	
-	try
-	{
-		ds_Gas_GF_Bathroom_Minute.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(1)))
-	}
-	catch(Exception e)
-	{
-		ds_Gas_GF_Bathroom_Minute.postUpdate(0)
-	}
-	
-	try
-	{
-		ds_Gas_GF_Bathroom_Hour.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)))
-	}
-	catch(Exception e)
-	{
-		ds_Gas_GF_Bathroom_Hour.postUpdate(0)
-	}
+	when
+		Time cron "0 * * * * ?"
+	then
+		var Number delta = 0
+		//logDebug("domus-silicea", "--------------------Energy per minute------------ Start  ------")
+		delta = ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(1)) ? 0
+		ds_Gas_GF_Bathroom_Minute.postUpdate(delta.toString)
 
-	
-	try
-	{
-		ds_Gas_GF_Bathroom_Day.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)))
-	}
-	catch(Exception e)
-	{
-		ds_Gas_GF_Bathroom_Day.postUpdate(0)
-	}
+		delta = ds_Water_GF_Bathroom.deltaSince(now.minusMinutes(1)) ? 0
+		ds_Water_GF_Bathroom_Minute.postUpdate(delta.toString)
 
-
-	//logDebug("domus-silicea", "--------------------Energy per minute------------ Water ------")
-
-	try
-	{
-		ds_Water_GF_Bathroom_Minute.postUpdate(ds_Water_GF_Bathroom.deltaSince(now.minusMinutes(1)))
-	}
-	catch(Exception e)
-	{
-		ds_Water_GF_Bathroom_Minute.postUpdate(0)
-	}
-	
-	try
-	{
-		ds_Water_GF_Bathroom_Hour.postUpdate(ds_Water_GF_Bathroom.deltaSince(now.minusHours(1)))
-	}
-	catch(Exception e)
-	{
-		ds_Water_GF_Bathroom_Hour.postUpdate(0)
-	}
-
-	
-	try
-	{
-		ds_Water_GF_Bathroom_Day.postUpdate(ds_Water_GF_Bathroom.deltaSince(now.minusDays(1)))
-	}
-	catch(Exception e)
-	{
-		ds_Water_GF_Bathroom_Day.postUpdate(0)
-	}
-
-
-
-
-	//logDebug("domus-silicea", "--------------------Energy per minute------------ Check Alarm ------")
-	
-	try
-	{
+		
 		if(ds_Gas_GF_Alarm.state == ON)
 		{
-			logDebug("domus-silicea", "--------------------Energy per minute------------ Check Caldaia ------")
-			delta = ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(60))
-			//logDebug("domus-silicea", "Delta: " + delta)
+			delta = ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(60)) ? 0
 			if(delta < 0.01)
 			{
 				logDebug("domus-silicea", "--------------------Energy per minute------------ ALLARME - Caldaia Spenta ------")
@@ -525,82 +472,81 @@ then
 				//callScript("alarm_heating")
 				ds_Gas_GF_Alarm.postUpdate(OFF)
 			}
-		}
-	}
-	catch(Exception e)
-	{
-		logDebug("domus-silicea", "--------------------Energy per minute------------ Error Check Caldaia ------")
-	}
-
-
-	
-//	ds_Gas_GF_Bathroom_Hour.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)))
-//  ds_Gas_GF_Bathroom_Day.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)))
-//  ds_Gas_GF_Bathroom_Week.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)))
-//	ds_Gas_GF_Bathroom_Month.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusMonths(1)))
+		}		
+		//logDebug("domus-silicea", "--------------------Energy per minute------------ End  ------")
 end
 
 
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Energy per hour"
+	when
+		Time cron "0 0 * * * ?"
+	then
+		var Number delta = 0
+		//logDebug("domus-silicea", "--------------------Energy per hour------------ Start  ------")
+		delta = ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)) ? 0
+		ds_Gas_GF_Bathroom_Hour.postUpdate(delta.toString)
+
+		delta = ds_Water_GF_Bathroom.deltaSince(now.minusHours(1)) ? 0
+		ds_Water_GF_Bathroom_Hour.postUpdate(delta.toString)
+		//logDebug("domus-silicea", "--------------------Energy per hour------------ End  ------")
+end
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
 rule "Energy per day"
-when
-Time cron "0 0 0/4 * * ?"
-then
-	//logDebug("domus-silicea", "--------------------- Energy per day ------------- Start ------")
-	var Number delta = 0
-	
+	when
+		Time cron "0 0 2 * * ?"
+	then
+		var Number delta = 0
+		//logDebug("domus-silicea", "--------------------Energy per day------------ Start  ------")
+		delta = ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)) ? 0
+		ds_Gas_GF_Bathroom_Day.postUpdate(delta.toString)
 
-	//logDebug("domus-silicea", "--------------------- Energy per day ------------- Gas ------")
-	try
-	{
-		ds_Gas_GF_Bathroom_Week.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)))
-	}
-	catch(Exception e)
-	{
-		ds_Gas_GF_Bathroom_Week.postUpdate(0)
-	}
-
-	
-	try
-	{
-		ds_Gas_GF_Bathroom_Month.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusMonths(1)))
-	}
-	catch(Exception e)
-	{
-		ds_Gas_GF_Bathroom_Month.postUpdate(0)
-	}
-
-
-	//logDebug("domus-silicea", "--------------------- Energy per day ------------- Water ------")
-	try
-	{
-		ds_Water_GF_Bathroom_Week.postUpdate(ds_Water_GF_Bathroom.deltaSince(now.minusWeeks(1)))
-	}
-	catch(Exception e)
-	{
-		ds_Water_GF_Bathroom_Week.postUpdate(0)
-	}
-
-	
-	try
-	{
-		ds_Water_GF_Bathroom_Month.postUpdate(ds_Water_GF_Bathroom.deltaSince(now.minusMonths(1)))
-	}
-	catch(Exception e)
-	{
-		ds_Water_GF_Bathroom_Month.postUpdate(0)
-	}
-
-	//logDebug("domus-silicea", "--------------------------------------------------- End ------")
-	
-
-//	ds_Gas_GF_Bathroom_Hour.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)))
-//  ds_Gas_GF_Bathroom_Day.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)))
-//  ds_Gas_GF_Bathroom_Week.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusWeeks(1)))
-//	ds_Gas_GF_Bathroom_Month.postUpdate(ds_Gas_GF_Bathroom.deltaSince(now.minusMonths(1)))
+		delta = ds_Water_GF_Bathroom.deltaSince(now.minusDays(1)) ? 0
+		ds_Water_GF_Bathroom_Day.postUpdate(delta.toString)
+		//logDebug("domus-silicea", "--------------------Energy per day------------ End  ------")
 end
 
 
 
-// to debug use logDebug("domus-silicea", "your message")
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Lights on when paused"
+	when
+        Item ds_KODI_Status changed from Play to Pause
+	then
+        var Date sunsetTime = (ds_Sunset_Time.state as DateTimeType).calendar.time
+        var Date sunriseTime = (ds_Sunrise_Time.state as DateTimeType).calendar.time
+        if( now.toDate().after(sunsetTime) || now.toDate().before(sunriseTime))
+		{
+                LightBrightnessBeforePause = ds_Dimmer_FF_LivingRoom_Ceiling.state as DecimalType
+                if ( LightBrightnessBeforePause < 50)
+				{
+                        sendCommand( ds_Dimmer_FF_LivingRoom_Ceiling, "50")     
+                }
+        }
+		sendCommand( ds_Dimmer_FF_LivingRoom_Ceiling, "50")     
+end
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Lights off when pause end"
+	when
+        Item ds_KODI_Status changed from Pause to Play 
+	then
+		
+        /*if (ds_Dimmer_FF_LivingRoom_Ceiling.state == 50){               
+                sendCommand( ds_Dimmer_FF_LivingRoom_Ceiling, LightBrightnessBeforePause)
+        }*/
+		sendCommand( ds_Dimmer_FF_LivingRoom_Ceiling, "0")
+
+end
 
 // to debug use logDebug("domus-silicea", "your message")
