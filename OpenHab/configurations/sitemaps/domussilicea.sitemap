@@ -1,18 +1,33 @@
 sitemap domussilicea label="Domus Silicea"
 {
 	Frame label="Gruppi" {
-		Group item=ds_Light {
+		Group item=ds_Light icon="light" 
+		{
 			Slider item=ds_Dimmer_FF_LivingRoom_Ceiling switchSupport			
 			Image url="http://192.168.0.14/cam.jpg"			
 		}		
-		Group label="Kodi"
+		Group label="Kodi" icon="kodi"
 		{
 			Slider item=ds_Dimmer_FF_LivingRoom_Ceiling switchSupport			
+			Switch item=ds_KODI_PowerOn					mappings=[ON="On"]
 			Slider item=ds_KODI_Volume step=10
 			Text item=ds_KODI_Status
-			Switch item=ds_KODI_PlayPause label="Play" 	mappings=[ON="Play"]
-			Switch item=ds_KODI_PlayPause label="Pause" mappings=[ON="Pause"]
 			Text item=ds_KODI_Title
+			Switch item=ds_KODI_PlayPause label="Play" 	mappings=[ON="Play"] icon="play"
+			Switch item=ds_KODI_PlayPause label="Pause" mappings=[ON="Pause"] icon="pause"
+			Switch item=ds_KODI_Stop 	  label="Stop"  mappings=[ON="Stop"] icon="stop"
+			Switch item=ds_KODI_Teleboy	  				mappings=[ON="Teleboy"]
+			Switch item=ds_KODI_RsiLa1	  				mappings=[ON="Rsi La1"]
+			Switch item=ds_KODI_RsiLa2	  				mappings=[ON="Rsi La2"]
+			Switch item=ds_KODI_Canale5			  		mappings=[ON="Canale 5"]
+			Switch item=ds_KODI_Italia1			  		mappings=[ON="Italia 1"]
+			Switch item=ds_KODI_Rete4			  		mappings=[ON="Rete 4"]
+			Switch item=ds_KODI_RaiUno			  		mappings=[ON="Rai Uno"]
+			Switch item=ds_KODI_RaiDue			  		mappings=[ON="Rai Due"]
+			Switch item=ds_KODI_RaiTre			  		mappings=[ON="Rai Tre"]
+			Switch item=ds_KODI_La7				  		mappings=[ON="La 7"]
+			Switch item=ds_KODI_MTVItalia		  		mappings=[ON="Mtv Italia"]
+			Switch item=ds_KODI_DMAX	  				mappings=[ON="DMAX"]
 		}		
 		Group item=ds_Temperature valuecolor=[>30="red", >24="orange", >=17="green", <17="blue"] {
 			Text item=ds_Temp_A_Playroom valuecolor=[>30="red", >24="orange", >=17="green", <17="blue"]			
@@ -163,6 +178,7 @@ sitemap domussilicea label="Domus Silicea"
 		Text item=ds_Presence_FC valuecolor=[Present="green",Absent="grey"]
 		Text item=ds_Presence_EA valuecolor=[Present="green",Absent="grey"]
 		Text item=ds_Presence_AG valuecolor=[Present="green",Absent="grey"]
+		Text item=ds_Presence_VA valuecolor=[Present="green",Absent="grey"]
 	}
 	Frame label="Impostazioni Avanzate" {
 		Group item=ds_Sensors_Communication valuecolor=[>86400="red", >3600="orange", <=3600="green"] {
@@ -230,6 +246,7 @@ sitemap domussilicea label="Domus Silicea"
 			Group item=ds_Group_FF_LivingRoom {
 				Image url="http://192.168.0.14/cam.jpg" refresh=1000				
 				Slider item=ds_Dimmer_FF_LivingRoom_Ceiling switchSupport				
+				Switch item=ds_KODI_PowerOn
 				Slider item=ds_KODI_Volume step=10
 				Text item=ds_KODI_Status
 				Switch item=ds_KODI_PlayPause label="Play" 	mappings=[ON="Play"]
