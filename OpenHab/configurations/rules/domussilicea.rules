@@ -397,6 +397,8 @@ rule "Gas Meter updates"
 	when	
 		Item ds_Gas_GF_Bathroom_Pulse received update 
 	then
+		//logDebug("domus-silicea", "--------------------Gas Meter updates------------ Start  ------")
+
 		//Reset pulse variable
 		if ((ds_Gas_GF_Bathroom_Pulse.state as DecimalType) == 0)
 		{
@@ -404,17 +406,20 @@ rule "Gas Meter updates"
 			return true
 		}
 		
-		ds_Gas_GF_Bathroom_Pulse.postUpdate(0)
-		
 		//Initialize GasMeter variable if null
 		if (ds_Gas_GF_Bathroom.state == Uninitialized) 
 		{
 			//It could happen if a pulse is sent just after openhab reboot and persistance not yet restore the last value
+			ds_Gas_GF_Bathroom_Pulse.postUpdate(0)
 			return true//    postUpdate(ds_Gas_GF_Bathroom, 0.00)
 		}
 		//Increment GasMeter variable
-		ds_Gas_GF_Bathroom.postUpdate(0.01 + (ds_Gas_GF_Bathroom.state as DecimalType))
+		ds_Gas_GF_Bathroom.postUpdate((ds_Gas_GF_Bathroom_Pulse.state as DecimalType)/100 + (ds_Gas_GF_Bathroom.state as DecimalType))
 		ds_Gas_GF_Bathroom_Changed.postUpdate(new DateTimeType().toString)
+
+		ds_Gas_GF_Bathroom_Pulse.postUpdate(0)
+		
+		//logDebug("domus-silicea", "--------------------Gas Meter updates------------ End  ------")
 end
 
 
@@ -425,6 +430,8 @@ rule "Water Meter updates"
 	when	
 		Item ds_Water_GF_Bathroom_Pulse received update 
 	then
+		//logDebug("domus-silicea", "--------------------Water Meter updates------------ Start  ------")
+
 		//Reset pulse variable
 		if ((ds_Water_GF_Bathroom_Pulse.state as DecimalType) == 0)
 		{
@@ -443,6 +450,9 @@ rule "Water Meter updates"
 		ds_Water_GF_Bathroom.postUpdate( (ds_Water_GF_Bathroom_Pulse.state as DecimalType)/10000 + (ds_Water_GF_Bathroom.state as DecimalType))
 		ds_Water_GF_Bathroom_Changed.postUpdate(new DateTimeType().toString)
 		ds_Water_GF_Bathroom_Pulse.postUpdate(0)
+
+		
+		//logDebug("domus-silicea", "--------------------Water Meter updates------------ End  ------")
 end
 
 
@@ -453,7 +463,10 @@ rule "Energy per minute"
 	when
 		Time cron "0 * * * * ?"
 	then
+
+
 		var Number delta = 0
+
 		//logDebug("domus-silicea", "--------------------Energy per minute------------ Start  ------")
 		delta = ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(1)) ? 0
 		ds_Gas_GF_Bathroom_Minute.postUpdate(delta.toString)

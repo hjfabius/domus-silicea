@@ -16,7 +16,7 @@ cp=$(find $eclipsehome -name "org.eclipse.equinox.launcher_*.jar" | sort | tail 
 debug_opts="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=8001,server=y,suspend=n"
 
 echo Launching the openHAB runtime in debug mode...
-/usr/local/jdk1.8.0_65/bin/java  $debug_opts \
+/usr/local/jdk1.8.0_73/bin/java  $debug_opts \
 	-Dgnu.io.rxtx.SerialPorts=/dev/ttyAMA0 \
     -Dosgi.clean=true \
 	-Declipse.ignoreApp=true \

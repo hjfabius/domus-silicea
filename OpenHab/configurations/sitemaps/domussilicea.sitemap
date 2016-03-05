@@ -38,8 +38,6 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Temp_FF_Bedroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Text item=ds_Temp_FF_LivingRoom valuecolor=[>30="red", >24="orange", >=17="green", <17="blue"]			
 			Text item=ds_Temp_FF_LivingRoom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
-			Text item=ds_Temp_FF_Kitchen valuecolor=[>30="red", >24="orange", >=17="green", <17="blue"]			
-			Text item=ds_Temp_FF_Kitchen_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Text item=ds_Temp_GF_Bathroom valuecolor=[>30="red", >24="orange", >=17="green", <17="blue"]			
 			Text item=ds_Temp_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Switch item=ds_Temp_ChartPeriod mappings=[0="No", 1="Orario", 2="Giornaliero", 3="Settimanale", 4="Bi-settimanale", 5="Mensile"]			
@@ -58,8 +56,6 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Humidity_FF_Bedroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Text item=ds_Humidity_FF_LivingRoom valuecolor=[>80="red", >70="orange", >=40="green", >20="orange", <20="red"]			
 			Text item=ds_Humidity_FF_LivingRoom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
-			Text item=ds_Humidity_FF_Kitchen valuecolor=[>80="red", >70="orange", >=40="green", >20="orange", <20="red"]			
-			Text item=ds_Humidity_FF_Kitchen_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Text item=ds_Humidity_GF_Bathroom valuecolor=[>80="red", >70="orange", >=40="green", >20="orange", <20="red"]			
 			Text item=ds_Humidity_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Switch item=ds_Humidity_ChartPeriod mappings=[0="No", 1="Orario", 2="Giornaliero", 3="Settimanale", 4="Bi-settimanale", 5="Mensile"]			
@@ -73,7 +69,6 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Battery_A_Playroom			
 			Text item=ds_Battery_FF_BedroomChildren			
 			Text item=ds_Battery_FF_Bedroom			
-			Text item=ds_Battery_FF_Kitchen			
 		}		
 		Group item=ds_Window		
 		Group item=ds_Energy {
@@ -146,10 +141,10 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Water_GF_Bathroom_Day
 			Text item=ds_Water_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
 
-			Text item=ds_Watt_GF_Corridor			
-			Text item=ds_Watt_GF_Corridor_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
-			Text item=ds_KWH_GF_Corridor		
-			Text item=ds_KWH_GF_Corridor_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
+//			Text item=ds_Watt_GF_Corridor			
+//			Text item=ds_Watt_GF_Corridor_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
+//			Text item=ds_KWH_GF_Corridor		
+//			Text item=ds_KWH_GF_Corridor_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]
 		}		
 		Group item=ds_Motion valuecolor=[OPEN="red", "CLOSED"="green"] labelcolor=[OPEN="red", "CLOSED"="green"] {
 			Text item=ds_Contact_A_Playroom valuecolor=[OPEN="red", "CLOSED"="green"] labelcolor=[OPEN="red", "CLOSED"="green"]			
@@ -158,8 +153,6 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Contact_FF_BedroomChildren_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Text item=ds_Contact_FF_LivingRoom valuecolor=[OPEN="red", "CLOSED"="green"] labelcolor=[OPEN="red", "CLOSED"="green"]			
 			Text item=ds_Contact_FF_LivingRoom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
-			Text item=ds_Contact_FF_Kitchen valuecolor=[OPEN="red", "CLOSED"="green"] labelcolor=[OPEN="red", "CLOSED"="green"]			
-			Text item=ds_Contact_FF_Kitchen_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Text item=ds_Contact_GF_Bathroom valuecolor=[OPEN="red", "CLOSED"="green"] labelcolor=[OPEN="red", "CLOSED"="green"]			
 			Text item=ds_Contact_GF_Bathroom_Changed valuecolor=[>86400="red", >3600="orange", <=3600="green"]			
 			Switch item=ds_Contact_ChartPeriod mappings=[0="No", 1="Giornaliero", 2="Settimanale", 3="Bi-settimanale", 4="Mensile"]			
@@ -186,18 +179,15 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Temp_FF_BedroomChildren_Changed			
 			Text item=ds_Temp_FF_Bedroom_Changed			
 			Text item=ds_Temp_FF_LivingRoom_Changed			
-			Text item=ds_Temp_FF_Kitchen_Changed			
 			Text item=ds_Temp_GF_Bathroom_Changed			
 			Text item=ds_Humidity_A_Playroom_Changed			
 			Text item=ds_Humidity_FF_BedroomChildren_Changed			
 			Text item=ds_Humidity_FF_Bedroom_Changed			
 			Text item=ds_Humidity_FF_LivingRoom_Changed			
-			Text item=ds_Humidity_FF_Kitchen_Changed		
 			Text item=ds_Humidity_GF_Bathroom_Changed						
 			Text item=ds_Contact_A_Playroom_Changed			
 			Text item=ds_Contact_FF_BedroomChildren_Changed			
 			Text item=ds_Contact_FF_LivingRoom_Changed			
-			Text item=ds_Contact_FF_Kitchen_Changed			
 			Text item=ds_Contact_GF_Bathroom_Changed			
 			Text item=ds_Watt_GF_Corridor_Changed			
 			Text item=ds_Gas_GF_Bathroom_Changed
@@ -206,13 +196,11 @@ sitemap domussilicea label="Domus Silicea"
 			Text item=ds_Battery_A_Playroom_Changed			
 			Text item=ds_Battery_FF_BedroomChildren_Changed			
 			Text item=ds_Battery_FF_Bedroom_Changed			
-			Text item=ds_Battery_FF_LivingRoom_Changed			
-			Text item=ds_Battery_FF_Kitchen_Changed			
+			//Text item=ds_Battery_FF_LivingRoom_Changed			
 			Text item=ds_Sketch_A_Playroom			
 			Text item=ds_Sketch_FF_BedroomChildren			
 			Text item=ds_Sketch_FF_Bedroom			
 			Text item=ds_Sketch_FF_LivingRoom			
-			Text item=ds_Sketch_FF_Kitchen			
 			Text item=ds_Sketch_GF_Corridor			
 			Text item=ds_Sketch_GF_Bathroom			
 		}		
@@ -253,14 +241,10 @@ sitemap domussilicea label="Domus Silicea"
 				Switch item=ds_KODI_PlayPause label="Pause" mappings=[ON="Pause"]
 				Text item=ds_KODI_Title
 				Text item=ds_Temp_FF_LivingRoom				
-				Text item=ds_Temp_FF_Kitchen				
 				Text item=ds_Humidity_FF_LivingRoom				
-				Text item=ds_Humidity_FF_Kitchen				
 				Text item=ds_Contact_FF_LivingRoom				
-				Text item=ds_Contact_FF_Kitchen				
-				Text item=ds_Battery_FF_LivingRoom				
-				Text item=ds_Battery_FF_Kitchen				
-				Text item=ds_Battery_GF_Corridor				
+				//Text item=ds_Battery_FF_LivingRoom				
+				//Text item=ds_Battery_GF_Corridor				
 			}			
 			Group item=ds_Group_FF_StairDown			
 		}		

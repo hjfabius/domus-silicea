@@ -18,7 +18,7 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="Open Home Automation Bus Daemon"
 NAME=openhab
 #DAEMON=/usr/bin/java
-DAEMON=/usr/local/jdk1.8.0_65/bin/java
+DAEMON=/usr/local/jdk1.8.0_73/bin/java
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
 ECLIPSEHOME="/opt/openhab";
@@ -26,7 +26,7 @@ HTTPPORT=8080
 HTTPSPORT=8443
 TELNETPORT=5555
 # be sure you are adopting the user to your local OH user 
-RUN_AS=openhab
+RUN_AS=pi
 #RUN_AS=root
 
 # get path to equinox jar inside $eclipsehome folder
