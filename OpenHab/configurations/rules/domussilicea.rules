@@ -447,7 +447,9 @@ rule "Water Meter updates"
 			return true
 		}
 		//Increment GasMeter variable
-		ds_Water_GF_Bathroom.postUpdate( (ds_Water_GF_Bathroom_Pulse.state as DecimalType)/10000 + (ds_Water_GF_Bathroom.state as DecimalType))
+		//Pulse / 10000 * 0.143170415
+		//Pulse / 69846.8327
+		ds_Water_GF_Bathroom.postUpdate( (ds_Water_GF_Bathroom_Pulse.state as DecimalType)/69846.8327 + (ds_Water_GF_Bathroom.state as DecimalType))
 		ds_Water_GF_Bathroom_Changed.postUpdate(new DateTimeType().toString)
 		ds_Water_GF_Bathroom_Pulse.postUpdate(0)
 
@@ -469,9 +471,11 @@ rule "Energy per minute"
 
 		//logDebug("domus-silicea", "--------------------Energy per minute------------ Start  ------")
 		delta = ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(1)) ? 0
+		delta = delta * 60 * 24
 		ds_Gas_GF_Bathroom_Minute.postUpdate(delta.toString)
 
 		delta = ds_Water_GF_Bathroom.deltaSince(now.minusMinutes(1)) ? 0
+		delta = delta * 60 * 24
 		ds_Water_GF_Bathroom_Minute.postUpdate(delta.toString)
 
 		
@@ -500,9 +504,11 @@ rule "Energy per hour"
 		var Number delta = 0
 		//logDebug("domus-silicea", "--------------------Energy per hour------------ Start  ------")
 		delta = ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)) ? 0
+		delta = delta * 24
 		ds_Gas_GF_Bathroom_Hour.postUpdate(delta.toString)
 
 		delta = ds_Water_GF_Bathroom.deltaSince(now.minusHours(1)) ? 0
+		delta = delta * 24
 		ds_Water_GF_Bathroom_Hour.postUpdate(delta.toString)
 		//logDebug("domus-silicea", "--------------------Energy per hour------------ End  ------")
 end

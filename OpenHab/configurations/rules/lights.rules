@@ -1,0 +1,60 @@
+import java.util.Date
+
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+import org.joda.time.*
+import java.util.*
+import org.eclipse.xtext.xbase.lib.*
+import org.openhab.core.items.*
+import org.openhab.model.script.debug
+
+rule "ds_Dimmer_FF_LivingRoom_LedRGB"
+	when
+		Item ds_Dimmer_FF_LivingRoom_LedRed received command or
+		Item ds_Dimmer_FF_LivingRoom_LedGreen received command or
+		Item ds_Dimmer_FF_LivingRoom_LedBlue received command
+	
+	then
+		logDebug("domus-silicea", "------------ ds_Dimmer_FF_LivingRoom_LedRGB ------------ Start  ------")
+		
+		var Number percentRed = 0
+		var Number percentGreen = 0
+		var Number percentBlue = 0
+		var String strRGB = ""
+		if(ds_Dimmer_FF_LivingRoom_LedRed.state 	instanceof DecimalType) 	percentRed 		= ds_Dimmer_FF_LivingRoom_LedRed.state as DecimalType
+		if(ds_Dimmer_FF_LivingRoom_LedGreen.state 	instanceof DecimalType) 	percentGreen 	= ds_Dimmer_FF_LivingRoom_LedGreen.state as DecimalType
+		if(ds_Dimmer_FF_LivingRoom_LedBlue.state 	instanceof DecimalType) 	percentBlue 	= ds_Dimmer_FF_LivingRoom_LedBlue.state as DecimalType
+
+		logDebug("domus-silicea", "Red:   " + percentRed)
+		logDebug("domus-silicea", "Green: " + percentGreen)
+		logDebug("domus-silicea", "Blue:  " + percentBlue)
+		
+		strRGB = percentRed + " " + percentGreen + " " + percentBlue
+		logDebug("domus-silicea", "RGB:   " + strRGB)
+		
+		postUpdate(ds_Dimmer_FF_LivingRoom_LedRGB, strRGB);		
+
+		logDebug("domus-silicea", "------------ ds_Dimmer_FF_LivingRoom_LedRGB ------------ End  ------")
+end
+ 
+
+ rule "ds_Dimmer_FF_LivingRoom_LedRGB_Color"
+	when
+		Item ds_Dimmer_FF_LivingRoom_LedRGB_Color received command
+	then
+		logDebug("domus-silicea", "------------ ds_Dimmer_FF_LivingRoom_LedRGB_Color ------------ Start  ------")
+
+        hsbValue = ds_Dimmer_FF_LivingRoom_LedRGB_Color.state as HSBType
+
+        redValue   = hsbValue.red.intValue.toString
+        greenValue = hsbValue.green.intValue.toString
+        blueValue  = hsbValue.blue.intValue.toString	
+
+		logDebug("domus-silicea", "Red:   " + redValue)
+		logDebug("domus-silicea", "Green: " + greenValue)
+		logDebug("domus-silicea", "Blue:  " + blueValue)
+
+		logDebug("domus-silicea", "------------ ds_Dimmer_FF_LivingRoom_LedRGB_Color ------------ End  ------")
+end 
+ 
