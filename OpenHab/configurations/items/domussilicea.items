@@ -36,14 +36,19 @@ Group:Contact:OR(OPEN, CLOSED) 	ds_Window 								"Finestre [%s]"															
 Group:Contact:OR(OPEN, CLOSED) 	ds_Motion 								"Movimento [MAP(motion.map):%s]"												<motion>			(All)
 Group:DateTime:MIN				ds_Sensors_Communication				"Comunicazione sensori [%1$tA, %1$td.%1$tm.%1$tY %1$tT]" 						<network> 			(All)
 Group:Number					ds_Energy								"Energia"																		<energy_elettric>	(All)
-Group:Number					ds_Gas									"Gas"																			<fire>				(All)
+Group:Number					ds_Gas									"Gas"																			<fire-on>				(All)
 Group:Number					ds_Water								"Acqua"																			<water>				(All)
-Group:Switch:OR(ON, OFF)		ds_Presences							"Presences"																							(All)
+Group:Switch:OR(ON, OFF)		ds_Presences							"Presenze"																		<present>			(All)
 Group							ds_KODI									"KODI"																			<kodi>				(All)
-
+Group							ds_Weather								"Meteo"																			<sun_clouds>		(All)
 	 
 /* lights */	
 Dimmer 							ds_Dimmer_FF_LivingRoom_Ceiling			"Divano [%d %%]" 																<light>				(ds_Light, ds_Group_FF_LivingRoom) 
+Dimmer							ds_Dimmer_FF_LivingRoom_LedRed			"Led Red [%d %%]"																<light>				(ds_Light, ds_Group_FF_LivingRoom, ds_Group_MQTT)			
+Dimmer							ds_Dimmer_FF_LivingRoom_LedGreen		"Led Blue [%d %%]"																<light>				(ds_Light, ds_Group_FF_LivingRoom, ds_Group_MQTT)			
+Dimmer							ds_Dimmer_FF_LivingRoom_LedBlue			"Led Green [%d %%]"																<light>				(ds_Light, ds_Group_FF_LivingRoom, ds_Group_MQTT)			
+String							ds_Dimmer_FF_LivingRoom_LedRGB			"Led RGB [%s]"																	<light>				(ds_Light, ds_Group_FF_LivingRoom, ds_Group_MQTT)			{mqtt=">[openhab:domus-silicea/FF_LivingRoom/V_LIGHT_RGB:state:*:default]"}
+Color  							ds_Dimmer_FF_LivingRoom_LedRGB_Color	"RGB Color"																		<slider>
 
 
 /* Indoor Temperatures */
@@ -55,10 +60,10 @@ Number 							ds_Temp_FF_Bedroom  	 				"Temperatura Camera [%.1f °C]"									
 DateTime 						ds_Temp_FF_Bedroom_Changed 				"Temperatura Camera modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<temperature> 		(ds_Sensors_Communication)
 Number 							ds_Temp_FF_LivingRoom  	 				"Temperatura Sala [%.1f °C]"													<temperature>		(ds_Temperature, ds_Group_FF_LivingRoom)
 DateTime 						ds_Temp_FF_LivingRoom_Changed 			"Temperatura Sala modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<temperature> 		(ds_Sensors_Communication)
-Number 							ds_Temp_FF_Kitchen  	 				"Temperatura Cucina [%.1f °C]"													<temperature>		(ds_Temperature, ds_Group_FF_LivingRoom)
-DateTime 						ds_Temp_FF_Kitchen_Changed 				"Temperatura Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<temperature> 		(ds_Sensors_Communication)
-Number 							ds_Temp_GF_Bedroom  	 				"Temperatura Stanza Ospiti [%.1f °C]"											<temperature>		(ds_Temperature, ds_Group_GF_BedRoom, ds_Group_MQTT)			{mqtt="<[openhab:domus-silicea/GF_Bedroom/V_TEMP:state:default]"}
-DateTime 						ds_Temp_GF_Bedroom_Changed 				"Temperatura Stanza Ospiti modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"	<temperature> 		(ds_Sensors_Communication)
+//Number 						ds_Temp_FF_Kitchen  	 				"Temperatura Cucina [%.1f °C]"													<temperature>		(ds_Temperature, ds_Group_FF_LivingRoom)
+//DateTime 						ds_Temp_FF_Kitchen_Changed 				"Temperatura Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<temperature> 		(ds_Sensors_Communication)
+//Number 						ds_Temp_GF_Bedroom  	 				"Temperatura Stanza Ospiti [%.1f °C]"											<temperature>		(ds_Temperature, ds_Group_GF_BedRoom, ds_Group_MQTT)			{mqtt="<[openhab:domus-silicea/GF_Bedroom/V_TEMP:state:default]"}
+//DateTime 						ds_Temp_GF_Bedroom_Changed 				"Temperatura Stanza Ospiti modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"	<temperature> 		(ds_Sensors_Communication)
 Number 							ds_Temp_GF_Bathroom  	 				"Temperatura Lavanderia [%.1f °C]"												<temperature>		(ds_Temperature, ds_Group_GF_BathRoom, ds_Group_MQTT)			{mqtt="<[openhab:domus-silicea/GF_Bathroom/V_TEMP:state:default]"}
 DateTime 						ds_Temp_GF_Bathroom_Changed 			"Temperatura Lavanderia modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<temperature> 		(ds_Sensors_Communication)
 Number							ds_Temp_ChartPeriod   					"Visualizza Trends"																<temperature>
@@ -74,10 +79,10 @@ Number 							ds_Humidity_FF_Bedroom  	 			"Umidità Camera [%.1f %%]"										
 DateTime 						ds_Humidity_FF_Bedroom_Changed 			"Umidità Camera modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<humidity> 			(ds_Sensors_Communication)
 Number 							ds_Humidity_FF_LivingRoom  	 			"Umidità Sala [%.1f %%]"														<humidity>			(ds_Humidity, ds_Group_FF_LivingRoom)
 DateTime 						ds_Humidity_FF_LivingRoom_Changed 		"Umidità Sala modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"					<humidity> 			(ds_Sensors_Communication)
-Number 							ds_Humidity_FF_Kitchen  	 			"Umidità Cucina [%.1f %%]"														<humidity>			(ds_Humidity, ds_Group_FF_LivingRoom)
-DateTime 						ds_Humidity_FF_Kitchen_Changed 			"Umidità Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<humidity> 			(ds_Sensors_Communication)
-Number 							ds_Humidity_GF_Bedroom  	 			"Umidità Camera Ospiti [%.1f %%]"												<humidity>			(ds_Humidity, ds_Group_GF_Bedroom, ds_Group_MQTT)			{mqtt="<[openhab:domus-silicea/GF_Bedroom/V_HUM:state:default]"}
-DateTime 						ds_Humidity_GF_Bedroom_Changed 			"Umidità Camera Ospiti modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<humidity> 			(ds_Sensors_Communication)
+//Number 						ds_Humidity_FF_Kitchen  	 			"Umidità Cucina [%.1f %%]"														<humidity>			(ds_Humidity, ds_Group_FF_LivingRoom)
+//DateTime 						ds_Humidity_FF_Kitchen_Changed 			"Umidità Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<humidity> 			(ds_Sensors_Communication)
+//Number 						ds_Humidity_GF_Bedroom  	 			"Umidità Camera Ospiti [%.1f %%]"												<humidity>			(ds_Humidity, ds_Group_GF_Bedroom, ds_Group_MQTT)			{mqtt="<[openhab:domus-silicea/GF_Bedroom/V_HUM:state:default]"}
+//DateTime 						ds_Humidity_GF_Bedroom_Changed 			"Umidità Camera Ospiti modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"		<humidity> 			(ds_Sensors_Communication)
 Number 							ds_Humidity_GF_Bathroom  	 			"Umidità Lavanderia [%.1f %%]"													<humidity>			(ds_Humidity, ds_Group_GF_Bathroom, ds_Group_MQTT)			{mqtt="<[openhab:domus-silicea/GF_Bathroom/V_HUM:state:default]"}
 DateTime 						ds_Humidity_GF_Bathroom_Changed 		"Umidità Lavanderia modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<humidity> 			(ds_Sensors_Communication)
 Number 							ds_Humidity_ChartPeriod					"Visualizza Trends"																<humidity>
@@ -91,8 +96,8 @@ DateTime 						ds_Contact_FF_BedroomChildren_Changed 	"Movimento Cameretta modif
 /*DateTime 						ds_Contact_FF_Bedroom_Changed 			"Movimento Camera modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<motion> 			(ds_Sensors_Communication)*/
 Contact 						ds_Contact_FF_LivingRoom  	 			"Movimento Sala [MAP(motion.map):%s]"		 									<motion>			(ds_Motion, ds_Group_FF_LivingRoom)
 DateTime 						ds_Contact_FF_LivingRoom_Changed 		"Movimento Sala modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<motion> 			(ds_Sensors_Communication)
-Contact 						ds_Contact_FF_Kitchen  	 				"Movimento Cucina [MAP(motion.map):%s]"		 									<motion>			(ds_Motion, ds_Group_FF_LivingRoom)
-DateTime 						ds_Contact_FF_Kitchen_Changed 			"Movimento Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<motion> 			(ds_Sensors_Communication)
+//Contact 						ds_Contact_FF_Kitchen  	 				"Movimento Cucina [MAP(motion.map):%s]"		 									<motion>			(ds_Motion, ds_Group_FF_LivingRoom)
+//DateTime 						ds_Contact_FF_Kitchen_Changed 			"Movimento Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<motion> 			(ds_Sensors_Communication)
 Contact 						ds_Contact_GF_Bathroom  	 			"Movimento Lavanderia [MAP(motion.map):%s]"										<motion>			(ds_Motion, ds_Group_GF_Bathroom, ds_Group_MQTT)			{mqtt="<[openhab:domus-silicea/GF_Bathroom/V_PIR:state:default]"}
 DateTime 						ds_Contact_GF_Bathroom_Changed 			"Movimento Lavanderia modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<motion> 			(ds_Sensors_Communication)
 Number 							ds_Contact_ChartPeriod					"Visualizza Trends"																<motion>
@@ -110,10 +115,10 @@ DateTime 						ds_Gas_GF_Bathroom_Changed 				"Gas m3 modificata alle [%1$tA, %1
 Switch							ds_Gas_GF_Alarm							"Allarme Gas"																	<siren>				(ds_Gas, ds_Group_GF_Bathroom) 		
 	
 /* Power Meter */	
-Number 							ds_Watt_GF_Corridor						"Watt [%d]"																		<energy_elettric>	(ds_Energy, ds_Group_GF_Corridor)
-DateTime 						ds_Watt_GF_Corridor_Changed 			"Watt modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"							<energy_elettric>	(ds_Sensors_Communication)
-Number 							ds_KWH_GF_Corridor						"KWattOra [%.3f]"																<energy_elettric>	(ds_Energy, ds_Group_GF_Corridor, ds_Group_MQTT) 		{mqtt="<[openhab:domus-silicea/GF_Corridor/V_POWER:state:default]"}
-DateTime 						ds_KWH_GF_Corridor_Changed 				"KWattOra modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"						<energy_elettric>	(ds_Sensors_Communication)
+//Number 						ds_Watt_GF_Corridor						"Watt [%d]"																		<energy_elettric>	(ds_Energy, ds_Group_GF_Corridor)
+//DateTime 						ds_Watt_GF_Corridor_Changed 			"Watt modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"							<energy_elettric>	(ds_Sensors_Communication)
+//Number 						ds_KWH_GF_Corridor						"KWattOra [%.3f]"																<energy_elettric>	(ds_Energy, ds_Group_GF_Corridor, ds_Group_MQTT) 		{mqtt="<[openhab:domus-silicea/GF_Corridor/V_POWER:state:default]"}
+//DateTime 						ds_KWH_GF_Corridor_Changed 				"KWattOra modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"						<energy_elettric>	(ds_Sensors_Communication)
 	
 /* Water Meter */	
 Number 							ds_Water_GF_Bathroom_Pulse				"Acqua Pulse [%.4f]"															<water>				(ds_Water, ds_Group_GF_Bathroom, ds_Group_MQTT) 		{mqtt="<[openhab:domus-silicea/GF_Bathroom/V_WATER:state:default]"}
@@ -131,12 +136,12 @@ Number 							ds_Battery_FF_BedroomChildren			"Batteria Cameretta [%.1f %%]"				
 DateTime						ds_Battery_FF_BedroomChildren_Changed 	"Batteria Cameretta modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<battery>			(ds_Sensors_Communication)
 Number 							ds_Battery_FF_Bedroom  	 	 			"Batteria Camera [%.1f %%]"														<battery>			(ds_Battery, ds_Group_FF_Bedroom)
 DateTime						ds_Battery_FF_Bedroom_Changed 			"Batteria Camera modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<battery>			(ds_Sensors_Communication)
-Number 							ds_Battery_FF_LivingRoom  	 			"Batteria Sala [%.1f %%]"														<battery>			(ds_Battery, ds_Group_FF_LivingRoom)
-DateTime						ds_Battery_FF_LivingRoom_Changed 		"Batteria Sala modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<battery>			(ds_Sensors_Communication)
-Number 							ds_Battery_FF_Kitchen  	 	 			"Batteria Cucina [%.1f %%]"														<battery>			(ds_Battery, ds_Group_FF_LivingRoom)
-DateTime						ds_Battery_FF_Kitchen_Changed 			"Batteria Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<battery>			(ds_Sensors_Communication)
-Number 							ds_Battery_GF_Corridor  	 	 		"Batteria Corridoio [%.1f %%]"													<battery>			(ds_Battery, ds_Group_FF_LivingRoom)
-DateTime						ds_Battery_GF_Corridor_Changed 			"Batteria Corridoio modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<battery>			(ds_Sensors_Communication)
+//Number 						ds_Battery_FF_LivingRoom  	 			"Batteria Sala [%.1f %%]"														<battery>			(ds_Battery, ds_Group_FF_LivingRoom)
+//DateTime						ds_Battery_FF_LivingRoom_Changed 		"Batteria Sala modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<battery>			(ds_Sensors_Communication)
+//Number 						ds_Battery_FF_Kitchen  	 	 			"Batteria Cucina [%.1f %%]"														<battery>			(ds_Battery, ds_Group_FF_LivingRoom)
+//DateTime						ds_Battery_FF_Kitchen_Changed 			"Batteria Cucina modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"				<battery>			(ds_Sensors_Communication)
+//Number 						ds_Battery_GF_Corridor  	 	 		"Batteria Corridoio [%.1f %%]"													<battery>			(ds_Battery, ds_Group_FF_LivingRoom)
+//DateTime						ds_Battery_GF_Corridor_Changed 			"Batteria Corridoio modificata alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"			<battery>			(ds_Sensors_Communication)
 	
 	
 /* Sensor Sketch */	
@@ -144,25 +149,17 @@ String 							ds_Sketch_A_Playroom  	 	 			"Sketch Sala Giochi [%s]"												
 String 							ds_Sketch_FF_BedroomChildren			"Sketch Cameretta [%s]"													    	<network> 			(ds_Sensors_Communication)
 String 							ds_Sketch_FF_Bedroom  	 	 			"Sketch Camera [%s]"															<network> 			(ds_Sensors_Communication)
 String 							ds_Sketch_FF_LivingRoom  	 			"Sketch Sala [%s]"																<network> 			(ds_Sensors_Communication)
-String 							ds_Sketch_FF_Kitchen  	 	 			"Sketch Cucina [%s]"															<network> 			(ds_Sensors_Communication)
-String 							ds_Sketch_GF_Corridor  	 	 			"Sketch Corridoio [%s]"															<network> 			(ds_Sensors_Communication)
+//String 						ds_Sketch_FF_Kitchen  	 	 			"Sketch Cucina [%s]"															<network> 			(ds_Sensors_Communication)
+//String 						ds_Sketch_GF_Corridor  	 	 			"Sketch Corridoio [%s]"															<network> 			(ds_Sensors_Communication)
 String 							ds_Sketch_GF_Bathroom  	 				"Sketch Lavanderia [%s]"														<network>			(ds_Sensors_Communication)			{mqtt="<[openhab:domus-silicea/GF_Bathroom/V_SKETCH:state:default]"}
 				
 				
-/* NTP binding - Date*/				
-DateTime						ds_Date									"Data [%1$tA, %1$td.%1$tm.%1$tY]"												<calendar>			{ ntp="Europe/Rome:it_IT" }
-String 							ds_Sunrise_Sunset 						"Alba / Tramonto [%s]" 															<sun>			
-DateTime 						ds_Sunrise_Time 						"Alba [%1$tH:%1$tM]" 																				{astro="planet=sun, type=rise, property=start"}
-DateTime 						ds_Sunset_Time 							"Tramonto [%1$tH:%1$tM]" 																			{astro="planet=sun, type=set, property=end"}
-				
-/* Camera Switch*/				
-Number							ds_Cameras_Switch   					"Telecamera"																	<camera>			
-			
+							
 /* Multimedia */			
 Switch 							ds_KODI_PowerOn							"KODI Power On" 																<switchon>			(ds_KODI, ds_Group_FF_LivingRoom) { exec="ON:/opt/openhab/tv-on.sh", autoupdate="false"}
 Dimmer 							ds_KODI_Volume 							"KODI Volume [%.1f]" 															<volume>			(ds_KODI, ds_Group_FF_LivingRoom) { xbmc="=[#kodi|Application.Volume]" }
 String							ds_KODI_Status 							"KODI Status [%s]" 																					(ds_KODI, ds_Group_FF_LivingRoom) { xbmc="<[#kodi|Player.State]" }
-String							ds_KODI_Title 							"KODI Title [%s]" 																					(ds_KODI, ds_Group_FF_LivingRoom) { xbmc="<[#kodi|Player.Description]" }
+//String						ds_KODI_Title 							"KODI Title [%s]" 																					(ds_KODI, ds_Group_FF_LivingRoom) { xbmc="<[#kodi|Player.Description]" }
 Switch 							ds_KODI_PlayPause						"KODI Play/Pause" 																					(ds_KODI, ds_Group_FF_LivingRoom) { xbmc=">[#kodi|Player.PlayPause]", autoupdate="false"}
 Switch 							ds_KODI_Stop							"KODI Stop" 																						(ds_KODI, ds_Group_FF_LivingRoom) { xbmc=">[#kodi|Player.Stop]", autoupdate="false"}
 Switch 							ds_KODI_Teleboy							"KODI Teleboy" 																	<teleboy>			(ds_KODI, ds_Group_FF_LivingRoom) { exec="ON:/opt/openhab/tv-teleboy.sh", autoupdate="false"}
@@ -183,3 +180,21 @@ String 							ds_Presence_FC							"Fabio [%s]" 																						(ds_Presen
 String 							ds_Presence_EA							"Elena [%s]" 																						(ds_Presences) { exec="<[/opt/openhab/iPhoneEA.sh:60000:REGEX((.*?))]" }
 String 							ds_Presence_AG							"Anna [%s]" 																						(ds_Presences) { exec="<[/opt/openhab/iPhoneAG.sh:60000:REGEX((.*?))]" }
 String 							ds_Presence_VA							"Valter [%s]" 																						(ds_Presences) { exec="<[/opt/openhab/iPhoneVA.sh:60000:REGEX((.*?))]" }
+
+/* NTP binding - Date*/				
+DateTime						ds_Date									"Data [%1$tA, %1$td.%1$tm.%1$tY]"												<calendar>			{ ntp="Europe/Rome:it_IT" }
+DateTime 						ds_Sunrise_Time 						"Alba [%1$tH:%1$tM]" 																				{astro="planet=sun, type=rise, property=start"}
+DateTime 						ds_Sunset_Time 							"Tramonto [%1$tH:%1$tM]" 																			{astro="planet=sun, type=set, property=end"}
+
+/* Weather - Meteo*/
+String 							ds_Sunrise_Sunset 						"Alba / Tramonto [%s]" 															<sun_moon>			(ds_Group_O, ds_Weather)
+Number   						ds_Temp_Ext_Yahoo   					"Temperatura Esterna [%.1f °C]"   												<temperature> 		(ds_Group_O, ds_Weather, ds_Temperature)	{weather="locationId=home, type=temperature, property=current"}
+Number   						ds_Humidity_Ext_Yahoo      				"Umidità Esterna [%.1f %%]"         											<humidity>			(ds_Group_O, ds_Weather, ds_Humidity)		{weather="locationId=home, type=atmosphere, property=humidity"}
+//Number   						ds_Clouds_Ext_Yahoo   					"Nuvolosità [%.0f %%]"   														<sun_clouds>		(ds_Group_O, ds_Weather) 					{weather="locationId=home, type=clouds, property=percent"}
+Number   						ds_Rain_Ext_Yahoo      					"Pioggia [%.2f mm/h]"         													<water>				(ds_Group_O, ds_Weather)					{weather="locationId=home, type=precipitation, property=rain"}
+Number   						ds_Snow_Ext_Yahoo      					"Neve [%.2f mm/h]"         														<snow>				(ds_Group_O, ds_Weather)					{weather="locationId=home, type=precipitation, property=snow"}
+Number   						ds_Wind_Ext_Yahoo      					"Vento [%.2f km/h]"         													<wind>				(ds_Group_O, ds_Weather)					{weather="locationId=home, type=wind, property=speed"}
+DateTime 						ds_Ext_Yahoo_LastUpdate       			"Meteo modificato alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"        									(ds_Group_O, ds_Weather)					{weather="locationId=home, type=condition, property=lastUpdate"}
+
+
+

@@ -44,6 +44,13 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss} - %-5level %logger{30}[:%line]- %msg%n</pattern>
         </encoder>
     </appender>
+	
+	<appender name="SYSLOG" class="ch.qos.logback.classic.net.SyslogAppender">
+	   <syslogHost>192.168.0.25</syslogHost>
+	   <facility>LOCAL7</facility>
+	   <suffixPattern>{}openhab: [%thread] %logger %msg</suffixPattern>
+	</appender>
+	
 
 	<logger name="runtime.busevents" level="INFO" additivity="false">
 		<appender-ref ref="EVENTFILE" />
@@ -68,12 +75,14 @@
     <logger name="org.openhab.model.script.domus-silicea" level="DEBUG" additivity="false">
         <appender-ref ref="DOMUS_SILICEA" />
 		<appender-ref ref="FILE" />
+		<appender-ref ref="SYSLOG" />
     </logger>
 	
 	
 	<root level="WARN">
 		<appender-ref ref="FILE" />
 		<appender-ref ref="STDOUT" />
+		<appender-ref ref="SYSLOG" />
 	</root>
 
 </configuration>

@@ -9,6 +9,48 @@ import org.eclipse.xtext.xbase.lib.*
 import org.openhab.core.items.*
 import org.openhab.model.script.debug
 
+
+var Number LightBrightnessBeforePause
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Lights on when paused"
+	when
+        Item ds_KODI_Status changed from Play to Pause
+	then
+        var Date sunsetTime = (ds_Sunset_Time.state as DateTimeType).calendar.time
+        var Date sunriseTime = (ds_Sunrise_Time.state as DateTimeType).calendar.time
+        if( now.toDate().after(sunsetTime) || now.toDate().before(sunriseTime))
+		{
+                LightBrightnessBeforePause = ds_Dimmer_FF_LivingRoom_Ceiling.state as DecimalType
+                if ( LightBrightnessBeforePause < 50)
+				{
+                        sendCommand( ds_Dimmer_FF_LivingRoom_Ceiling, "50")     
+                }
+        }
+		sendCommand( ds_Dimmer_FF_LivingRoom_Ceiling, "50")     
+end
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Lights off when pause end"
+	when
+        Item ds_KODI_Status changed from Pause to Play 
+	then
+		
+        /*if (ds_Dimmer_FF_LivingRoom_Ceiling.state == 50){               
+                sendCommand( ds_Dimmer_FF_LivingRoom_Ceiling, LightBrightnessBeforePause)
+        }*/
+		sendCommand( ds_Dimmer_FF_LivingRoom_Ceiling, "0")
+
+end
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
 rule "ds_Dimmer_FF_LivingRoom_LedRGB"
 	when
 		Item ds_Dimmer_FF_LivingRoom_LedRed received command or
@@ -39,7 +81,9 @@ rule "ds_Dimmer_FF_LivingRoom_LedRGB"
 end
  
 
- rule "ds_Dimmer_FF_LivingRoom_LedRGB_Color"
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "ds_Dimmer_FF_LivingRoom_LedRGB_Color"
 	when
 		Item ds_Dimmer_FF_LivingRoom_LedRGB_Color received command
 	then

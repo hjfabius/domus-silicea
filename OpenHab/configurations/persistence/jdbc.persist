@@ -2,9 +2,10 @@
 Strategies 
 {
     // if no strategy is specified for an item entry below, the default list will be used
-    everyMinute : "0 * * * * ?"		
-	everyHour   : "0 0 * * * ?"
-    everyDay    : "0 0 0 * * ?"	
+    everyMinute 	: "0 * * * * ?"		
+	every10Minutes 	: "0 0/10 * * * ?"		
+	everyHour   	: "0 0 * * * ?"
+    everyDay    	: "0 0 0 * * ?"	
     default = everyChange
 }
 
@@ -19,4 +20,5 @@ Items
 	ds_Energy*		 	: strategy = everyChange, everyMinute, restoreOnStartup	
 	ds_Battery*		 	: strategy = everyChange, everyMinute, restoreOnStartup	
 	ds_Presences*		: strategy = everyChange, everyMinute, restoreOnStartup	
+	ds_Weather*			: strategy = everyChange, every10Minutes, restoreOnStartup	
 }

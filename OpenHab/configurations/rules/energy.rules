@@ -1,0 +1,160 @@
+import java.util.Date
+
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+import org.joda.time.*
+import java.util.*
+import org.eclipse.xtext.xbase.lib.*
+import org.openhab.core.items.*
+import org.openhab.model.script.debug
+
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Gas Meter updates"
+	when	
+		Item ds_Gas_GF_Bathroom_Pulse received update 
+	then
+		//logDebug("domus-silicea", "--------------------Gas Meter updates------------ Start  ------")
+
+		//Reset pulse variable
+		if ((ds_Gas_GF_Bathroom_Pulse.state as DecimalType) == 0)
+		{
+			ds_Gas_GF_Bathroom_Changed.postUpdate(new DateTimeType().toString)
+			return true
+		}
+		
+		//Initialize GasMeter variable if null
+		if (ds_Gas_GF_Bathroom.state == Uninitialized) 
+		{
+			//It could happen if a pulse is sent just after openhab reboot and persistance not yet restore the last value
+			ds_Gas_GF_Bathroom_Pulse.postUpdate(0)
+			return true//    postUpdate(ds_Gas_GF_Bathroom, 0.00)
+		}
+		//Increment GasMeter variable
+		ds_Gas_GF_Bathroom.postUpdate((ds_Gas_GF_Bathroom_Pulse.state as DecimalType)/100 + (ds_Gas_GF_Bathroom.state as DecimalType))
+		ds_Gas_GF_Bathroom_Changed.postUpdate(new DateTimeType().toString)
+
+		ds_Gas_GF_Bathroom_Pulse.postUpdate(0)
+		
+		//logDebug("domus-silicea", "--------------------Gas Meter updates------------ End  ------")
+end
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Water Meter updates"
+	when	
+		Item ds_Water_GF_Bathroom_Pulse received update 
+	then
+		//logDebug("domus-silicea", "--------------------Water Meter updates------------ Start  ------")
+
+		//Reset pulse variable
+		if ((ds_Water_GF_Bathroom_Pulse.state as DecimalType) == 0)
+		{
+			ds_Water_GF_Bathroom_Changed.postUpdate(new DateTimeType().toString)
+			return true
+		}
+			
+		//Initialize GasMeter variable if null
+		if (ds_Water_GF_Bathroom.state == Uninitialized) 
+		{
+			//It could happen if a pulse is sent just after openhab reboot and persistance not yet restore the last value
+			ds_Water_GF_Bathroom_Pulse.postUpdate(0)
+			return true
+		}
+		//Increment GasMeter variable
+		//Pulse / 10000 * 0.143170415
+		//Pulse / 69846.8327
+		ds_Water_GF_Bathroom.postUpdate( (ds_Water_GF_Bathroom_Pulse.state as DecimalType)/69846.8327 + (ds_Water_GF_Bathroom.state as DecimalType))
+		ds_Water_GF_Bathroom_Changed.postUpdate(new DateTimeType().toString)
+		ds_Water_GF_Bathroom_Pulse.postUpdate(0)
+
+		
+		//logDebug("domus-silicea", "--------------------Water Meter updates------------ End  ------")
+end
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Energy per minute"
+	when
+		Time cron "0 * * * * ?"
+	then
+	 
+		var Number delta = 0
+		
+		//logDebug("domus-silicea", "--------------------Energy per minute------------ Start  ------")
+		delta = ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(1)) ? 0
+		delta = delta * 60 * 24
+		ds_Gas_GF_Bathroom_Minute.postUpdate(delta.toString)
+
+		delta = ds_Water_GF_Bathroom.deltaSince(now.minusMinutes(1)) ? 0
+		delta = delta * 60 * 24
+		ds_Water_GF_Bathroom_Minute.postUpdate(delta.toString)
+
+		
+		if(ds_Gas_GF_Alarm.state == ON)
+		{
+			delta = ds_Gas_GF_Bathroom.deltaSince(now.minusMinutes(60)) ? 0
+			if(delta < 0.01)
+			{
+				logDebug("domus-silicea", "--------------------Energy per minute------------ ALLARME - Caldaia Spenta ------")
+				sendMail("fabio.cristini@gmail.com;fabio.cristini@pmi.com;elena.avanzi.ch@gmail.com", "Domus Silicea - ALLARME CALDAIA", "Attenzione, non c'e' stato alcun consumo di gas negli ultimi 60 minuti.")	
+				//callScript("alarm_heating")
+				ds_Gas_GF_Alarm.postUpdate(OFF)
+			}
+		}		
+		//logDebug("domus-silicea", "--------------------Energy per minute------------ End  ------")
+end
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Energy per hour"
+	when
+		//Time cron "0 0 * * * ?"
+		//Every 30 minutes
+		Time cron "0 0/30 * * * ?"
+	then
+		var Number delta = 0
+		//logDebug("domus-silicea", "--------------------Energy per hour------------ Start  ------")
+		delta = ds_Gas_GF_Bathroom.deltaSince(now.minusHours(1)) ? 0
+		delta = delta * 24
+		ds_Gas_GF_Bathroom_Hour.postUpdate(delta.toString)
+
+		delta = ds_Water_GF_Bathroom.deltaSince(now.minusHours(1)) ? 0
+		delta = delta * 24
+		ds_Water_GF_Bathroom_Hour.postUpdate(delta.toString)
+		//logDebug("domus-silicea", "--------------------Energy per hour------------ End  ------")
+end
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Energy per day"
+	when
+		//Time cron "0 0 2 * * ?"  
+		//Every 30 minutes
+		Time cron "0 0/30 * * * ?"
+	then
+		var Number delta = 0
+		//logDebug("domus-silicea", "--------------------Energy per day------------ Start  ------")
+		delta = ds_Gas_GF_Bathroom.deltaSince(now.minusDays(1)) ? 0
+		ds_Gas_GF_Bathroom_Day.postUpdate(delta.toString)
+
+		delta = ds_Water_GF_Bathroom.deltaSince(now.minusDays(1)) ? 0
+		ds_Water_GF_Bathroom_Day.postUpdate(delta.toString)
+		//logDebug("domus-silicea", "--------------------Energy per day------------ End  ------")
+end
+
+
+
+// to debug use logDebug("domus-silicea", "your message")
