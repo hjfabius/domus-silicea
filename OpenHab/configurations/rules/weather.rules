@@ -1,0 +1,35 @@
+import java.util.Date
+
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+import org.joda.time.*
+import java.util.*
+import org.eclipse.xtext.xbase.lib.*
+import org.openhab.core.items.*
+import org.openhab.model.script.debug
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
+rule "Weather per day"
+	when
+		//Time cron "0 0 2 * * ?"  
+		//Every 30 minutes
+		//Time cron "0 0/30 * * * ?"
+		Item ds_Temp_Ext_Yahoo received update
+	then
+		var Number delta = 0
+		logDebug("domus-silicea", "--------------------Weather per day------------ Start  ------")
+		delta = ds_Temp_Ext_Yahoo.averageSince(now.minusDays(1)) ? 0
+		ds_Temp_Ext_Yahoo_Day.postUpdate(delta.toString)
+		
+		delta = ds_Temp_Ext_Yahoo.maxSince(now.minusDays(1)) ? 0
+		ds_Temp_Ext_Yahoo_Max.postUpdate(delta.toString)
+		
+		delta = ds_Temp_Ext_Yahoo.minSince(now.minusDays(1)) ? 0
+		ds_Temp_Ext_Yahoo_Min.postUpdate(delta.toString)
+		
+		logDebug("domus-silicea", "--------------------Weather per day------------ End  ------")
+end
+

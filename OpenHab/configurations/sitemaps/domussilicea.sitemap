@@ -81,8 +81,8 @@ sitemap domussilicea label="Domus Silicea"
 		Group item=ds_Gas  icon="fire-on" 
 		{
 			Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Minute&period=h&random=60&h=300&w=1000" 						refresh=120000 
-			Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Day,ds_Gas_GF_Bathroom_Hour&period=D&random=60&h=300&w=1000"   	refresh=120000
-			Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Day,ds_Gas_GF_Bathroom_Hour&period=W&random=60&h=300&w=1000"  	refresh=120000
+			Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Day,ds_Gas_GF_Bathroom_Hour,ds_Temp_Ext_Yahoo&period=D&random=60&h=300&w=1000"   	refresh=120000
+			Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom_Day,ds_Temp_Ext_Yahoo,ds_Temp_Ext_Yahoo_Day&period=2W&random=60&h=300&w=1000"  	refresh=120000
 			Image url="http://localhost:8080/chart?items=ds_Gas_GF_Bathroom&period=D&random=60&h=300&w=1000"  								refresh=120000
 		
 			Group label="Show Values" icon="fire-on" 
@@ -101,7 +101,7 @@ sitemap domussilicea label="Domus Silicea"
 		{
 			Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Minute&period=h&random=60&h=300&w=1000"							refresh=120000
 			Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Day,ds_Water_GF_Bathroom_Hour&period=D&random=60&h=300&w=1000"	refresh=120000
-			Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Day,ds_Water_GF_Bathroom_Hour&period=W&random=60&h=300&w=1000"	refresh=120000
+			Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom_Day&period=2W&random=60&h=300&w=1000"	refresh=120000
 			Image url="http://localhost:8080/chart?items=ds_Water_GF_Bathroom&period=D&random=60&h=300&w=1000"  								refresh=120000
 		
 			Group label="Show Values" icon="water" 

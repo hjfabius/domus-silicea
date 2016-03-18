@@ -3,8 +3,8 @@ local configWifi = {}
 
 	print ("domus-silicea - configWifi.lua - Script Starting") 
 	
-    configWifi.SSID = "HJ_HOME"
-    configWifi.PWD = "8082808280"
+    configWifi.SSID = "yourSSID"
+    configWifi.PWD = "yourWIFIpassword"
 
     configWifi.IP  = ""
     configWifi.MAC  = ""

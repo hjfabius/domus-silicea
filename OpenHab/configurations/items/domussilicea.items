@@ -1,7 +1,7 @@
 //String Arduino "Arduino" { serial="COM7@115200" }
 //String Arduino "Arduino" { serial="COM7@9600" }
 //String Arduino "Arduino" { serial="/dev/ttyUSB0" }
-String Arduino "Arduino" {serial="/dev/ttyAMA0@9600"}
+String Arduino "Arduino" {serial="/dev/ttyAMA0@9600"} 
 
 
 /* groups */
@@ -189,12 +189,14 @@ DateTime 						ds_Sunset_Time 							"Tramonto [%1$tH:%1$tM]" 																		
 /* Weather - Meteo*/
 String 							ds_Sunrise_Sunset 						"Alba / Tramonto [%s]" 															<sun_moon>			(ds_Group_O, ds_Weather)
 Number   						ds_Temp_Ext_Yahoo   					"Temperatura Esterna [%.1f °C]"   												<temperature> 		(ds_Group_O, ds_Weather, ds_Temperature)	{weather="locationId=home, type=temperature, property=current"}
+Number   						ds_Temp_Ext_Yahoo_Day   				"Temperatura Media Esterna [%.1f °C]"   							<temperature> 		(ds_Group_O, ds_Weather, ds_Temperature)	{weather="locationId=home, type=temperature, property=current"}
+Number   						ds_Temp_Ext_Yahoo_Max   				"Temperatura Max Esterna [%.1f °C]"   							<temperature> 		(ds_Group_O, ds_Weather, ds_Temperature)	{weather="locationId=home, type=temperature, property=current"}
+Number   						ds_Temp_Ext_Yahoo_Min   				"Temperatura Min Esterna [%.1f °C]"   							<temperature> 		(ds_Group_O, ds_Weather, ds_Temperature)	{weather="locationId=home, type=temperature, property=current"}
 Number   						ds_Humidity_Ext_Yahoo      				"Umidità Esterna [%.1f %%]"         											<humidity>			(ds_Group_O, ds_Weather, ds_Humidity)		{weather="locationId=home, type=atmosphere, property=humidity"}
 //Number   						ds_Clouds_Ext_Yahoo   					"Nuvolosità [%.0f %%]"   														<sun_clouds>		(ds_Group_O, ds_Weather) 					{weather="locationId=home, type=clouds, property=percent"}
 Number   						ds_Rain_Ext_Yahoo      					"Pioggia [%.2f mm/h]"         													<water>				(ds_Group_O, ds_Weather)					{weather="locationId=home, type=precipitation, property=rain"}
 Number   						ds_Snow_Ext_Yahoo      					"Neve [%.2f mm/h]"         														<snow>				(ds_Group_O, ds_Weather)					{weather="locationId=home, type=precipitation, property=snow"}
 Number   						ds_Wind_Ext_Yahoo      					"Vento [%.2f km/h]"         													<wind>				(ds_Group_O, ds_Weather)					{weather="locationId=home, type=wind, property=speed"}
-DateTime 						ds_Ext_Yahoo_LastUpdate       			"Meteo modificato alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"        									(ds_Group_O, ds_Weather)					{weather="locationId=home, type=condition, property=lastUpdate"}
-
+DateTime 						ds_Ext_Yahoo_LastUpdate       			"Meteo modificato alle [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"        									(ds_Group_O, ds_Weather)					{weather="locationId=home, type=condition, property=lastUpdate"} 
 
 
